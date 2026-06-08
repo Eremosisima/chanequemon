@@ -1,0 +1,42 @@
+id: redcap_goblin
+displayName: "Redcap"
+loreOrigin: "Folclore britanico — Baladas de la frontera (~1800); goblin asesino de las fronteras escocesas"
+publicDomainSource: true
+type: UNDEAD
+stats:
+  hp: 60
+  attack: 80
+  defense: 35
+  speed: 75
+affinity: UNDEAD
+captureRate: 0.12
+summonAnimation: PORTAL
+moves:
+  - id: bloody_pike
+    displayName: "Pica Sangrienta"
+    power: 60
+    type: PHYSICAL
+    element: UNDEAD
+    apCost: 9
+  - id: cap_dye
+    displayName: "Tinte de Gorro"
+    power: 0
+    type: STATUS
+    element: UNDEAD
+    apCost: 12
+  - id: fortress_ambush
+    displayName: "Emboscada en Fortaleza"
+    power: 45
+    type: PHYSICAL
+    element: BEAST
+    apCost: 10
+spawnConditions:
+  biomes:
+    - STONY_PEAKS
+    - WINDSWEPT_HILLS
+    - DARK_FOREST
+  structures:
+    - WOODLAND_MANSION
+    - PILLAGER_OUTPOST
+  time: NIGHT
+  probability: 0.05

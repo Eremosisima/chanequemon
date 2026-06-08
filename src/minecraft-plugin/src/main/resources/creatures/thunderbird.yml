@@ -1,0 +1,44 @@
+id: thunderbird_sky
+displayName: "Thunderbird"
+loreOrigin: "Folclore nativo americano — Tradicion oral de diversas tribus; pajaro celestial creador de tormentas"
+publicDomainSource: true
+type: MYTHIC
+stats:
+  hp: 85
+  attack: 75
+  defense: 55
+  speed: 90
+affinity: AIR
+captureRate: 0.04
+summonAnimation: PORTAL
+moves:
+  - id: lightning_strike
+    displayName: "Golpe de Rayo"
+    power: 70
+    type: MAGICAL
+    element: AIR
+    apCost: 7
+  - id: thunder_clap
+    displayName: "Trueno"
+    power: 0
+    type: STATUS
+    element: AIR
+    apCost: 13
+    statusEffect: PARALYSIS
+  - id: storm_wind
+    displayName: "Viento de Tormenta"
+    power: 50
+    type: MAGICAL
+    element: AIR
+    apCost: 10
+spawnConditions:
+  biomes:
+    - WINDSWEPT_HILLS
+    - WINDSWEPT_SAVANNA
+    - STONY_PEAKS
+    - FROZEN_PEAKS
+  structures:
+    - END_CITY
+    - STRONGHOLD
+  time: DAY
+  probability: 0.02

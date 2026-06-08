@@ -1,0 +1,39 @@
+id: golem_prague
+displayName: "Golem"
+loreOrigin: "Tradicion judia — Talmud (~500 d.C.); Leyenda del Golem de Praga (~1580)"
+publicDomainSource: true
+type: MYTHIC
+stats:
+  hp: 130
+  attack: 60
+  defense: 90
+  speed: 15
+affinity: EARTH
+captureRate: 0.07
+summonAnimation: PORTAL
+moves:
+  - id: earth_slam
+    displayName: "Golpe de Tierra"
+    power: 60
+    type: PHYSICAL
+    element: EARTH
+    apCost: 9
+  - id: clay_barrier
+    displayName: "Barrera de Arcilla"
+    power: 0
+    type: STATUS
+    element: EARTH
+    apCost: 14
+  - id: hebrew_seal
+    displayName: "Sello Hebreo"
+    power: 45
+    type: MAGICAL
+    element: MYTHIC
+    apCost: 11
+spawnConditions:
+  biomes:
+    - PLAINS
+    - FOREST
+    - SNOWY_PLAINS
+  time: ANY
+  probability: 0.03

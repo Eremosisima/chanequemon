@@ -1,0 +1,40 @@
+id: centaur_chiron
+displayName: "Centauro"
+loreOrigin: "Mitologia griega — Homero, Iliada (~750 a.C.); Quiron, el centauro sabio"
+publicDomainSource: true
+type: BEAST
+stats:
+  hp: 90
+  attack: 70
+  defense: 55
+  speed: 80
+affinity: BEAST
+captureRate: 0.10
+summonAnimation: PORTAL
+moves:
+  - id: gallop_strike
+    displayName: "Golpe al Galope"
+    power: 50
+    type: PHYSICAL
+    element: BEAST
+    apCost: 10
+  - id: bow_shot
+    displayName: "Disparo de Arco"
+    power: 45
+    type: PHYSICAL
+    element: AIR
+    apCost: 12
+  - id: herbal_wisdom
+    displayName: "Sabiduria Herbal"
+    power: 0
+    type: STATUS
+    element: PLANT
+    apCost: 14
+spawnConditions:
+  biomes:
+    - PLAINS
+    - SUNFLOWER_PLAINS
+    - MEADOW
+    - FOREST
+  time: DAY
+  probability: 0.05

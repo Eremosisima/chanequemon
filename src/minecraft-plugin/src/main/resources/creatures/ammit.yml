@@ -1,0 +1,39 @@
+id: ammit_devourer
+displayName: "Ammit"
+loreOrigin: "Mitologia egipcia — Libro de los Muertos (~1550 a.C.); devoradora de almas impuras"
+publicDomainSource: true
+type: MYTHIC
+stats:
+  hp: 100
+  attack: 85
+  defense: 60
+  speed: 45
+affinity: MYTHIC
+captureRate: 0.05
+summonAnimation: PORTAL
+moves:
+  - id: soul_devour
+    displayName: "Devorar Alma"
+    power: 65
+    type: MAGICAL
+    element: MYTHIC
+    apCost: 8
+  - id: crocodile_jaw
+    displayName: "Mandibula de Cocodrilo"
+    power: 55
+    type: PHYSICAL
+    element: BEAST
+    apCost: 9
+  - id: hippo_stomp
+    displayName: "Pisotón de Hipopotamo"
+    power: 40
+    type: PHYSICAL
+    element: EARTH
+    apCost: 12
+spawnConditions:
+  biomes:
+    - DESERT
+    - SWAMP
+    - NETHER_WASTE
+  time: NIGHT
+  probability: 0.02

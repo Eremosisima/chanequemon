@@ -1,0 +1,39 @@
+id: fenrir_wolf
+displayName: "Fenrir"
+loreOrigin: "Mitologia nordica — Edda Poetica (~1270); Edda Prosaica de Snorri Sturluson (~1220)"
+publicDomainSource: true
+type: BEAST
+stats:
+  hp: 120
+  attack: 95
+  defense: 50
+  speed: 70
+affinity: BEAST
+captureRate: 0.04
+summonAnimation: PORTAL
+moves:
+  - id: fenris_bite
+    displayName: "Mordida de Fenris"
+    power: 70
+    type: PHYSICAL
+    element: BEAST
+    apCost: 7
+  - id: ragnarok_howl
+    displayName: "Aullido del Ragnarok"
+    power: 0
+    type: STATUS
+    element: SPIRIT
+    apCost: 14
+  - id: chainsnap
+    displayName: "Rompemicadena"
+    power: 50
+    type: PHYSICAL
+    element: BEAST
+    apCost: 10
+spawnConditions:
+  biomes:
+    - SNOWY_TAIGA
+    - FROZEN_PEAKS
+    - ICE_SPIKES
+  time: NIGHT
+  probability: 0.02

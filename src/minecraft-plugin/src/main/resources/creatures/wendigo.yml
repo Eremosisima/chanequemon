@@ -1,0 +1,41 @@
+id: wendigo_cannibal
+displayName: "Wendigo"
+loreOrigin: "Folclore algonquino — Tradicion oral nativa americana; espiritu del canibalismo y el invierno"
+publicDomainSource: true
+type: UNDEAD
+stats:
+  hp: 100
+  attack: 85
+  defense: 45
+  speed: 70
+affinity: UNDEAD
+captureRate: 0.06
+summonAnimation: MIST
+moves:
+  - id: frost_bite
+    displayName: "Mordida Helada"
+    power: 60
+    type: PHYSICAL
+    element: UNDEAD
+    apCost: 9
+    statusEffect: PARALYSIS
+  - id: insatiable_hunger
+    displayName: "Hambre Insaciable"
+    power: 55
+    type: MAGICAL
+    element: UNDEAD
+    apCost: 10
+  - id: eerie_howl
+    displayName: "Aullido Escalofriante"
+    power: 0
+    type: STATUS
+    element: SPIRIT
+    apCost: 14
+spawnConditions:
+  biomes:
+    - SNOWY_PLAINS
+    - SNOWY_TAIGA
+    - FROZEN_PEAKS
+    - ICE_SPIKES
+  time: NIGHT
+  probability: 0.03

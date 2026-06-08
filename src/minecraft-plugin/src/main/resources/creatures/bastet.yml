@@ -1,0 +1,39 @@
+id: bastet_cat
+displayName: "Bastet"
+loreOrigin: "Mitologia egipcia — Culto de Bastet (~2000 a.C.); diosa-gato del hogar y la proteccion"
+publicDomainSource: true
+type: SPIRIT
+stats:
+  hp: 65
+  attack: 55
+  defense: 45
+  speed: 95
+affinity: SPIRIT
+captureRate: 0.08
+summonAnimation: PORTAL
+moves:
+  - id: feline_grace
+    displayName: "Gracia Felina"
+    power: 40
+    type: PHYSICAL
+    element: BEAST
+    apCost: 10
+  - id: protective_ward
+    displayName: "Escudo Protector"
+    power: 0
+    type: STATUS
+    element: SPIRIT
+    apCost: 14
+  - id: sun_cat_beam
+    displayName: "Rayo Solar Felino"
+    power: 50
+    type: MAGICAL
+    element: FIRE
+    apCost: 10
+spawnConditions:
+  biomes:
+    - DESERT
+    - SAVANNA
+    - PLAINS
+  time: DAY
+  probability: 0.04

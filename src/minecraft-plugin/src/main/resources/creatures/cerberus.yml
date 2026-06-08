@@ -1,0 +1,42 @@
+id: cerberus_hades
+displayName: "Cerbero"
+loreOrigin: "Mitologia griega — Hesiodo, Teogonia (~700 a.C.); guardia del Hades"
+publicDomainSource: true
+type: BEAST
+stats:
+  hp: 110
+  attack: 85
+  defense: 70
+  speed: 40
+affinity: BEAST
+captureRate: 0.05
+summonAnimation: PORTAL
+moves:
+  - id: triple_bite
+    displayName: "Mordida Triple"
+    power: 55
+    type: PHYSICAL
+    element: BEAST
+    apCost: 8
+  - id: hell_hound_howl
+    displayName: "Aullido Infernal"
+    power: 40
+    type: MAGICAL
+    element: FIRE
+    apCost: 10
+  - id: guardian_stance
+    displayName: "Postura de Guardia"
+    power: 0
+    type: STATUS
+    element: BEAST
+    apCost: 15
+spawnConditions:
+  biomes:
+    - SOUL_SAND_VALLEY
+    - NETHER_WASTE
+    - BASALT_DELTAS
+  structures:
+    - BASTION_REMNANT
+    - NETHER_FORTRESS
+  time: ANY
+  probability: 0.02

@@ -1,0 +1,39 @@
+id: kappa_river
+displayName: "Kappa"
+loreOrigin: "Folclore japones — Nihon Shoki (720 d.C.); demonio de rio de caparazon"
+publicDomainSource: true
+type: SPIRIT
+stats:
+  hp: 75
+  attack: 55
+  defense: 70
+  speed: 60
+affinity: WATER
+captureRate: 0.10
+summonAnimation: PORTAL
+moves:
+  - id: water_grapple
+    displayName: "Presa Acuatica"
+    power: 45
+    type: PHYSICAL
+    element: WATER
+    apCost: 10
+  - id: cucumber_charm
+    displayName: "Encanto del Pepino"
+    power: 0
+    type: STATUS
+    element: WATER
+    apCost: 14
+  - id: river_vortex
+    displayName: "Vortice Fluvial"
+    power: 50
+    type: MAGICAL
+    element: WATER
+    apCost: 10
+spawnConditions:
+  biomes:
+    - RIVER
+    - SWAMP
+    - LUKEWARM_OCEAN
+  time: DAY
+  probability: 0.05

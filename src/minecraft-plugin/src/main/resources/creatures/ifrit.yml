@@ -1,0 +1,42 @@
+id: ifrit_djinn
+displayName: "Ifrit"
+loreOrigin: "Folclore arabe — Las mil y una noches (~900 d.C.); djinn de fuego"
+publicDomainSource: true
+type: UNDEAD
+stats:
+  hp: 85
+  attack: 80
+  defense: 50
+  speed: 70
+affinity: FIRE
+captureRate: 0.05
+summonAnimation: PORTAL
+moves:
+  - id: fire_whirlwind
+    displayName: "Torbellino de Fuego"
+    power: 65
+    type: MAGICAL
+    element: FIRE
+    apCost: 8
+  - id: smokestep
+    displayName: "Paso de Humo"
+    power: 0
+    type: STATUS
+    element: FIRE
+    apCost: 13
+  - id: scorching_claw
+    displayName: "Garra Abrasadora"
+    power: 55
+    type: PHYSICAL
+    element: FIRE
+    apCost: 9
+spawnConditions:
+  biomes:
+    - NETHER_WASTE
+    - BASALT_DELTAS
+    - SOUL_SAND_VALLEY
+  structures:
+    - BASTION_REMNANT
+    - NETHER_FORTRESS
+  time: ANY
+  probability: 0.04

@@ -1,0 +1,39 @@
+id: griffin_hyperborea
+displayName: "Grifo"
+loreOrigin: "Mitologia griega — Herodoto, Historias (~440 a.C.); guardián de oro en Hiperborea"
+publicDomainSource: true
+type: MYTHIC
+stats:
+  hp: 80
+  attack: 75
+  defense: 60
+  speed: 85
+affinity: MYTHIC
+captureRate: 0.07
+summonAnimation: PORTAL
+moves:
+  - id: sky_swoop
+    displayName: "Picado Celestial"
+    power: 60
+    type: PHYSICAL
+    element: AIR
+    apCost: 8
+  - id: eagle_eye
+    displayName: "Ojo de Aguila"
+    power: 0
+    type: STATUS
+    element: AIR
+    apCost: 14
+  - id: lion_claw
+    displayName: "Garra de Leon"
+    power: 45
+    type: PHYSICAL
+    element: BEAST
+    apCost: 10
+spawnConditions:
+  biomes:
+    - STONY_PEAKS
+    - WINDSWEPT_HILLS
+    - MEADOW
+  time: DAY
+  probability: 0.03

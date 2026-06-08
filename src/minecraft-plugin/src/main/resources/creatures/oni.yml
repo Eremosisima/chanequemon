@@ -1,0 +1,43 @@
+id: oni_demon
+displayName: "Oni"
+loreOrigin: "Folclore japones — Nihon Shoki (720 d.C.); demonio cornudo del folclore nipon"
+publicDomainSource: true
+type: UNDEAD
+stats:
+  hp: 105
+  attack: 85
+  defense: 65
+  speed: 50
+affinity: UNDEAD
+captureRate: 0.06
+summonAnimation: PORTAL
+moves:
+  - id: iron_club
+    displayName: "Maza de Hierro"
+    power: 65
+    type: PHYSICAL
+    element: UNDEAD
+    apCost: 8
+  - id: demon_roar
+    displayName: "Rugido Demoníaco"
+    power: 40
+    type: MAGICAL
+    element: SPIRIT
+    apCost: 11
+  - id: oni_mask
+    displayName: "Mascara Oni"
+    power: 0
+    type: STATUS
+    element: SPIRIT
+    apCost: 14
+    statusEffect: PARALYSIS
+spawnConditions:
+  biomes:
+    - CRIMSON_FOREST
+    - NETHER_WASTE
+    - DARK_FOREST
+  structures:
+    - BASTION_REMNANT
+    - NETHER_FORTRESS
+  time: NIGHT
+  probability: 0.03

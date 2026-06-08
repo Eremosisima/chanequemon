@@ -1,0 +1,40 @@
+id: tuatha_fairy
+displayName: "Tuatha de Danann"
+loreOrigin: "Mitologia irlandesa — Lebor Gabala Erenn (~1150); el pueblo de la diosa Danu"
+publicDomainSource: true
+type: MYTHIC
+stats:
+  hp: 70
+  attack: 60
+  defense: 55
+  speed: 85
+affinity: MYTHIC
+captureRate: 0.06
+summonAnimation: PORTAL
+moves:
+  - id: fairy_fire
+    displayName: "Fuego Hada"
+    power: 50
+    type: MAGICAL
+    element: MYTHIC
+    apCost: 10
+  - id: otherworld_step
+    displayName: "Paso del Otro Mundo"
+    power: 0
+    type: STATUS
+    element: SPIRIT
+    apCost: 14
+  - id: enchanted_blade
+    displayName: "Espada Encantada"
+    power: 55
+    type: PHYSICAL
+    element: MYTHIC
+    apCost: 9
+spawnConditions:
+  biomes:
+    - MUSHROOM_FIELDS
+    - MEADOW
+    - FLOWER_FOREST
+    - CHERRY_GROVE
+  time: DAY
+  probability: 0.03

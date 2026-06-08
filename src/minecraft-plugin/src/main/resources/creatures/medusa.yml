@@ -1,0 +1,41 @@
+id: medusa_gorgon
+displayName: "Medusa"
+loreOrigin: "Mitologia griega — Ovidio, Metamorfosis (8 d.C.); una de las tres Gorgonas"
+publicDomainSource: true
+type: MYTHIC
+stats:
+  hp: 70
+  attack: 60
+  defense: 50
+  speed: 75
+affinity: MYTHIC
+captureRate: 0.07
+summonAnimation: PORTAL
+moves:
+  - id: petrifying_gaze
+    displayName: "Mirada Petrificante"
+    power: 50
+    type: MAGICAL
+    element: MYTHIC
+    apCost: 10
+    statusEffect: PARALYSIS
+  - id: serpent_hair
+    displayName: "Cabellera de Serpientes"
+    power: 45
+    type: PHYSICAL
+    element: BEAST
+    apCost: 10
+  - id: stone_curse
+    displayName: "Maldicion de Piedra"
+    power: 30
+    type: MAGICAL
+    element: EARTH
+    apCost: 8
+    statusEffect: PARALYSIS
+spawnConditions:
+  biomes:
+    - BADLANDS
+    - ERODED_BADLANDS
+    - WOODED_BADLANDS
+  time: ANY
+  probability: 0.03

@@ -1,0 +1,39 @@
+id: qilin_mythic
+displayName: "Qilin"
+loreOrigin: "Mitologia china — Confucio, Registros de los Ritos (~500 a.C.); bestia divina de justicia"
+publicDomainSource: true
+type: MYTHIC
+stats:
+  hp: 90
+  attack: 65
+  defense: 70
+  speed: 75
+affinity: MYTHIC
+captureRate: 0.05
+summonAnimation: PORTAL
+moves:
+  - id: justice_flame
+    displayName: "Llama de Justicia"
+    power: 60
+    type: MAGICAL
+    element: MYTHIC
+    apCost: 9
+  - id: righteous_hoof
+    displayName: "Pezuña Justiciera"
+    power: 50
+    type: PHYSICAL
+    element: MYTHIC
+    apCost: 10
+  - id: divine_judgment
+    displayName: "Juicio Divino"
+    power: 0
+    type: STATUS
+    element: MYTHIC
+    apCost: 16
+spawnConditions:
+  biomes:
+    - CHERRY_GROVE
+    - FLOWER_FOREST
+    - MEADOW
+  time: DAY
+  probability: 0.02

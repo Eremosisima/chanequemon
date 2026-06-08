@@ -1,0 +1,42 @@
+id: hydra_lerna
+displayName: "Hidra de Lerna"
+loreOrigin: "Mitologia griega — Hesiodo, Teogonia (~700 a.C.); segundo trabajo de Heracles"
+publicDomainSource: true
+type: DRAGON
+stats:
+  hp: 130
+  attack: 70
+  defense: 60
+  speed: 30
+affinity: DRAGON
+captureRate: 0.04
+summonAnimation: PORTAL
+moves:
+  - id: regen_heads
+    displayName: "Cabezas Regeneradas"
+    power: 0
+    type: STATUS
+    element: DRAGON
+    apCost: 18
+  - id: venom_spray
+    displayName: "Lluvia de Veneno"
+    power: 60
+    type: MAGICAL
+    element: DRAGON
+    apCost: 8
+    statusEffect: PARALYSIS
+  - id: multi_strike
+    displayName: "Golpe Multiple"
+    power: 40
+    type: PHYSICAL
+    element: BEAST
+    apCost: 10
+spawnConditions:
+  biomes:
+    - SWAMP
+    - MANGROVE_SWAMP
+    - DARK_FOREST
+  structures:
+    - SWAMP_HUT
+  time: NIGHT
+  probability: 0.02

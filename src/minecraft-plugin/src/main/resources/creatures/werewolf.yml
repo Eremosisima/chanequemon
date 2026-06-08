@@ -1,0 +1,40 @@
+id: werewolf_lycan
+displayName: "Hombre Lobo"
+loreOrigin: "Folclore europeo medieval; Licantropía — diversos textos pre-1900"
+publicDomainSource: true
+type: BEAST
+stats:
+  hp: 90
+  attack: 80
+  defense: 40
+  speed: 70
+affinity: BEAST
+captureRate: 0.12
+summonAnimation: PORTAL
+moves:
+  - id: claw
+    displayName: "Garra Filial"
+    power: 45
+    type: PHYSICAL
+    element: BEAST
+    apCost: 10
+  - id: howl
+    displayName: "Aullido"
+    power: 0
+    type: STATUS
+    element: BEAST
+    apCost: 15
+    statusEffect: PARALYSIS
+  - id: feral_rush
+    displayName: "Embestida Feral"
+    power: 65
+    type: PHYSICAL
+    element: BEAST
+    apCost: 8
+spawnConditions:
+  biomes:
+    - FOREST
+    - TAIGA
+    - DARK_FOREST
+  time: NIGHT
+  probability: 0.06

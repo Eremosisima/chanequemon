@@ -1,0 +1,40 @@
+id: kitsune_nine
+displayName: "Kitsune de Nueve Colas"
+loreOrigin: "Folclore japonés; Nihon Shoki (720 d.C.); diversos cuentos pre-1900"
+publicDomainSource: true
+type: SPIRIT
+stats:
+  hp: 60
+  attack: 50
+  defense: 50
+  speed: 90
+affinity: SPIRIT
+captureRate: 0.08
+summonAnimation: PORTAL
+moves:
+  - id: fox_fire
+    displayName: "Fuego de Zorro"
+    power: 40
+    type: MAGICAL
+    element: SPIRIT
+    apCost: 10
+  - id: illusion
+    displayName: "Ilusion"
+    power: 0
+    type: STATUS
+    element: SPIRIT
+    apCost: 12
+    statusEffect: SLEEP
+  - id: will_o_wisp
+    displayName: "Fuego Fatuo"
+    power: 55
+    type: MAGICAL
+    element: SPIRIT
+    apCost: 8
+spawnConditions:
+  biomes:
+    - CHERRY_GROVE
+    - FLOWER_FOREST
+    - BIRCH_FOREST
+  time: NIGHT
+  probability: 0.04

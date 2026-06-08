@@ -1,0 +1,40 @@
+id: banshee_mourner
+displayName: "Banshee"
+loreOrigin: "Folclore irlandés; tradición oral celta pre-cristiana; textos del siglo XVIII"
+publicDomainSource: true
+type: SPIRIT
+stats:
+  hp: 50
+  attack: 70
+  defense: 30
+  speed: 80
+affinity: SPIRIT
+captureRate: 0.10
+summonAnimation: MIST
+moves:
+  - id: keening_wail
+    displayName: "Lamento"
+    power: 60
+    type: MAGICAL
+    element: SPIRIT
+    apCost: 8
+  - id: spectral_touch
+    displayName: "Toque Espectral"
+    power: 35
+    type: PHYSICAL
+    element: UNDEAD
+    apCost: 12
+  - id: foresee_doom
+    displayName: "Presagio"
+    power: 0
+    type: STATUS
+    element: SPIRIT
+    apCost: 15
+    statusEffect: PARALYSIS
+spawnConditions:
+  biomes:
+    - SWAMP
+    - OLD_GROWTH_PINE_TAIGA
+    - PLAINS
+  time: NIGHT
+  probability: 0.05

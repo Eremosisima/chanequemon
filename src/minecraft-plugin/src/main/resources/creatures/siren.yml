@@ -1,0 +1,44 @@
+id: siren_sea
+displayName: "Sirena"
+loreOrigin: "Mitologia griega — Homero, Odisea (~750 a.C.); cantantes marinas que atraen navegantes"
+publicDomainSource: true
+type: SPIRIT
+stats:
+  hp: 60
+  attack: 55
+  defense: 35
+  speed: 90
+affinity: WATER
+captureRate: 0.08
+summonAnimation: MIST
+moves:
+  - id: enchanting_song
+    displayName: "Canto Encantador"
+    power: 0
+    type: STATUS
+    element: SPIRIT
+    apCost: 12
+    statusEffect: SLEEP
+  - id: wave_strike
+    displayName: "Golpe de Ola"
+    power: 50
+    type: MAGICAL
+    element: WATER
+    apCost: 10
+  - id: coral_dagger
+    displayName: "Daga de Coral"
+    power: 40
+    type: PHYSICAL
+    element: WATER
+    apCost: 12
+spawnConditions:
+  biomes:
+    - WARM_OCEAN
+    - LUKEWARM_OCEAN
+    - OCEAN
+    - BEACH
+  structures:
+    - SHIPWRECK
+    - OCEAN_RUIN
+  time: ANY
+  probability: 0.05

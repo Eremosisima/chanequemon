@@ -1,0 +1,42 @@
+id: shade_void
+displayName: "Sombra del Vacío"
+loreOrigin: "Mitologia griega — Homero, Odisea (~750 a.C.); las sombras del Hades"
+publicDomainSource: true
+type: SPIRIT
+stats:
+  hp: 55
+  attack: 65
+  defense: 30
+  speed: 85
+affinity: SPIRIT
+captureRate: 0.08
+summonAnimation: MIST
+moves:
+  - id: void_touch
+    displayName: "Toque del Vacio"
+    power: 55
+    type: MAGICAL
+    element: SPIRIT
+    apCost: 9
+  - id: dimensional_shift
+    displayName: "Desplazamiento Dimensional"
+    power: 0
+    type: STATUS
+    element: SPIRIT
+    apCost: 14
+  - id: shadow_lash
+    displayName: "Latigo de Sombra"
+    power: 45
+    type: PHYSICAL
+    element: SPIRIT
+    apCost: 11
+spawnConditions:
+  biomes:
+    - END_HIGHLANDS
+    - END_MIDLANDS
+    - SMALL_END_ISLANDS
+    - END_BARRENS
+  structures:
+    - END_CITY
+  time: ANY
+  probability: 0.06

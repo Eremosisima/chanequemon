@@ -1,0 +1,39 @@
+id: tiamat_chaos
+displayName: "Tiamat"
+loreOrigin: "Mitologia mesopotamica — Enuma Elish (~1750 a.C.); dragon primordial del caos"
+publicDomainSource: true
+type: DRAGON
+stats:
+  hp: 160
+  attack: 90
+  defense: 70
+  speed: 35
+affinity: DRAGON
+captureRate: 0.02
+summonAnimation: PORTAL
+moves:
+  - id: chaos_breath
+    displayName: "Aliento del Caos"
+    power: 75
+    type: MAGICAL
+    element: DRAGON
+    apCost: 6
+  - id: primordial_split
+    displayName: "Division Primordial"
+    power: 55
+    type: PHYSICAL
+    element: DRAGON
+    apCost: 9
+  - id: salt_sea
+    displayName: "Mar Salado"
+    power: 0
+    type: STATUS
+    element: WATER
+    apCost: 15
+spawnConditions:
+  biomes:
+    - END_HIGHLANDS
+    - END_MIDLANDS
+    - SMALL_END_ISLANDS
+  time: ANY
+  probability: 0.01

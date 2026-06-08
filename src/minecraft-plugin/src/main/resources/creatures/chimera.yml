@@ -1,0 +1,40 @@
+id: chimera_lycia
+displayName: "Quimera"
+loreOrigin: "Mitologia griega — Homero, Iliada (~750 a.C.); leon-cabra-serpiente de Licia"
+publicDomainSource: true
+type: MYTHIC
+stats:
+  hp: 85
+  attack: 80
+  defense: 55
+  speed: 65
+affinity: MYTHIC
+captureRate: 0.06
+summonAnimation: PORTAL
+moves:
+  - id: lion_fury
+    displayName: "Furia de Leon"
+    power: 50
+    type: PHYSICAL
+    element: BEAST
+    apCost: 10
+  - id: goat_flame
+    displayName: "Llama de Cabra"
+    power: 60
+    type: MAGICAL
+    element: FIRE
+    apCost: 8
+  - id: serpent_tail
+    displayName: "Cola de Serpiente"
+    power: 35
+    type: PHYSICAL
+    element: DRAGON
+    apCost: 12
+    statusEffect: PARALYSIS
+spawnConditions:
+  biomes:
+    - SAVANNA
+    - WINDSWEPT_SAVANNA
+    - STONY_PEAKS
+  time: DAY
+  probability: 0.03

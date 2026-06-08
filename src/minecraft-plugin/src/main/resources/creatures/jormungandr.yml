@@ -1,0 +1,42 @@
+id: jormungandr_serpent
+displayName: "Jormungandr"
+loreOrigin: "Mitologia nordica — Edda Poetica (~1270); serpiente que rodea Midgard"
+publicDomainSource: true
+type: DRAGON
+stats:
+  hp: 140
+  attack: 80
+  defense: 75
+  speed: 25
+affinity: DRAGON
+captureRate: 0.03
+summonAnimation: PORTAL
+moves:
+  - id: world_coil
+    displayName: "Espiral del Mundo"
+    power: 65
+    type: PHYSICAL
+    element: DRAGON
+    apCost: 8
+  - id: midgard_venom
+    displayName: "Veneno de Midgard"
+    power: 55
+    type: MAGICAL
+    element: DRAGON
+    apCost: 9
+    statusEffect: PARALYSIS
+  - id: deep_sea_rage
+    displayName: "Furia Abisal"
+    power: 45
+    type: MAGICAL
+    element: WATER
+    apCost: 10
+spawnConditions:
+  biomes:
+    - DEEP_COLD_OCEAN
+    - DEEP_OCEAN
+    - DEEP_LUKEWARM_OCEAN
+  structures:
+    - OCEAN_MONUMENT
+  time: ANY
+  probability: 0.01

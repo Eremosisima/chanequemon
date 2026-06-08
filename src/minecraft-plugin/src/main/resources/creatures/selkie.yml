@@ -1,0 +1,46 @@
+id: selkie_seal
+displayName: "Selkie"
+loreOrigin: "Folclore escoces/islandes — tradicion oral; foca que muda su piel para volverse humano"
+publicDomainSource: true
+type: SPIRIT
+stats:
+  hp: 65
+  attack: 50
+  defense: 55
+  speed: 75
+affinity: WATER
+captureRate: 0.11
+summonAnimation: PORTAL
+moves:
+  - id: seal_skin
+    displayName: "Piel de Foca"
+    power: 0
+    type: STATUS
+    element: WATER
+    apCost: 14
+  - id: ocean_grace
+    displayName: "Gracia Oceanica"
+    power: 45
+    type: MAGICAL
+    element: WATER
+    apCost: 11
+  - id: tidal_song
+    displayName: "Canto de Marea"
+    power: 40
+    type: MAGICAL
+    element: AIR
+    apCost: 12
+    statusEffect: SLEEP
+spawnConditions:
+  biomes:
+    - FROZEN_OCEAN
+    - DEEP_FROZEN_OCEAN
+    - COLD_OCEAN
+    - STONY_SHORE
+    - SNOWY_BEACH
+    - BEACH
+  structures:
+    - SHIPWRECK
+    - OCEAN_RUIN
+  time: ANY
+  probability: 0.06

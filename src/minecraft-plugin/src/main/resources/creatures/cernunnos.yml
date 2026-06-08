@@ -1,0 +1,40 @@
+id: cernunnos_horned
+displayName: "Cernunnos"
+loreOrigin: "Mitologia celta — Caldero de Gundestrup (~200 a.C.); dios astado de la naturaleza"
+publicDomainSource: true
+type: MYTHIC
+stats:
+  hp: 100
+  attack: 70
+  defense: 75
+  speed: 55
+affinity: MYTHIC
+captureRate: 0.05
+summonAnimation: PORTAL
+moves:
+  - id: stag_charge
+    displayName: "Carga del Ciervo"
+    power: 60
+    type: PHYSICAL
+    element: BEAST
+    apCost: 9
+  - id: forest_blessing
+    displayName: "Bendicion del Bosque"
+    power: 0
+    type: STATUS
+    element: PLANT
+    apCost: 15
+  - id: natures_wrath
+    displayName: "Ira de la Naturaleza"
+    power: 55
+    type: MAGICAL
+    element: EARTH
+    apCost: 10
+spawnConditions:
+  biomes:
+    - OLD_GROWTH_PINE_TAIGA
+    - OLD_GROWTH_SPRUCE_TAIGA
+    - FOREST
+    - MEADOW
+  time: DAY
+  probability: 0.02

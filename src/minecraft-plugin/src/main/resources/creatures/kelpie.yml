@@ -1,0 +1,41 @@
+id: kelpie_water
+displayName: "Kelpie"
+loreOrigin: "Folclore celta — Mitologia escocesa; caballo acuatico que arrastra jinetes al agua"
+publicDomainSource: true
+type: BEAST
+stats:
+  hp: 70
+  attack: 60
+  defense: 50
+  speed: 85
+affinity: WATER
+captureRate: 0.09
+summonAnimation: PORTAL
+moves:
+  - id: drowning_trot
+    displayName: "Trote Ahogante"
+    power: 50
+    type: PHYSICAL
+    element: WATER
+    apCost: 10
+  - id: water_gallop
+    displayName: "Galope Acuatico"
+    power: 45
+    type: PHYSICAL
+    element: BEAST
+    apCost: 11
+  - id: sticky_mane
+    displayName: "Crin Pegajosa"
+    power: 0
+    type: STATUS
+    element: WATER
+    apCost: 14
+    statusEffect: PARALYSIS
+spawnConditions:
+  biomes:
+    - RIVER
+    - SWAMP
+    - PLAINS
+    - MEADOW
+  time: NIGHT
+  probability: 0.04

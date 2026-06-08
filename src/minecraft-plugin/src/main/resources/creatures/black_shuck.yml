@@ -1,0 +1,44 @@
+id: black_shuck
+displayName: "Black Shuck"
+loreOrigin: "Folclore ingles — Registros parroquiales del s.XVI; perro fantasmal de East Anglia"
+publicDomainSource: true
+type: UNDEAD
+stats:
+  hp: 80
+  attack: 75
+  defense: 45
+  speed: 80
+affinity: UNDEAD
+captureRate: 0.07
+summonAnimation: MIST
+moves:
+  - id: spectral_bite
+    displayName: "Mordida Espectral"
+    power: 55
+    type: PHYSICAL
+    element: UNDEAD
+    apCost: 9
+  - id: ghostly_howl
+    displayName: "Aullido Fantasmal"
+    power: 0
+    type: STATUS
+    element: SPIRIT
+    apCost: 13
+  - id: shadow_pounce
+    displayName: "Salto de Sombra"
+    power: 50
+    type: PHYSICAL
+    element: SPIRIT
+    apCost: 10
+spawnConditions:
+  biomes:
+    - DARK_FOREST
+    - FOREST
+    - PLAINS
+    - OLD_GROWTH_PINE_TAIGA
+  structures:
+    - WOODLAND_MANSION
+    - PILLAGER_OUTPOST
+    - TRAIL_RUINS
+  time: NIGHT
+  probability: 0.05

@@ -1,0 +1,39 @@
+id: spriggan_cave
+displayName: "Spriggan"
+loreOrigin: "Folclore cornes — tradicion oral; espiritu guardian de cuevas y tesoros enterrados"
+publicDomainSource: true
+type: SPIRIT
+stats:
+  hp: 75
+  attack: 65
+  defense: 60
+  speed: 55
+affinity: EARTH
+captureRate: 0.10
+summonAnimation: PORTAL
+moves:
+  - id: crystal_blast
+    displayName: "Explosion de Cristal"
+    power: 55
+    type: MAGICAL
+    element: EARTH
+    apCost: 9
+  - id: cave_guard
+    displayName: "Guardian de la Cueva"
+    power: 0
+    type: STATUS
+    element: EARTH
+    apCost: 13
+  - id: vine_whip
+    displayName: "Latigo de Enredadera"
+    power: 40
+    type: PHYSICAL
+    element: PLANT
+    apCost: 11
+spawnConditions:
+  biomes:
+    - LUSH_CAVES
+    - DRIPSTONE_CAVES
+    - OLD_GROWTH_SPRUCE_TAIGA
+  time: ANY
+  probability: 0.05

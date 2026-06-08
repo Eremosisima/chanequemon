@@ -1,0 +1,39 @@
+id: baba_yaga
+displayName: "Baba Yaga"
+loreOrigin: "Folclore eslavo — Coleccion de Afanasiev (~1860); bruja del bosque en cabana con patas de gallina"
+publicDomainSource: true
+type: MYTHIC
+stats:
+  hp: 85
+  attack: 75
+  defense: 50
+  speed: 60
+affinity: MYTHIC
+captureRate: 0.06
+summonAnimation: PORTAL
+moves:
+  - id: mortar_flight
+    displayName: "Vuelo en Mortero"
+    power: 55
+    type: MAGICAL
+    element: AIR
+    apCost: 9
+  - id: iron_tooth
+    displayName: "Diente de Hierro"
+    power: 45
+    type: PHYSICAL
+    element: MYTHIC
+    apCost: 10
+  - id: hut_summon
+    displayName: "Invoca Cabaña"
+    power: 0
+    type: STATUS
+    element: EARTH
+    apCost: 15
+spawnConditions:
+  biomes:
+    - DARK_FOREST
+    - OLD_GROWTH_SPRUCE_TAIGA
+    - SWAMP
+  time: NIGHT
+  probability: 0.02

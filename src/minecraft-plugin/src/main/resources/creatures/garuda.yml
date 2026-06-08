@@ -1,0 +1,40 @@
+id: garuda_eagle
+displayName: "Garuda"
+loreOrigin: "Mitologia hindu — Rigveda (~1500 a.C.); el gran pajaro divino, montura de Visnu"
+publicDomainSource: true
+type: MYTHIC
+stats:
+  hp: 80
+  attack: 75
+  defense: 50
+  speed: 95
+affinity: AIR
+captureRate: 0.05
+summonAnimation: PORTAL
+moves:
+  - id: solar_swoop
+    displayName: "Picado Solar"
+    power: 65
+    type: PHYSICAL
+    element: AIR
+    apCost: 8
+  - id: divine_feather
+    displayName: "Pluma Divina"
+    power: 50
+    type: MAGICAL
+    element: AIR
+    apCost: 10
+  - id: serpent_hunter
+    displayName: "Cazador de Serpientes"
+    power: 0
+    type: STATUS
+    element: MYTHIC
+    apCost: 13
+spawnConditions:
+  biomes:
+    - STONY_PEAKS
+    - WINDSWEPT_HILLS
+    - JUNGLE
+    - SAVANNA
+  time: DAY
+  probability: 0.02

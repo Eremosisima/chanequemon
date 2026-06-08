@@ -1,0 +1,40 @@
+id: lung_dragon
+displayName: "Long (Dragon Chino)"
+loreOrigin: "Mitologia china — I Ching (~1000 a.C.); dragon celestial chino de los elementos"
+publicDomainSource: true
+type: DRAGON
+stats:
+  hp: 115
+  attack: 80
+  defense: 70
+  speed: 60
+affinity: DRAGON
+captureRate: 0.04
+summonAnimation: PORTAL
+moves:
+  - id: celestial_breath
+    displayName: "Aliento Celestial"
+    power: 65
+    type: MAGICAL
+    element: DRAGON
+    apCost: 8
+  - id: pearl_of_wisdom
+    displayName: "Perla de Sabiduria"
+    power: 0
+    type: STATUS
+    element: MYTHIC
+    apCost: 14
+  - id: elemental_fury
+    displayName: "Furia Elemental"
+    power: 55
+    type: MAGICAL
+    element: FIRE
+    apCost: 9
+spawnConditions:
+  biomes:
+    - JUNGLE
+    - BAMBOO_JUNGLE
+    - CHERRY_GROVE
+    - STONY_PEAKS
+  time: DAY
+  probability: 0.02

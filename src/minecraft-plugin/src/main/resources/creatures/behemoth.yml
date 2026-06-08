@@ -1,0 +1,40 @@
+id: behemoth_beast
+displayName: "Behemoth"
+loreOrigin: "Tradicion abrahamica — Libro de Job (~600 a.C.); bestia colosal de la tierra"
+publicDomainSource: true
+type: BEAST
+stats:
+  hp: 140
+  attack: 75
+  defense: 85
+  speed: 25
+affinity: EARTH
+captureRate: 0.03
+summonAnimation: PORTAL
+moves:
+  - id: earth_tremor
+    displayName: "Temblor de Tierra"
+    power: 65
+    type: PHYSICAL
+    element: EARTH
+    apCost: 8
+  - id: leviathan_rival
+    displayName: "Rival del Leviatan"
+    power: 0
+    type: STATUS
+    element: BEAST
+    apCost: 14
+  - id: colossal_stomp
+    displayName: "Pisotón Colosal"
+    power: 55
+    type: PHYSICAL
+    element: BEAST
+    apCost: 10
+spawnConditions:
+  biomes:
+    - PLAINS
+    - SAVANNA
+    - MEADOW
+    - WINDSWEPT_SAVANNA
+  time: DAY
+  probability: 0.02

@@ -1,0 +1,41 @@
+id: leviathan_sea
+displayName: "Leviatán"
+loreOrigin: "Tradicion abrahamica — Libro de Job (~600 a.C.); monstruo marino primordial"
+publicDomainSource: true
+type: DRAGON
+stats:
+  hp: 150
+  attack: 85
+  defense: 80
+  speed: 20
+affinity: DRAGON
+captureRate: 0.02
+summonAnimation: PORTAL
+moves:
+  - id: abyssal_roar
+    displayName: "Rugido Abismal"
+    power: 70
+    type: MAGICAL
+    element: DRAGON
+    apCost: 7
+  - id: ocean_sweep
+    displayName: "Barrido Oceanico"
+    power: 60
+    type: PHYSICAL
+    element: WATER
+    apCost: 9
+  - id: primordial_pressure
+    displayName: "Presion Primordial"
+    power: 0
+    type: STATUS
+    element: WATER
+    apCost: 15
+    statusEffect: PARALYSIS
+spawnConditions:
+  biomes:
+    - DEEP_OCEAN
+    - DEEP_COLD_OCEAN
+    - DEEP_LUKEWARM_OCEAN
+    - FROZEN_OCEAN
+  time: ANY
+  probability: 0.01

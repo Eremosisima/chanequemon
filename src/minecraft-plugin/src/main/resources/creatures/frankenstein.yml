@@ -1,0 +1,40 @@
+id: frankenstein_creature
+displayName: "Criatura de Frankenstein"
+loreOrigin: "Mary Shelley — Frankenstein; o el moderno Prometeo (1818) — Dominio publico"
+publicDomainSource: true
+type: UNDEAD
+stats:
+  hp: 120
+  attack: 80
+  defense: 75
+  speed: 30
+affinity: UNDEAD
+captureRate: 0.07
+summonAnimation: PORTAL
+moves:
+  - id: electric_fist
+    displayName: "Puño Electrico"
+    power: 65
+    type: PHYSICAL
+    element: UNDEAD
+    apCost: 8
+  - id: galvanic_charge
+    displayName: "Carga Galvanica"
+    power: 0
+    type: STATUS
+    element: FIRE
+    apCost: 14
+  - id: mourners_strength
+    displayName: "Fuerza del Duelo"
+    power: 55
+    type: PHYSICAL
+    element: BEAST
+    apCost: 10
+spawnConditions:
+  biomes:
+    - WINDSWEPT_HILLS
+    - STONY_PEAKS
+    - SNOWY_PLAINS
+    - TAIGA
+  time: NIGHT
+  probability: 0.03

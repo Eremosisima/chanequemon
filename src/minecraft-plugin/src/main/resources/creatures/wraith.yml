@@ -1,0 +1,41 @@
+id: wraith_deep
+displayName: "Espectro de las Profundidades"
+loreOrigin: "Folclore escoces — tradicion oral; espectro que habita ruinas subterraneas"
+publicDomainSource: true
+type: SPIRIT
+stats:
+  hp: 65
+  attack: 70
+  defense: 35
+  speed: 75
+affinity: SPIRIT
+captureRate: 0.09
+summonAnimation: MIST
+moves:
+  - id: dark_whisper
+    displayName: "Susurro Oscuro"
+    power: 50
+    type: MAGICAL
+    element: SPIRIT
+    apCost: 10
+  - id: chilling_touch
+    displayName: "Toque Helado"
+    power: 40
+    type: PHYSICAL
+    element: UNDEAD
+    apCost: 11
+    statusEffect: PARALYSIS
+  - id: fade_away
+    displayName: "Desvanecerse"
+    power: 0
+    type: STATUS
+    element: SPIRIT
+    apCost: 14
+spawnConditions:
+  biomes:
+    - DEEP_DARK
+  structures:
+    - ANCIENT_CITY
+    - STRONGHOLD
+  time: ANY
+  probability: 0.07

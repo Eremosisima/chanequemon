@@ -1,0 +1,39 @@
+id: minotaur_crete
+displayName: "Minotauro"
+loreOrigin: "Mitologia griega — Plutarco, Vidas paralelas (~100 d.C.); bestia del laberinto de Creta"
+publicDomainSource: true
+type: BEAST
+stats:
+  hp: 100
+  attack: 90
+  defense: 65
+  speed: 50
+affinity: BEAST
+captureRate: 0.08
+summonAnimation: PORTAL
+moves:
+  - id: labyrinth_charge
+    displayName: "Carga del Laberinto"
+    power: 65
+    type: PHYSICAL
+    element: BEAST
+    apCost: 8
+  - id: horn_gore
+    displayName: "Cornada"
+    power: 50
+    type: PHYSICAL
+    element: BEAST
+    apCost: 10
+  - id: berserker_rage
+    displayName: "Furia Berserker"
+    power: 0
+    type: STATUS
+    element: BEAST
+    apCost: 12
+spawnConditions:
+  biomes:
+    - DARK_FOREST
+    - WINDSWEPT_FOREST
+    - STONY_PEAKS
+  time: DAY
+  probability: 0.04

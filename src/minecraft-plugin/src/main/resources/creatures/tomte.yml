@@ -1,0 +1,43 @@
+id: tomte_winter
+displayName: "Tomte"
+loreOrigin: "Folclore escandinavo — tradicion oral pre-cristiana; espiritu invernal guardian del hogar"
+publicDomainSource: true
+type: SPIRIT
+stats:
+  hp: 60
+  attack: 45
+  defense: 50
+  speed: 70
+affinity: SPIRIT
+captureRate: 0.12
+summonAnimation: PORTAL
+moves:
+  - id: frosty_trick
+    displayName: "Truco Helado"
+    power: 40
+    type: MAGICAL
+    element: AIR
+    apCost: 12
+    statusEffect: PARALYSIS
+  - id: hidden_gift
+    displayName: "Regalo Oculto"
+    power: 0
+    type: STATUS
+    element: SPIRIT
+    apCost: 14
+  - id: winter_chill
+    displayName: "Frio Invernal"
+    power: 45
+    type: MAGICAL
+    element: AIR
+    apCost: 11
+spawnConditions:
+  biomes:
+    - SNOWY_PLAINS
+    - SNOWY_TAIGA
+    - GROVE
+    - SNOWY_SLOPES
+  structures:
+    - IGLOO
+  time: NIGHT
+  probability: 0.06

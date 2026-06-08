@@ -1,0 +1,42 @@
+id: draugr_norse
+displayName: "Draugr"
+loreOrigin: "Mitologia nordica — Saga de Grettir (~1310); muertos vivientes nordicos"
+publicDomainSource: true
+type: UNDEAD
+stats:
+  hp: 95
+  attack: 65
+  defense: 80
+  speed: 30
+affinity: UNDEAD
+captureRate: 0.10
+summonAnimation: MIST
+moves:
+  - id: grave_touch
+    displayName: "Toque de la Tumba"
+    power: 45
+    type: PHYSICAL
+    element: UNDEAD
+    apCost: 10
+  - id: hoard_curse
+    displayName: "Maldicion del Tesoro"
+    power: 35
+    type: MAGICAL
+    element: UNDEAD
+    apCost: 12
+  - id: undying_will
+    displayName: "Voluntad Imortal"
+    power: 0
+    type: STATUS
+    element: UNDEAD
+    apCost: 16
+spawnConditions:
+  biomes:
+    - SNOWY_PLAINS
+    - SNOWY_TAIGA
+    - FROZEN_RIVER
+  structures:
+    - MINESHAFT
+    - STRONGHOLD
+  time: NIGHT
+  probability: 0.05

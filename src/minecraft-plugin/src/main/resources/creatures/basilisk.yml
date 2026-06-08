@@ -1,0 +1,40 @@
+id: basilisk_king
+displayName: "Basilisco"
+loreOrigin: "Bestiarios medievales europeos; Plinio el Viejo — Naturalis Historia (77 d.C.)"
+publicDomainSource: true
+type: DRAGON
+stats:
+  hp: 70
+  attack: 60
+  defense: 80
+  speed: 40
+affinity: DRAGON
+captureRate: 0.10
+summonAnimation: PORTAL
+moves:
+  - id: petrifying_gaze
+    displayName: "Mirada Petrificante"
+    power: 30
+    type: MAGICAL
+    element: DRAGON
+    apCost: 12
+    statusEffect: SLEEP
+  - id: venom_bite
+    displayName: "Mordedura Venenosa"
+    power: 50
+    type: PHYSICAL
+    element: DRAGON
+    apCost: 10
+  - id: scale_armor
+    displayName: "Escamas de Armadura"
+    power: 0
+    type: STATUS
+    element: EARTH
+    apCost: 15
+spawnConditions:
+  biomes:
+    - DESERT
+    - BADLANDS
+    - SAVANNA
+  time: DAY
+  probability: 0.05

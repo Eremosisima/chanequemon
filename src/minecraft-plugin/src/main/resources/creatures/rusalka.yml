@@ -1,0 +1,41 @@
+id: rusalka_water
+displayName: "Rusalka"
+loreOrigin: "Folclore eslavo — Tradicion oral pre-cristiana; espiritu acuatico de doncellas ahogadas"
+publicDomainSource: true
+type: SPIRIT
+stats:
+  hp: 65
+  attack: 50
+  defense: 40
+  speed: 80
+affinity: WATER
+captureRate: 0.10
+summonAnimation: MIST
+moves:
+  - id: drownings_song
+    displayName: "Canto de Ahogamiento"
+    power: 0
+    type: STATUS
+    element: WATER
+    apCost: 13
+    statusEffect: SLEEP
+  - id: water_weave
+    displayName: "Tejido Acuatico"
+    power: 45
+    type: MAGICAL
+    element: WATER
+    apCost: 11
+  - id: wet_grasp
+    displayName: "Agarre Humedo"
+    power: 35
+    type: PHYSICAL
+    element: WATER
+    apCost: 12
+spawnConditions:
+  biomes:
+    - RIVER
+    - SWAMP
+    - LUKEWARM_OCEAN
+    - FROZEN_RIVER
+  time: NIGHT
+  probability: 0.05

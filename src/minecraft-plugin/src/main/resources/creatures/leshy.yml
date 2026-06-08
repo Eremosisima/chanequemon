@@ -1,0 +1,41 @@
+id: leshy_forest
+displayName: "Leshy"
+loreOrigin: "Folclore eslavo — Tradicion oral pre-cristiana; espiritu del bosque eslavo"
+publicDomainSource: true
+type: SPIRIT
+stats:
+  hp: 80
+  attack: 60
+  defense: 65
+  speed: 70
+affinity: PLANT
+captureRate: 0.09
+summonAnimation: PORTAL
+moves:
+  - id: forest_meld
+    displayName: "Fusion Forestal"
+    power: 0
+    type: STATUS
+    element: PLANT
+    apCost: 14
+  - id: entangling_roots
+    displayName: "Raices Enredantes"
+    power: 40
+    type: MAGICAL
+    element: PLANT
+    apCost: 12
+    statusEffect: PARALYSIS
+  - id: beast_call
+    displayName: "Llamado de la Bestia"
+    power: 50
+    type: PHYSICAL
+    element: BEAST
+    apCost: 10
+spawnConditions:
+  biomes:
+    - OLD_GROWTH_PINE_TAIGA
+    - OLD_GROWTH_SPRUCE_TAIGA
+    - DARK_FOREST
+    - FOREST
+  time: ANY
+  probability: 0.05

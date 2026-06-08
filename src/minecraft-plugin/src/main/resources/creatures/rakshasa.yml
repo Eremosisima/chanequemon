@@ -1,0 +1,40 @@
+id: rakshasa_demon
+displayName: "Rakshasa"
+loreOrigin: "Mitologia hindu — Ramayana de Valmiki (~500 a.C.); demonio cambiaformas"
+publicDomainSource: true
+type: UNDEAD
+stats:
+  hp: 90
+  attack: 75
+  defense: 55
+  speed: 70
+affinity: UNDEAD
+captureRate: 0.06
+summonAnimation: PORTAL
+moves:
+  - id: illusion_face
+    displayName: "Rostro de Ilusion"
+    power: 0
+    type: STATUS
+    element: SPIRIT
+    apCost: 12
+    statusEffect: SLEEP
+  - id: demon_claw
+    displayName: "Garra Demoníaca"
+    power: 55
+    type: PHYSICAL
+    element: UNDEAD
+    apCost: 9
+  - id: shapeshifter_trick
+    displayName: "Truco Cambiaformas"
+    power: 45
+    type: MAGICAL
+    element: SPIRIT
+    apCost: 10
+spawnConditions:
+  biomes:
+    - JUNGLE
+    - DARK_FOREST
+    - CRIMSON_FOREST
+  time: NIGHT
+  probability: 0.03

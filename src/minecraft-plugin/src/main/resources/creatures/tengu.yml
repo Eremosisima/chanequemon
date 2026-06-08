@@ -1,0 +1,39 @@
+id: tengu_karasu
+displayName: "Tengu"
+loreOrigin: "Folclore japones — Kojiki (712 d.C.); criatura mitad cuervo, mitad hombre"
+publicDomainSource: true
+type: SPIRIT
+stats:
+  hp: 70
+  attack: 75
+  defense: 45
+  speed: 90
+affinity: SPIRIT
+captureRate: 0.08
+summonAnimation: PORTAL
+moves:
+  - id: wind_blade
+    displayName: "Cuchilla de Viento"
+    power: 55
+    type: MAGICAL
+    element: AIR
+    apCost: 9
+  - id: martial_arts
+    displayName: "Artes Marciales"
+    power: 50
+    type: PHYSICAL
+    element: BEAST
+    apCost: 10
+  - id: crow_messenger
+    displayName: "Mensajero Cuervo"
+    power: 0
+    type: STATUS
+    element: AIR
+    apCost: 13
+spawnConditions:
+  biomes:
+    - CHERRY_GROVE
+    - BAMBOO_JUNGLE
+    - OLD_GROWTH_PINE_TAIGA
+  time: ANY
+  probability: 0.04

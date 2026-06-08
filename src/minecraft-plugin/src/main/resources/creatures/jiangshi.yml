@@ -1,0 +1,39 @@
+id: jiangshi_hopping
+displayName: "Jiangshi"
+loreOrigin: "Folclore chino — Leyendas de la dinastia Qing (~1644-1912); vampiro saltarin chino"
+publicDomainSource: true
+type: UNDEAD
+stats:
+  hp: 80
+  attack: 60
+  defense: 55
+  speed: 35
+affinity: UNDEAD
+captureRate: 0.12
+summonAnimation: MIST
+moves:
+  - id: vampiric_hop
+    displayName: "Salto Vampirico"
+    power: 50
+    type: PHYSICAL
+    element: UNDEAD
+    apCost: 10
+  - id: chi_drain
+    displayName: "Drenar Chi"
+    power: 40
+    type: MAGICAL
+    element: SPIRIT
+    apCost: 12
+  - id: talisman_fear
+    displayName: "Miedo al Talisman"
+    power: 0
+    type: STATUS
+    element: SPIRIT
+    apCost: 14
+spawnConditions:
+  biomes:
+    - DARK_FOREST
+    - BAMBOO_JUNGLE
+    - TAIGA
+  time: NIGHT
+  probability: 0.05

@@ -1,0 +1,39 @@
+id: phoenix_immortal
+displayName: "Fenix"
+loreOrigin: "Mitologia griega/egipcia — Herodoto, Historias (~440 a.C.); Ovidio, Metamorfosis (8 d.C.)"
+publicDomainSource: true
+type: MYTHIC
+stats:
+  hp: 75
+  attack: 70
+  defense: 40
+  speed: 95
+affinity: FIRE
+captureRate: 0.03
+summonAnimation: PORTAL
+moves:
+  - id: rebirth_flame
+    displayName: "Llama de Renacimiento"
+    power: 70
+    type: MAGICAL
+    element: FIRE
+    apCost: 7
+  - id: solar_flare
+    displayName: "Destello Solar"
+    power: 55
+    type: MAGICAL
+    element: FIRE
+    apCost: 9
+  - id: healing_light
+    displayName: "Luz Curativa"
+    power: 0
+    type: STATUS
+    element: AIR
+    apCost: 16
+spawnConditions:
+  biomes:
+    - DESERT
+    - BADLANDS
+    - SAVANNA
+  time: DAY
+  probability: 0.01

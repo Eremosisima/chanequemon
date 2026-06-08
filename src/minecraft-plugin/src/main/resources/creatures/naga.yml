@@ -1,0 +1,41 @@
+id: naga_serpent
+displayName: "Naga"
+loreOrigin: "Mitologia hindu — Mahabharata (~400 a.C.); serpiente divina guardiana de tesoros"
+publicDomainSource: true
+type: DRAGON
+stats:
+  hp: 85
+  attack: 65
+  defense: 60
+  speed: 65
+affinity: DRAGON
+captureRate: 0.07
+summonAnimation: PORTAL
+moves:
+  - id: venom_spit
+    displayName: "Escupitajo Venenoso"
+    power: 50
+    type: MAGICAL
+    element: DRAGON
+    apCost: 10
+    statusEffect: PARALYSIS
+  - id: coil_constrict
+    displayName: "Constriccion Espiral"
+    power: 55
+    type: PHYSICAL
+    element: DRAGON
+    apCost: 9
+  - id: treasure_guard
+    displayName: "Guardian del Tesoro"
+    power: 0
+    type: STATUS
+    element: EARTH
+    apCost: 14
+spawnConditions:
+  biomes:
+    - JUNGLE
+    - BAMBOO_JUNGLE
+    - SWAMP
+    - LUKEWARM_OCEAN
+  time: ANY
+  probability: 0.04

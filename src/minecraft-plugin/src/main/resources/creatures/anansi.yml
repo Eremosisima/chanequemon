@@ -1,0 +1,40 @@
+id: anansi_spider
+displayName: "Anansi"
+loreOrigin: "Folclore africano (Ashanti/Ghana) — Tradicion oral pre-colonial; el dios arana tramposo"
+publicDomainSource: true
+type: MYTHIC
+stats:
+  hp: 60
+  attack: 45
+  defense: 40
+  speed: 90
+affinity: MYTHIC
+captureRate: 0.08
+summonAnimation: PORTAL
+moves:
+  - id: web_weave
+    displayName: "Tejido de Telaraña"
+    power: 0
+    type: STATUS
+    element: AIR
+    apCost: 12
+    statusEffect: PARALYSIS
+  - id: trickster_bite
+    displayName: "Mordida Tramposa"
+    power: 40
+    type: PHYSICAL
+    element: BEAST
+    apCost: 12
+  - id: story_steal
+    displayName: "Robo de Historias"
+    power: 35
+    type: MAGICAL
+    element: MYTHIC
+    apCost: 13
+spawnConditions:
+  biomes:
+    - JUNGLE
+    - SAVANNA
+    - BAMBOO_JUNGLE
+  time: NIGHT
+  probability: 0.05

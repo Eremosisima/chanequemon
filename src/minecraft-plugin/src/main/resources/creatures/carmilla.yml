@@ -1,0 +1,40 @@
+id: carmilla_vampire
+displayName: "Carmilla"
+loreOrigin: "Sheridan Le Fanu — Carmilla (1872) — Dominio publico; vampiro aristocratico femenino"
+publicDomainSource: true
+type: UNDEAD
+stats:
+  hp: 75
+  attack: 65
+  defense: 45
+  speed: 85
+affinity: UNDEAD
+captureRate: 0.08
+summonAnimation: MIST
+moves:
+  - id: aristocratic_charm
+    displayName: "Encanto Aristocratico"
+    power: 0
+    type: STATUS
+    element: SPIRIT
+    apCost: 13
+    statusEffect: SLEEP
+  - id: blood_lust
+    displayName: "Sed de Sangre"
+    power: 55
+    type: PHYSICAL
+    element: UNDEAD
+    apCost: 9
+  - id: mist_form
+    displayName: "Forma de Niebla"
+    power: 40
+    type: MAGICAL
+    element: UNDEAD
+    apCost: 11
+spawnConditions:
+  biomes:
+    - DARK_FOREST
+    - FOREST
+    - PLAINS
+  time: NIGHT
+  probability: 0.04

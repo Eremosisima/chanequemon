@@ -5,3 +5,12 @@ api-version: 1.21
 author: Erendira Raquel Perales Perez
 description: "Chanequemon — Capture mythological creatures from world folklore. Turn-based RPG. Defensive publication."
 website: https://github.com/eremosisima/Chanequemon
+commands:
+  chanequemon:
+    description: "Comando principal de Chanequemon"
+    usage: "/chanequemon <list|captured|curse|books>"
+    aliases: [chm]
+permissions:
+  chanequemon.use:
+    description: "Permite usar comandos de Chanequemon"
+    default: true

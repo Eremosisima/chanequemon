@@ -1,0 +1,41 @@
+id: mummy_undead
+displayName: "Momia"
+loreOrigin: "Folclore egipcio — practicas funerarias del Antiguo Egipto (~2600 a.C.); literatura gotica del s.XIX"
+publicDomainSource: true
+type: UNDEAD
+stats:
+  hp: 90
+  attack: 65
+  defense: 60
+  speed: 30
+affinity: UNDEAD
+captureRate: 0.10
+summonAnimation: MIST
+moves:
+  - id: desiccating_touch
+    displayName: "Toque Desecante"
+    power: 50
+    type: PHYSICAL
+    element: UNDEAD
+    apCost: 10
+  - id: sandstorm
+    displayName: "Tormenta de Arena"
+    power: 45
+    type: MAGICAL
+    element: EARTH
+    apCost: 11
+  - id: ancient_curse
+    displayName: "Maldicion Ancestral"
+    power: 0
+    type: STATUS
+    element: UNDEAD
+    apCost: 14
+    statusEffect: PARALYSIS
+spawnConditions:
+  biomes:
+    - DESERT
+    - BADLANDS
+  structures:
+    - DESERT_PYRAMID
+  time: NIGHT
+  probability: 0.07

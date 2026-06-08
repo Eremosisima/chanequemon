@@ -1,0 +1,43 @@
+id: anubis_egypt
+displayName: "Anubis"
+loreOrigin: "Mitologia egipcia — Textos de las Piramides (~2400 a.C.); dios del juicio funerario"
+publicDomainSource: true
+type: SPIRIT
+stats:
+  hp: 85
+  attack: 60
+  defense: 70
+  speed: 65
+affinity: SPIRIT
+captureRate: 0.06
+summonAnimation: PORTAL
+moves:
+  - id: soul_weigh
+    displayName: "Pesaje del Alma"
+    power: 55
+    type: MAGICAL
+    element: SPIRIT
+    apCost: 9
+  - id: jackal_strike
+    displayName: "Golpe de Chacal"
+    power: 45
+    type: PHYSICAL
+    element: SPIRIT
+    apCost: 10
+  - id: underworld_guide
+    displayName: "Guia del Inframundo"
+    power: 0
+    type: STATUS
+    element: SPIRIT
+    apCost: 15
+    statusEffect: SLEEP
+spawnConditions:
+  biomes:
+    - DESERT
+    - BADLANDS
+    - SOUL_SAND_VALLEY
+  structures:
+    - DESERT_PYRAMID
+    - STRONGHOLD
+  time: NIGHT
+  probability: 0.03
