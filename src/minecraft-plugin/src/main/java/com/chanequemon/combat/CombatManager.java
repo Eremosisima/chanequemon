@@ -159,7 +159,7 @@ public class CombatManager {
 
         ItemStack curseBook = captureManager.removeCurseBook(player);
         if (curseBook == null) {
-            session.setMessage("No tienes un libro de la Maldicion de la Lesser Key!");
+            session.setMessage("No tienes un grimorio de la Maldicion de Lemegeton!");
             session.setState(CombatSession.State.MAIN);
             gui.openMainCombatScreen(player, session);
             return;

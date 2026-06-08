@@ -33,13 +33,13 @@ public class EnchantmentListener implements Listener {
         ItemStack item = event.getItem();
         if (item == null || item.getType() == Material.AIR) return;
 
-        plugin.getLogger().info(player.getName() + " recibio la Maldicion de la Lesser Key al encantar!");
+        plugin.getLogger().info(player.getName() + " recibio la Maldicion de Lemegeton al encantar!");
 
         ItemStack cursed = curseManager.applyCurseToItem(item);
         event.getInventory().setItem(0, cursed);
 
         player.sendMessage(Component.text("Sientes el peso de un sello antiguo... ", NamedTextColor.DARK_PURPLE)
-            .append(Component.text("Maldicion de la Lesser Key", NamedTextColor.RED))
+            .append(Component.text("Maldicion de Lemegeton", NamedTextColor.RED))
             .append(Component.text(" se ha infundido en tu objeto!", NamedTextColor.DARK_PURPLE)));
     }
 
@@ -56,7 +56,7 @@ public class EnchantmentListener implements Listener {
         block.getWorld().dropItemNaturally(block.getLocation().add(0.5, 0.5, 0.5), curseManager.createCurseBook());
 
         player.sendMessage(Component.text("Encuentras un libro antiguo entre la arena...", NamedTextColor.GOLD));
-        plugin.getLogger().info(player.getName() + " found a Lesser Key curse book in " + type.name());
+        plugin.getLogger().info(player.getName() + " found a Lemegeton curse book in " + type.name());
     }
 
     @EventHandler(priority = EventPriority.HIGHEST)
