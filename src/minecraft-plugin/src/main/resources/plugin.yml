@@ -1,7 +1,7 @@
-name: BestiarioMundial
+name: Chanequemon
 version: 1.0.0
-main: com.bestiario.BestiarioPlugin
+main: com.chanequemon.ChanequemonPlugin
 api-version: 1.21
-author: Public Domain
-description: "Capture mythological creatures in a turn-based RPG. Public domain prior art."
-website: https://github.com/[usuario]/BestiarioMundial
+author: Erendira Raquel Perales Perez
+description: "Chanequemon — Capture mythological creatures from world folklore. Turn-based RPG. Defensive publication."
+website: https://github.com/eremosisima/Chanequemon

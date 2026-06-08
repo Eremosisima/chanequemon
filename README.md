@@ -1,4 +1,4 @@
-# Bestiario Mundial — Defensive Publication
+# Chanequemon — Defensive Publication
 
 **Title:** System and Method for Menu-Based Capture of Mythological Creatures in an Open-World RPG
 
@@ -8,7 +8,7 @@
 
 **Status:** Public Disclosure for Prior Art Purposes
 
-**Repository:** https://github.com/[usuario]/BestiarioMundial (pending)
+**Repository:** https://github.com/eremosisima/Chanequemon
 
 ---
 
@@ -149,7 +149,7 @@ The creature roster draws exclusively from:
 | mermaid | Sirena | Folclore global | ✅ Folclore |
 | cyclops | Cíclope | Mitología griega | ✅ Mitología |
 | oni | Oni | Folclore japonés | ✅ Folclore |
-| basilisk | Basilisco | Bestiario europeo medieval | ✅ Folclore |
+| basilisk | Basilisco | Bestiario medieval europeo | ✅ Folclore |
 
 > **Nota legal sobre vampiros:** El concepto de "vampiro" como criatura folclórica es de dominio público. La representación específica de Drácula de Bram Stoker (1897) también es dominio público. No se utilizarán elementos protegidos por derechos de autor de adaptaciones modernas (películas, juegos, etc.).
 
@@ -344,9 +344,9 @@ Each creature has 1-2 elemental affinities. Moves of a matching affinity deal 1.
 ### 7.1 Architecture (Paper Plugin 1.21.4)
 
 ```
-BestiarioMundialPlugin/
-├── src/main/java/com/bestiario/
-│   ├── BestiarioPlugin.java           // Main class, onEnable/onDisable
+ChanequemonPlugin/
+├── src/main/java/com/chanequemon/
+│   ├── ChanequemonPlugin.java        // Main class, onEnable/onDisable
 │   ├── combat/
 │   │   ├── CombatManager.java         // Turn-based combat loop
 │   │   ├── CombatScreen.java          // GUI menu (chest GUI)
@@ -393,7 +393,7 @@ Sello de Élite: 4× Diamante + 1× Estrella de Nether + 1× Bloque de Cuarzo
 ### 8.1 Architecture
 
 ```
-BestiarioMundial.rbxl
+Chanequemon.rbxl
 ├── ServerScriptService/
 │   ├── CombatHandler.lua           // Turn-based combat server logic
 │   ├── CaptureHandler.lua          // Capture formula execution
@@ -410,7 +410,7 @@ BestiarioMundial.rbxl
 │   │   └── CaptureAnimation
 │   └── SharedTypes.lua             // Type definitions
 └── StarterGui/
-    └── BestiarioGui               // Main game GUI
+    └── ChanequemonGui            // Main game GUI
 ```
 
 Key Roblox-specific considerations:

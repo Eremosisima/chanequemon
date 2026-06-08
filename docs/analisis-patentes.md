@@ -1,4 +1,4 @@
-# Análisis de Patentes — Bestiario Mundial
+# Análisis de Patentes — Chanequemon
 
 ## Patentes de Nintendo Identificadas y Cómo las Evitamos
 
