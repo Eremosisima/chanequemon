@@ -3,11 +3,16 @@ package com.chanequemon.combat;
 import com.chanequemon.enchant.ChanequeCurseManager;
 import com.chanequemon.model.Creature;
 import com.chanequemon.model.CreatureInstance;
+import com.chanequemon.player.PlayerData;
 import com.chanequemon.registry.CreatureRegistry;
 import org.bukkit.Location;
 import org.bukkit.StructureType;
 import org.bukkit.World;
+import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.potion.PotionEffect;
+import org.bukkit.potion.PotionEffectType;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerMoveEvent;
@@ -91,6 +96,10 @@ public class EncounterManager implements Listener {
 
             if (!biomeMatch && !structureMatch) continue;
             if (!checkTime(c, loc)) continue;
+            if (!checkPotionEffects(player, c)) continue;
+            if (!checkPlayerEffects(player, c)) continue;
+            if (!checkEnchantments(player, c)) continue;
+            if (!checkBadOmen(player, c)) continue;
             candidates.add(c);
         }
 
@@ -156,8 +165,81 @@ public class EncounterManager implements Listener {
         return !time.equals("DAY") || !isNight;
     }
 
+    private boolean checkPotionEffects(Player player, Creature creature) {
+        List<String> required = creature.spawnPotionEffects();
+        if (required.isEmpty()) return true;
+        for (String effectName : required) {
+            PotionEffectType type = PotionEffectType.getByName(effectName);
+            if (type == null) return false;
+            if (player.getPotionEffect(type) == null) return false;
+        }
+        return true;
+    }
+
+    private static final Set<String> SUSPICIOUS_STEW_EFFECTS = Set.of(
+        "BLINDNESS", "FIRE_RESISTANCE", "JUMP_BOOST", "NIGHT_VISION",
+        "POISON", "REGENERATION", "SATURATION", "SLOW_FALLING",
+        "SPEED", "STRENGTH", "WATER_BREATHING", "WEAKNESS", "WITHER"
+    );
+
+    private boolean checkPlayerEffects(Player player, Creature creature) {
+        List<String> required = creature.spawnPlayerEffects();
+        if (required.isEmpty()) return true;
+        for (String effectName : required) {
+            if ("SUSPICIOUS_STEW".equals(effectName)) {
+                boolean found = false;
+                for (PotionEffect effect : player.getActivePotionEffects()) {
+                    if (SUSPICIOUS_STEW_EFFECTS.contains(effect.getType().getName())) {
+                        found = true;
+                        break;
+                    }
+                }
+                if (!found) return false;
+            } else {
+                PotionEffectType type = PotionEffectType.getByName(effectName);
+                if (type == null) return false;
+                if (player.getPotionEffect(type) == null) return false;
+            }
+        }
+        return true;
+    }
+
+    private boolean checkEnchantments(Player player, Creature creature) {
+        List<String> required = creature.spawnEnchantments();
+        if (required.isEmpty()) return true;
+        for (String enchName : required) {
+            boolean found = false;
+            for (ItemStack armor : player.getInventory().getArmorContents()) {
+                if (armor != null && !armor.getEnchantments().isEmpty()) {
+                    for (Enchantment e : armor.getEnchantments().keySet()) {
+                        if (e.getKey().getKey().equalsIgnoreCase(enchName)) {
+                            found = true;
+                            break;
+                        }
+                    }
+                }
+                if (found) break;
+            }
+            if (!found) return false;
+        }
+        return true;
+    }
+
+    private boolean checkBadOmen(Player player, Creature creature) {
+        int min = creature.badOmenMin();
+        int max = creature.badOmenMax();
+        if (min <= 0 && max <= 0) return true;
+        PotionEffect badOmen = player.getPotionEffect(PotionEffectType.BAD_OMEN);
+        if (badOmen == null) return false;
+        int level = badOmen.getAmplifier() + 1;
+        return level >= min && level <= max;
+    }
+
     private CreatureInstance createStarterCreature(Player player) {
-        Creature starter = registry.get("vampire_dracula");
+        Creature starter = registry.get("espiritu_vinculante");
+        if (starter == null) {
+            starter = registry.get("vampire_dracula");
+        }
         if (starter == null && !registry.all().isEmpty()) {
             starter = registry.all().iterator().next();
         }
@@ -166,7 +248,11 @@ public class EncounterManager implements Listener {
                 "SPIRIT", Map.of("hp", 60, "attack", 40, "defense", 40, "speed", 50),
                 "SPIRIT", 0.2, "PORTAL", List.of(), Map.of(), List.of());
         }
-        return new CreatureInstance(starter, false);
+        CreatureInstance instance = new CreatureInstance(starter, false);
+        PlayerData data = ((com.chanequemon.ChanequemonPlugin)plugin).playerDataManager().get(player);
+        int[] prog = data.getProgression(starter.id());
+        instance.setPersistentData(prog[0], prog[1], prog[2]);
+        return instance;
     }
 
     private record StructureCacheEntry(Location location, Set<String> structures, long timestamp) {}

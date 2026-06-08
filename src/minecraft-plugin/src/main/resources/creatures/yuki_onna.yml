@@ -40,3 +40,6 @@ spawnConditions:
     - FROZEN_PEAKS
   time: NIGHT
   probability: 0.04
+  conditions:
+    enchantments:
+      - FROST_WALKER

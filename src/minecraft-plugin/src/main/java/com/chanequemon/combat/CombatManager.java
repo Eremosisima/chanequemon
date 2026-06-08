@@ -3,6 +3,8 @@ package com.chanequemon.combat;
 import com.chanequemon.capture.CaptureManager;
 import com.chanequemon.enchant.ChanequeCurseManager;
 import com.chanequemon.model.*;
+import net.kyori.adventure.text.Component;
+import net.kyori.adventure.text.format.NamedTextColor;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
@@ -67,8 +69,12 @@ public class CombatManager {
         session.setState(CombatSession.State.ANIMATING);
         executeMove(attacker, move, moveIndex, session.wildCreature(), session);
         attacker.useAp(moveIndex);
+        session.wildCreature().processStatusEndOfTurn();
 
         if (session.wildCreature().isFainted()) {
+            awardXp(attacker, session.wildCreature());
+            saveProgression(player, attacker);
+            autoCaptureIfBinder(player, attacker, session.wildCreature());
             session.setMessage("Has vencido a " + session.wildCreature().template().displayName() + "!");
             session.setState(CombatSession.State.ENDED);
             endBattle(player);
@@ -76,6 +82,7 @@ public class CombatManager {
         }
 
         if (session.playerCreature().isFainted()) {
+            playerFaintCleanup(player, session.playerCreature());
             session.setMessage("Tu " + session.playerCreature().template().displayName() + " ha sido vencido!");
             session.setState(CombatSession.State.ENDED);
             endBattle(player);
@@ -92,6 +99,23 @@ public class CombatManager {
         CreatureInstance wild = session.wildCreature();
         if (wild.isFainted()) {
             endBattle(player);
+            return;
+        }
+
+        session.playerCreature().processStatusEndOfTurn();
+        if (session.playerCreature().isFainted()) {
+            session.setMessage("Tu " + session.playerCreature().template().displayName() + " ha sido vencido!");
+            session.setState(CombatSession.State.ENDED);
+            endBattle(player);
+            return;
+        }
+
+        if (!session.playerCreature().canAct()) {
+            session.setMessage("Tu " + session.playerCreature().template().displayName()
+                + " esta en " + session.playerCreature().statusEffect() + " y no puede moverse!");
+            session.setPlayerTurn(true);
+            session.setState(CombatSession.State.MAIN);
+            gui.openMainCombatScreen(player, session);
             return;
         }
 
@@ -144,6 +168,48 @@ public class CombatManager {
             session.setMessage(session.message() + " " + defender.template().displayName()
                 + " ahora tiene " + move.statusEffect() + "!");
         }
+    }
+
+    private void awardXp(CreatureInstance winner, CreatureInstance loser) {
+        int totalBase = loser.template().baseHp() + loser.template().baseAttack()
+            + loser.template().baseDefense() + loser.template().baseSpeed()
+            + loser.template().baseLck() + loser.template().baseWis();
+        int xpGain = (int) (totalBase * (0.10 + Math.random() * 0.10));
+        winner.gainXp(xpGain);
+    }
+
+    private void autoCaptureIfBinder(Player player, CreatureInstance binder, CreatureInstance wild) {
+        if (!"espiritu_vinculante".equals(binder.template().id())) return;
+        ItemStack curseBook = curseManager.findCurseBookWithBinder(player);
+        if (curseBook == null) return;
+        int level = captureManager.getCreatureLevel(wild);
+        ItemStack capturedBook = curseManager.createCapturedBook(curseBook, wild, level);
+        curseBook.setAmount(curseBook.getAmount() - 1);
+        if (curseBook.getAmount() <= 0) {
+            player.getInventory().remove(curseBook);
+        }
+        player.getInventory().addItem(capturedBook);
+        com.chanequemon.player.PlayerData data = ((com.chanequemon.ChanequemonPlugin)plugin)
+            .playerDataManager().get(player);
+        data.addCaptured(wild.template().id());
+        plugin.getLogger().info(player.getName() + " auto-captured " + wild.template().id() + " via binder");
+    }
+
+    private void playerFaintCleanup(Player player, CreatureInstance creature) {
+        String id = creature.template().id();
+        if ("espiritu_vinculante".equals(id)) {
+            curseManager.setBinderCooldown(player, System.currentTimeMillis() + 300000);
+            player.sendMessage(Component.text("Tu Espiritu Vinculante se ha desvanecido. 5 min de reuso.", NamedTextColor.GRAY));
+        } else {
+            curseManager.removeBookFromInventory(player, id);
+            player.sendMessage(Component.text("El libro de " + creature.template().displayName() + " se ha desintegrado!", NamedTextColor.RED));
+        }
+    }
+
+    private void saveProgression(Player player, CreatureInstance creature) {
+        com.chanequemon.player.PlayerData data = ((com.chanequemon.ChanequemonPlugin)plugin)
+            .playerDataManager().get(player);
+        data.setProgression(creature.template().id(), creature.battleLevel(), creature.xp(), creature.statBonus());
     }
 
     private void scheduleWildTurn(CombatSession session, Player player) {

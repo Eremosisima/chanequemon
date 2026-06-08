@@ -1,6 +1,7 @@
 package com.chanequemon;
 
 import com.chanequemon.enchant.ChanequeCurseManager;
+import com.chanequemon.item.ChanequeGuideBook;
 import com.chanequemon.model.Creature;
 import com.chanequemon.player.PlayerData;
 import net.kyori.adventure.text.Component;
@@ -33,6 +34,7 @@ public class ChanequemonCommand implements CommandExecutor {
             sender.sendMessage(Component.text("/chanequemon list — lista de criaturas", NamedTextColor.GRAY));
             sender.sendMessage(Component.text("/chanequemon captured — tus capturas", NamedTextColor.GRAY));
             sender.sendMessage(Component.text("/chanequemon curse — obtener grimorio de Lemegeton Clavicula", NamedTextColor.DARK_PURPLE));
+            sender.sendMessage(Component.text("/chanequemon guia — guia de habitats y condiciones", NamedTextColor.GREEN));
             sender.sendMessage(Component.text("/chanequemon books — ver libros de criaturas", NamedTextColor.AQUA));
             sender.sendMessage(Component.text("/chanequemon invocar — invoca la criatura del libro en mano", NamedTextColor.GOLD));
             sender.sendMessage(Component.text("/chanequemon regresar — devuelve la criatura a su libro", NamedTextColor.GOLD));
@@ -61,6 +63,12 @@ public class ChanequemonCommand implements CommandExecutor {
                     String name = c != null ? c.displayName() : id;
                     sender.sendMessage(Component.text("  " + name, NamedTextColor.AQUA));
                 }
+            }
+            case "guia" -> {
+                if (!isPlayer) { sender.sendMessage("Solo jugadores."); return true; }
+                Player player = (Player) sender;
+                player.getInventory().addItem(ChanequeGuideBook.create(plugin.creatureRegistry().all()));
+                sender.sendMessage(Component.text("Guia de Crianza de Chanequemon agregada a tu inventario.", NamedTextColor.GREEN));
             }
             case "curse" -> {
                 if (!isPlayer) { sender.sendMessage("Solo jugadores."); return true; }

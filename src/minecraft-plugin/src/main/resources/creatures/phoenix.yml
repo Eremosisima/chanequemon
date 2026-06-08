@@ -56,3 +56,6 @@ spawnConditions:
     - SAVANNA
   time: DAY
   probability: 0.01
+  conditions:
+    potion_effects:
+      - REGENERATION

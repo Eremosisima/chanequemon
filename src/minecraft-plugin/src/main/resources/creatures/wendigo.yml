@@ -39,3 +39,6 @@ spawnConditions:
     - ICE_SPIKES
   time: NIGHT
   probability: 0.03
+  conditions:
+    player_effects:
+      - HUNGER

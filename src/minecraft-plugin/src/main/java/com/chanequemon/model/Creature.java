@@ -15,6 +15,8 @@ public class Creature {
     private final int baseAttack;
     private final int baseDefense;
     private final int baseSpeed;
+    private final int baseLck;
+    private final int baseWis;
     private final double captureRate;
     private final String summonAnimation;
     private final List<Move> moves;
@@ -22,6 +24,11 @@ public class Creature {
     private final String spawnTime;
     private final double spawnProbability;
     private final List<String> spawnStructures;
+    private final List<String> spawnPotionEffects;
+    private final List<String> spawnPlayerEffects;
+    private final List<String> spawnEnchantments;
+    private final int badOmenMin;
+    private final int badOmenMax;
     private final List<SupportAbility> supportAbilities;
 
     @SuppressWarnings("unchecked")
@@ -41,6 +48,8 @@ public class Creature {
         this.baseAttack = intOr(statsRaw.get("attack"), 50);
         this.baseDefense = intOr(statsRaw.get("defense"), 50);
         this.baseSpeed = intOr(statsRaw.get("speed"), 50);
+        this.baseLck = intOr(statsRaw.get("lck"), 10);
+        this.baseWis = intOr(statsRaw.get("wis"), 10);
         this.captureRate = captureRate;
         this.summonAnimation = summonAnimation;
 
@@ -59,6 +68,10 @@ public class Creature {
             }
         }
 
+        List<String> pe = List.of();
+        List<String> ench = List.of();
+        int boMin = 0, boMax = 0;
+
         if (spawnConditions != null && !spawnConditions.isEmpty()) {
             Object biomesObj = spawnConditions.get("biomes");
             List<String> biomes = biomesObj instanceof List ? (List<String>) biomesObj : List.of();
@@ -69,12 +82,39 @@ public class Creature {
             this.spawnStructures = structsObj instanceof List
                 ? ((List<String>) structsObj).stream().map(s -> s.toUpperCase()).toList()
                 : List.of();
+            Object condsObj = spawnConditions.get("conditions");
+            if (condsObj instanceof Map conds) {
+                Object peObj = conds.get("potion_effects");
+                this.spawnPotionEffects = peObj instanceof List
+                    ? ((List<String>) peObj).stream().map(String::toUpperCase).toList()
+                    : List.of();
+                Object playerEffObj = conds.get("player_effects");
+                pe = playerEffObj instanceof List
+                    ? ((List<String>) playerEffObj).stream().map(String::toUpperCase).toList()
+                    : List.of();
+                Object enchObj = conds.get("enchantments");
+                ench = enchObj instanceof List
+                    ? ((List<String>) enchObj).stream().map(String::toUpperCase).toList()
+                    : List.of();
+                Object boObj = conds.get("bad_omen_level");
+                if (boObj instanceof Map boMap) {
+                    boMin = intOr(boMap.get("min"), 0);
+                    boMax = intOr(boMap.get("max"), 5);
+                }
+            } else {
+                this.spawnPotionEffects = List.of();
+            }
         } else {
             this.spawnBiomes = List.of();
             this.spawnTime = "ANY";
             this.spawnProbability = 0.05;
             this.spawnStructures = List.of();
+            this.spawnPotionEffects = List.of();
         }
+        this.spawnPlayerEffects = pe;
+        this.spawnEnchantments = ench;
+        this.badOmenMin = boMin;
+        this.badOmenMax = boMax;
 
         this.supportAbilities = new ArrayList<>();
         if (supportMaps != null) {
@@ -94,6 +134,8 @@ public class Creature {
     public int baseAttack() { return baseAttack; }
     public int baseDefense() { return baseDefense; }
     public int baseSpeed() { return baseSpeed; }
+    public int baseLck() { return baseLck; }
+    public int baseWis() { return baseWis; }
     public double captureRate() { return captureRate; }
     public String summonAnimation() { return summonAnimation; }
     public List<Move> moves() { return moves; }
@@ -101,10 +143,17 @@ public class Creature {
     public String spawnTime() { return spawnTime; }
     public double spawnProbability() { return spawnProbability; }
     public List<String> spawnStructures() { return spawnStructures; }
+    public List<String> spawnPotionEffects() { return spawnPotionEffects; }
+    public List<String> spawnPlayerEffects() { return spawnPlayerEffects; }
+    public List<String> spawnEnchantments() { return spawnEnchantments; }
+    public int badOmenMin() { return badOmenMin; }
+    public int badOmenMax() { return badOmenMax; }
     public List<SupportAbility> supportAbilities() { return supportAbilities; }
 
     public boolean hasSpawnConditions() {
-        return !spawnBiomes.isEmpty() || !spawnStructures.isEmpty();
+        return !spawnBiomes.isEmpty() || !spawnStructures.isEmpty()
+            || !spawnPotionEffects.isEmpty() || !spawnPlayerEffects.isEmpty()
+            || !spawnEnchantments.isEmpty() || badOmenMin > 0;
     }
 
     private static Element safeParseElement(String s) {

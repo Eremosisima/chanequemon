@@ -13,6 +13,7 @@ public class CreatureRegistry {
     private final Random rng = new Random();
 
     private static final String[] DEFAULT_CREATURES = {
+        "espiritu_vinculante.yml",
         "ammit.yml", "anansi.yml", "anubis.yml",
         "baba_yaga.yml", "banshee.yml", "basilisk.yml", "bastet.yml", "behemoth.yml",
         "black_shuck.yml",

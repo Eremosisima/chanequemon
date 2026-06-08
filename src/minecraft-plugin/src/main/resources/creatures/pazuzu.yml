@@ -38,3 +38,7 @@ spawnConditions:
     - SOUL_SAND_VALLEY
   time: NIGHT
   probability: 0.02
+  conditions:
+    bad_omen_level:
+      min: 1
+      max: 3

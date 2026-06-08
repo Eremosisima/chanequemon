@@ -18,6 +18,12 @@ support:
     radius: 12
     target: MOBS
     description: "El triple aullido de Cerbero paraliza de miedo a los enemigos cercanos"
+  - aura: DEBUFF
+    effect: FEAR
+    amplifier: 0
+    radius: 12
+    target: MOBS
+    description: "El aullido de Cerbero siembra el panico entre las criaturas cercanas, haciendo que huyan"
   - aura: BUFF
     effect: STRENGTH
     amplifier: 0

@@ -1,0 +1,30 @@
+id: espiritu_vinculante
+displayName: "Espiritu Vinculante"
+loreOrigin: "El nexo entre el portador del Lemegeton y las criaturas atrapadas en sus paginas"
+publicDomainSource: true
+type: SPIRIT
+stats:
+  hp: 180
+  attack: 5
+  defense: 5
+  speed: 10
+  lck: 5
+  wis: 25
+affinity: SPIRIT
+captureRate: 1.0
+summonAnimation: PORTAL
+support: []
+moves:
+  - id: bind
+    displayName: "Vinculo de Salomon"
+    power: 10
+    type: MAGICAL
+    element: SPIRIT
+    apCost: 5
+  - id: spirit_touch
+    displayName: "Toque Espiritual"
+    power: 5
+    type: PHYSICAL
+    element: SPIRIT
+    apCost: 3
+spawnConditions: {}

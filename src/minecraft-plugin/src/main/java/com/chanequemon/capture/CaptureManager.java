@@ -2,6 +2,7 @@ package com.chanequemon.capture;
 
 import com.chanequemon.enchant.ChanequeCurseManager;
 import com.chanequemon.model.CreatureInstance;
+import com.chanequemon.util.FibUtil;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -28,10 +29,10 @@ public class CaptureManager {
 
     public String getDifficultyLabel(CreatureInstance creature) {
         int level = getCreatureLevel(creature);
-        if (level <= 5) return "Facil";
-        if (level <= 10) return "Media";
-        if (level <= 18) return "Dificil";
-        if (level <= 25) return "Muy Dificil";
+        if (level <= 3) return "Facil";
+        if (level <= 5) return "Media";
+        if (level <= 8) return "Dificil";
+        if (level <= 13) return "Muy Dificil";
         return "Legendaria";
     }
 
@@ -41,7 +42,7 @@ public class CaptureManager {
             ? creature.template().captureRate() : BASE_CAPTURE_RATE;
         double hpFactor = 1.0 - (1.0 - creature.hpRatio()) * 0.5;
         double statusBonus = creature.statusEffect() != null ? 0.15 : 0.0;
-        double levelResistance = Math.max(0.05, 1.0 - (level * 0.03));
+        double levelResistance = Math.max(0.05, 1.0 - FibUtil.fibLog2(level) * 0.04);
         double threshold = rate * hpFactor * (1.0 + statusBonus) * levelResistance;
         return rng.nextDouble() < threshold;
     }
@@ -84,7 +85,7 @@ public class CaptureManager {
             ? creature.template().captureRate() : BASE_CAPTURE_RATE;
         double hpFactor = 1.0 - (1.0 - creature.hpRatio()) * 0.5;
         double statusBonus = creature.statusEffect() != null ? 0.15 : 0.0;
-        double levelResistance = Math.max(0.05, 1.0 - (level * 0.03));
+        double levelResistance = Math.max(0.05, 1.0 - FibUtil.fibLog2(level) * 0.04);
         return rate * hpFactor * (1.0 + statusBonus) * levelResistance;
     }
 }

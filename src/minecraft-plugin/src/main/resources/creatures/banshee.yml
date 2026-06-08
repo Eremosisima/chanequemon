@@ -38,3 +38,6 @@ spawnConditions:
     - PLAINS
   time: NIGHT
   probability: 0.05
+  conditions:
+    player_effects:
+      - SUSPICIOUS_STEW

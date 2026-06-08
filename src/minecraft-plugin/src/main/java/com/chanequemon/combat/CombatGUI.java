@@ -57,10 +57,11 @@ public class CombatGUI implements Listener {
         for (int i = 27; i <= 35; i++) inv.setItem(i, filler());
 
         // Row 4: Player creature
-        inv.setItem(36, creatureHead(playerC, session.playerCreature(), true));
-        fillHpBar(inv, 37, 44, session.playerCreature().hpRatio());
-        inv.setItem(45, label(playerC.displayName(), NamedTextColor.AQUA));
-        inv.setItem(53, label("HP: " + session.playerCreature().hp() + "/" + session.playerCreature().maxHp(), NamedTextColor.GREEN));
+        CreatureInstance pc = session.playerCreature();
+        inv.setItem(36, creatureHead(playerC, pc, true));
+        fillHpBar(inv, 37, 44, pc.hpRatio());
+        inv.setItem(45, label(playerC.displayName() + " Nv." + pc.battleLevel(), NamedTextColor.AQUA));
+        inv.setItem(53, label("HP: " + pc.hp() + "/" + pc.maxHp(), NamedTextColor.GREEN));
 
         // Row 5: Action buttons
         inv.setItem(47, button(Material.DIAMOND_SWORD, "PELEAR", NamedTextColor.RED));
@@ -246,7 +247,24 @@ public class CombatGUI implements Listener {
         lore.add(Component.text("Tipo: " + template.type(), NamedTextColor.GRAY));
         lore.add(Component.text("HP: " + instance.hp() + "/" + instance.maxHp(), NamedTextColor.GREEN));
         if (instance.statusEffect() != null && !instance.statusEffect().isEmpty()) {
-            lore.add(Component.text("Estado: " + instance.statusEffect(), NamedTextColor.LIGHT_PURPLE));
+            String mech = switch (instance.statusEffect().toUpperCase()) {
+                case "SLEEP" -> " (50% dormido)";
+                case "PARALYSIS" -> " (Velocidad/2, 25% paralisis)";
+                case "POISON" -> " (Dano por turno: 1/8 HP)";
+                case "BURN" -> " (Ataque/2, dano 1/16 HP)";
+                default -> "";
+            };
+            lore.add(Component.text("Estado: " + instance.statusEffect() + mech, NamedTextColor.LIGHT_PURPLE));
+        }
+        if (playerOwned) {
+            int xp = instance.xp();
+            int next = instance.xpToNextLevel();
+            lore.add(Component.text("XP: " + xp + "/" + next, NamedTextColor.DARK_AQUA));
+            if (next > 0) {
+                int pct = Math.min(100, xp * 100 / next);
+                lore.add(Component.text("Progreso: " + pct + "%", NamedTextColor.GRAY));
+            }
+            lore.add(Component.text("Potenciador: +" + instance.statBonus(), NamedTextColor.GOLD));
         }
         lore.add(Component.text("Origen: " + template.loreOrigin(), NamedTextColor.DARK_GRAY));
         meta.lore(lore);

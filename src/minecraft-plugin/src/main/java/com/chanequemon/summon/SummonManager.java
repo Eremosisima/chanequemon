@@ -5,16 +5,16 @@ import com.chanequemon.model.Creature;
 import com.chanequemon.model.Element;
 import com.chanequemon.model.SupportAbility;
 import com.chanequemon.registry.CreatureRegistry;
+import com.chanequemon.util.FibUtil;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.NamedTextColor;
 import net.kyori.adventure.text.format.TextDecoration;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
-import org.bukkit.NamespacedKey;
 import org.bukkit.Particle;
 import org.bukkit.Sound;
-import org.bukkit.attribute.Attribute;
 import org.bukkit.entity.*;
+import org.bukkit.util.Vector;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
@@ -66,6 +66,7 @@ public class SummonManager implements Listener {
         EFFECT_MAP.put("ABSORPTION", PotionEffectType.ABSORPTION);
         EFFECT_MAP.put("DOLPHINS_GRACE", PotionEffectType.DOLPHINS_GRACE);
         EFFECT_MAP.put("DARKNESS", PotionEffectType.DARKNESS);
+        EFFECT_MAP.put("MINING_FATIGUE", PotionEffectType.SLOW_DIGGING);
     }
 
     private static final Set<Creature> PHOENIX_CACHE = new HashSet<>();
@@ -117,8 +118,36 @@ public class SummonManager implements Listener {
         player.playSound(player.getLocation(), Sound.ITEM_TOTEM_USE, 1.0, 1.0);
 
         Creature creature = registry.get(summon.creatureId);
+        String name = creature != null ? creature.displayName() : "Fenix";
+
+        ItemStack book = null;
+        int slot = -1;
+        for (int i = 0; i < player.getInventory().getSize(); i++) {
+            ItemStack item = player.getInventory().getItem(i);
+            if (item != null && curseManager.isCapturedBook(item)
+                && summon.creatureId.equals(curseManager.getCapturedCreatureId(item))) {
+                book = item;
+                slot = i;
+                break;
+            }
+        }
+
+        if (book != null) {
+            int newLevel = curseManager.decrementCapturedCreatureLevel(book);
+            if (newLevel == -1) {
+                player.getInventory().setItem(slot, null);
+                player.sendMessage(Component.text("Tu libro de ", NamedTextColor.RED)
+                    .append(Component.text(name, NamedTextColor.AQUA))
+                    .append(Component.text(" se ha desintegrado!", NamedTextColor.RED)));
+            } else {
+                player.sendMessage(Component.text("Tu ", NamedTextColor.GOLD)
+                    .append(Component.text(name, NamedTextColor.AQUA))
+                    .append(Component.text(" ha perdido un nivel (Nivel " + newLevel + " restante).", NamedTextColor.GOLD)));
+            }
+        }
+
         player.sendMessage(Component.text("Tu ", NamedTextColor.GOLD)
-            .append(Component.text(creature != null ? creature.displayName() : "Fenix", NamedTextColor.AQUA))
+            .append(Component.text(name, NamedTextColor.AQUA))
             .append(Component.text(" se ha sacrificado para salvarte!", NamedTextColor.GOLD)));
 
         dismissSummon(player);
@@ -192,7 +221,14 @@ public class SummonManager implements Listener {
         if (ownerId != null) {
             Player owner = Bukkit.getPlayer(ownerId);
             if (owner != null) {
-                owner.sendMessage(Component.text("Tu criatura invocada ha muerto!", NamedTextColor.RED));
+                String creatureId = getSummonCreature(entity);
+                if ("espiritu_vinculante".equals(creatureId)) {
+                    curseManager.setBinderCooldown(owner, System.currentTimeMillis() + 300000);
+                    owner.sendMessage(Component.text("Tu Espiritu Vinculante se ha desvanecido. Espera 5 min.", NamedTextColor.GRAY));
+                } else {
+                    curseManager.removeBookFromInventory(owner, creatureId);
+                    owner.sendMessage(Component.text("Tu criatura invocada ha muerto! Su libro se ha desintegrado.", NamedTextColor.RED));
+                }
             }
             cleanupSummon(entity.getUniqueId());
         }
@@ -243,13 +279,14 @@ public class SummonManager implements Listener {
             .append(Component.text(creature.displayName(), NamedTextColor.AQUA))
             .append(Component.text("!", NamedTextColor.GOLD)));
 
+        int level = curseManager.getCapturedCreatureLevel(book);
         int ampBonus = curseManager.getAuraAmplifierBonus(book);
         int radBonus = curseManager.getAuraRadiusBonus(book);
         int spdBonus = curseManager.getAuraSpeedBonus(book);
         boolean isPhoenix = creature.id().toLowerCase().contains("phoenix")
             || creature.displayName().toLowerCase().contains("fenix");
 
-        UUID taskId = startAuraTask(player, creature, entity, ampBonus, radBonus, spdBonus);
+        UUID taskId = startAuraTask(player, creature, entity, ampBonus, radBonus, spdBonus, level);
         activeSummons.put(player.getUniqueId(),
             new SummonedCreature(player.getUniqueId(), creature.id(), entity.getUniqueId(), taskId, isPhoenix));
     }
@@ -275,7 +312,7 @@ public class SummonManager implements Listener {
 
     // ─── Aura Task ──────────────────────────────────────────────────────
     private UUID startAuraTask(Player player, Creature creature, Entity entity,
-                                int ampBonus, int radBonus, int spdBonus) {
+                                int ampBonus, int radBonus, int spdBonus, int level) {
         List<SupportAbility> abilities = creature.supportAbilities();
         if (abilities.isEmpty()) {
             List<SupportAbility> fallback = DEFAULT_SUPPORT.get(creature.affinity());
@@ -301,14 +338,27 @@ public class SummonManager implements Listener {
             Location eLoc = entity.getLocation();
             for (SupportAbility ab : finalAbilities) {
                 String effectName = ab.effect().toUpperCase();
+                int fibVal = FibUtil.fibLog2(level);
+                int rad = ab.radius() + radBonus + fibVal * 2;
 
                 if ("IMMORTALITY".equals(effectName)) continue;
+                if ("FEAR".equals(effectName)) {
+                    for (Entity nearby : eLoc.getWorld().getNearbyEntities(eLoc, rad, rad, rad)) {
+                        if (nearby instanceof Mob mob && !(nearby instanceof Player)) {
+                            mob.setTarget(null);
+                            Vector away = mob.getLocation().toVector().subtract(eLoc.toVector()).normalize();
+                            Location fleeTo = mob.getLocation().add(away.multiply(15));
+                            fleeTo.setY(mob.getLocation().getY());
+                            mob.getPathfinder().moveTo(fleeTo, 1.5);
+                        }
+                    }
+                    continue;
+                }
 
                 PotionEffectType effectType = EFFECT_MAP.get(effectName);
                 if (effectType == null) continue;
 
-                int amp = ab.amplifier() + ampBonus;
-                int rad = ab.radius() + radBonus;
+                int amp = ab.amplifier() + ampBonus + fibVal;
 
                 if (ab.isBuff()) {
                     if ("PLAYER".equalsIgnoreCase(ab.target()) || "ALLIES".equalsIgnoreCase(ab.target())) {

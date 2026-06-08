@@ -25,9 +25,14 @@ public class ChanequeCurseManager {
     private static final long COOLDOWN_CURSED_MS = 800;
 
     private final JavaPlugin plugin;
+    public static final String BINDER_ID = "espiritu_vinculante";
+    private static final long BINDER_COOLDOWN_MS = 300000;
+
     private final NamespacedKey curseKey;
     private final NamespacedKey curseBookKey;
     private final NamespacedKey capturedCreatureKey;
+    private final NamespacedKey creatureLevelKey;
+    private final NamespacedKey hasBinderKey;
     private final Random rng = new Random();
 
     private static final Map<Enchantment, String> ENCHANT_AURA_MAP = Map.of(
@@ -44,6 +49,8 @@ public class ChanequeCurseManager {
         this.curseKey = new NamespacedKey(plugin, "chaneque_curse");
         this.curseBookKey = new NamespacedKey(plugin, "chaneque_curse_book");
         this.capturedCreatureKey = new NamespacedKey(plugin, "captured_creature");
+        this.creatureLevelKey = new NamespacedKey(plugin, "creature_level");
+        this.hasBinderKey = new NamespacedKey(plugin, "has_binder");
     }
 
     public NamespacedKey curseKey() { return curseKey; }
@@ -113,6 +120,7 @@ public class ChanequeCurseManager {
             Component.text("para sellar su escencia con el Sello de Salomon.", NamedTextColor.DARK_PURPLE)
         ));
         meta.getPersistentDataContainer().set(curseBookKey, PersistentDataType.BOOLEAN, true);
+        meta.getPersistentDataContainer().set(hasBinderKey, PersistentDataType.BOOLEAN, true);
         meta.addEnchant(Enchantment.MENDING, 1, true);
         meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
         book.setItemMeta(meta);
@@ -136,12 +144,38 @@ public class ChanequeCurseManager {
         return result;
     }
 
+    public int getCapturedCreatureLevel(ItemStack book) {
+        if (!isCapturedBook(book)) return 1;
+        return book.getItemMeta().getPersistentDataContainer()
+            .getOrDefault(creatureLevelKey, PersistentDataType.INTEGER, 1);
+    }
+
+    public void setCapturedCreatureLevel(ItemStack book, int level) {
+        if (!isCapturedBook(book)) return;
+        ItemMeta meta = book.getItemMeta();
+        meta.getPersistentDataContainer().set(creatureLevelKey, PersistentDataType.INTEGER, level);
+        List<Component> lore = meta.lore();
+        if (lore != null && lore.size() > 0) {
+            lore.set(0, Component.text("Nivel " + level, NamedTextColor.DARK_GREEN));
+            meta.lore(lore);
+        }
+        book.setItemMeta(meta);
+    }
+
+    public int decrementCapturedCreatureLevel(ItemStack book) {
+        int current = getCapturedCreatureLevel(book);
+        if (current <= 1) return -1;
+        setCapturedCreatureLevel(book, current - 1);
+        return current - 1;
+    }
+
     public ItemStack createCapturedBook(ItemStack curseBook, CreatureInstance creature, int level) {
         ItemStack book = new ItemStack(Material.WRITTEN_BOOK);
         book.setAmount(1);
         ItemMeta meta = book.getItemMeta();
 
         meta.getPersistentDataContainer().set(capturedCreatureKey, PersistentDataType.STRING, creature.template().id());
+        meta.getPersistentDataContainer().set(creatureLevelKey, PersistentDataType.INTEGER, level);
 
         meta.displayName(Component.text("Esencia de ", NamedTextColor.GOLD)
             .append(Component.text(creature.template().displayName(), NamedTextColor.AQUA, TextDecoration.BOLD)));
@@ -199,6 +233,58 @@ public class ChanequeCurseManager {
             if ("SPEED".equals(auraType)) bonus += e.getValue() * 5;
         }
         return bonus;
+    }
+
+    public boolean hasBinder(ItemStack book) {
+        if (book == null || !book.hasItemMeta()) return false;
+        return book.getItemMeta().getPersistentDataContainer()
+            .has(hasBinderKey, PersistentDataType.BOOLEAN);
+    }
+
+    public void setHasBinder(ItemStack book, boolean has) {
+        if (book == null || !book.hasItemMeta()) return;
+        ItemMeta meta = book.getItemMeta();
+        if (has) {
+            meta.getPersistentDataContainer().set(hasBinderKey, PersistentDataType.BOOLEAN, true);
+        } else {
+            meta.getPersistentDataContainer().remove(hasBinderKey);
+        }
+        book.setItemMeta(meta);
+    }
+
+    public long getBinderCooldown(Player player) {
+        return player.getPersistentDataContainer()
+            .getOrDefault(new NamespacedKey(plugin, "binder_cooldown"), PersistentDataType.LONG, 0L);
+    }
+
+    public void setBinderCooldown(Player player, long cooldownUntil) {
+        player.getPersistentDataContainer()
+            .set(new NamespacedKey(plugin, "binder_cooldown"), PersistentDataType.LONG, cooldownUntil);
+    }
+
+    public boolean isBinderReady(Player player) {
+        return System.currentTimeMillis() >= getBinderCooldown(player);
+    }
+
+    public boolean removeBookFromInventory(Player player, String creatureId) {
+        for (int i = 0; i < player.getInventory().getSize(); i++) {
+            ItemStack item = player.getInventory().getItem(i);
+            if (item != null && isCapturedBook(item)
+                && creatureId.equals(getCapturedCreatureId(item))) {
+                player.getInventory().setItem(i, null);
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public ItemStack findCurseBookWithBinder(Player player) {
+        for (ItemStack item : player.getInventory().getContents()) {
+            if (item != null && isCurseBook(item) && hasBinder(item)) {
+                return item;
+            }
+        }
+        return null;
     }
 
     public boolean rollEnchantTableCurse() {
