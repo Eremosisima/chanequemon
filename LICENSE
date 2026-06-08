@@ -1,7 +1,19 @@
-CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
+# BestiarioMundial — Dual Licensing
 
-The person who associated a work with this deed has dedicated the work to the public domain by waiving all of his or her rights to the work worldwide under copyright law, including all related and neighboring rights, to the extent allowed by law.
+## Documentation (README.md, docs/, GUIA-PUBLICACION.md)
+**CC0 1.0 Universal (Public Domain Dedication)**
 
-You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission.
+Estos archivos constituyen una **publicación defensiva** (prior art) y están dedicados al dominio público. Cualquier persona puede copiarlos, modificarlos, distribuirlos y usarlos, incluso comercialmente, sin pedir permiso.
 
 https://creativecommons.org/publicdomain/zero/1.0/
+
+## Source Code (src/ y todos los archivos de implementación)
+**All Rights Reserved © Erendira Raquel Perales Perez**
+
+El código fuente del plugin está reservado. No se concede permiso para copiar, modificar, distribuir o usar el código sin autorización expresa por escrito del autor. El código se incluye en este repositorio únicamente como referencia para la publicación defensiva.
+
+**Excepción:** El código de terceros (dependencias Maven, Paper API, etc.) mantiene sus respectivas licencias originales.
+
+---
+
+Para licencias comerciales o permisos, contactar a: ere_2120@hotmail.com
