@@ -17,7 +17,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import java.util.*;
 
 public class ChanequeCurseManager {
-    public static final String CURSE_NAME = "Maldicion del Chaneque";
+    public static final String CURSE_NAME = "Maldicion de la Lesser Key";
     private static final double ENCHANT_TABLE_CURSE_CHANCE = 0.35;
     private static final double SUSPICIOUS_SAND_CURSE_CHANCE = 0.12;
     private static final double SUSPICIOUS_GRAVEL_CURSE_CHANCE = 0.10;
@@ -102,7 +102,7 @@ public class ChanequeCurseManager {
         ItemMeta meta = book.getItemMeta();
         meta.displayName(Component.text(CURSE_NAME, NamedTextColor.DARK_PURPLE, TextDecoration.BOLD));
         meta.lore(List.of(
-            Component.text("Un libro virgen listo para escribir.", NamedTextColor.GRAY),
+            Component.text("Un grimorio en blanco de la Lesser Key de Salomon.", NamedTextColor.GRAY),
             Component.text("", NamedTextColor.DARK_GRAY),
             Component.text("Al portarlo, atrae criaturas mitologicas", NamedTextColor.DARK_PURPLE),
             Component.text("que emergen del bioma circundante.", NamedTextColor.DARK_PURPLE),
@@ -110,7 +110,7 @@ public class ChanequeCurseManager {
             Component.text("Maldicion — No removible por medios normales", NamedTextColor.RED),
             Component.text("", NamedTextColor.DARK_GRAY),
             Component.text("Usalo contra una criatura debilitada", NamedTextColor.DARK_PURPLE),
-            Component.text("para atrapar su escencia en sus paginas.", NamedTextColor.DARK_PURPLE)
+            Component.text("para sellar su escencia con el Sello de Salomon.", NamedTextColor.DARK_PURPLE)
         ));
         meta.getPersistentDataContainer().set(curseBookKey, PersistentDataType.BOOLEAN, true);
         meta.addEnchant(Enchantment.MENDING, 1, true);

@@ -159,7 +159,7 @@ public class CombatManager {
 
         ItemStack curseBook = captureManager.removeCurseBook(player);
         if (curseBook == null) {
-            session.setMessage("No tienes un libro de la Maldicion del Chaneque!");
+            session.setMessage("No tienes un libro de la Maldicion de la Lesser Key!");
             session.setState(CombatSession.State.MAIN);
             gui.openMainCombatScreen(player, session);
             return;
@@ -182,7 +182,7 @@ public class CombatManager {
             session.setState(CombatSession.State.ENDED);
             endBattle(player);
         } else {
-            session.setMessage(wild.template().displayName() + " resistio la Maldicion del Chaneque! "
+            session.setMessage(wild.template().displayName() + " resistio el Sello de Salomon! "
                 + "El libro se ha consumido.");
             session.setState(CombatSession.State.MAIN);
             gui.openMainCombatScreen(player, session);
