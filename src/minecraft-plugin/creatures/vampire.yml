@@ -1,0 +1,39 @@
+id: vampire_dracula
+displayName: "Vampiro de Transilvania"
+loreOrigin: "Drácula — Bram Stoker (1897); folclore rumano"
+publicDomainSource: true
+type: UNDEAD
+stats:
+  hp: 85
+  attack: 75
+  defense: 50
+  speed: 65
+  affinity: UNDEAD
+captureRate: 0.15
+summonAnimation: MIST
+moves:
+  - id: bite
+    displayName: "Mordida de Vampiro"
+    power: 40
+    type: PHYSICAL
+    element: UNDEAD
+    apCost: 10
+  - id: hypnosis
+    displayName: "Hipnosis"
+    power: 0
+    type: STATUS
+    element: SPIRIT
+    apCost: 15
+    statusEffect: SLEEP
+  - id: drain_life
+    displayName: "Drenar Vida"
+    power: 55
+    type: MAGICAL
+    element: UNDEAD
+    apCost: 12
+spawnConditions:
+  biomes:
+    - DARK_FOREST
+    - SWAMP
+  time: NIGHT
+  probability: 0.08
