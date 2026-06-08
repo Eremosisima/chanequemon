@@ -164,7 +164,7 @@ public class EncounterManager implements Listener {
         if (starter == null) {
             starter = new Creature("placeholder", "Espiritu Inicial", "placeholder", true,
                 "SPIRIT", Map.of("hp", 60, "attack", 40, "defense", 40, "speed", 50),
-                "SPIRIT", 0.2, "PORTAL", List.of(), Map.of());
+                "SPIRIT", 0.2, "PORTAL", List.of(), Map.of(), List.of());
         }
         return new CreatureInstance(starter, false);
     }

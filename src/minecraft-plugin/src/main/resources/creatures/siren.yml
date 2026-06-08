@@ -11,6 +11,19 @@ stats:
 affinity: WATER
 captureRate: 0.08
 summonAnimation: MIST
+support:
+  - aura: DEBUFF
+    effect: NAUSEA
+    amplifier: 0
+    radius: 10
+    target: MOBS
+    description: "El canto de la Sirena desorienta a los enemigos cercanos"
+  - aura: BUFF
+    effect: WATER_BREATHING
+    amplifier: 0
+    radius: 10
+    target: PLAYER
+    description: "La Sirena purifica el agua alrededor de su amo"
 moves:
   - id: enchanting_song
     displayName: "Canto Encantador"

@@ -11,6 +11,19 @@ stats:
 affinity: FIRE
 captureRate: 0.03
 summonAnimation: PORTAL
+support:
+  - aura: BUFF
+    effect: FIRE_RESISTANCE
+    amplifier: 0
+    radius: 12
+    target: PLAYER
+    description: "Las llamas del Fenix protegen a su portador del calor"
+  - aura: BUFF
+    effect: REGENERATION
+    amplifier: 1
+    radius: 12
+    target: ALLIES
+    description: "El canto del Fenix regenera las heridas de los aliados cercanos"
 moves:
   - id: rebirth_flame
     displayName: "Llama de Renacimiento"

@@ -11,6 +11,19 @@ stats:
 affinity: FIRE
 captureRate: 0.05
 summonAnimation: PORTAL
+support:
+  - aura: BUFF
+    effect: FIRE_RESISTANCE
+    amplifier: 1
+    radius: 12
+    target: ALLIES
+    description: "El Ifrit domina el fuego y protege del calor a los aliados cercanos"
+  - aura: DEBUFF
+    effect: POISON
+    amplifier: 0
+    radius: 8
+    target: MOBS
+    description: "El humo del Ifrit envenena a los enemigos"
 moves:
   - id: fire_whirlwind
     displayName: "Torbellino de Fuego"

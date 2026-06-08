@@ -11,6 +11,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
@@ -33,6 +34,9 @@ public class ChanequemonCommand implements CommandExecutor {
             sender.sendMessage(Component.text("/chanequemon captured — tus capturas", NamedTextColor.GRAY));
             sender.sendMessage(Component.text("/chanequemon curse — obtener libro maldito", NamedTextColor.DARK_PURPLE));
             sender.sendMessage(Component.text("/chanequemon books — ver libros de criaturas", NamedTextColor.AQUA));
+            sender.sendMessage(Component.text("/chanequemon invocar — invoca la criatura del libro en mano", NamedTextColor.GOLD));
+            sender.sendMessage(Component.text("/chanequemon regresar — devuelve la criatura a su libro", NamedTextColor.GOLD));
+            sender.sendMessage(Component.text("/chanequemon dismiss — lo mismo que regresar", NamedTextColor.GRAY));
             return true;
         }
 
@@ -88,6 +92,28 @@ public class ChanequemonCommand implements CommandExecutor {
                         sender.sendMessage(Component.text("  " + name, NamedTextColor.AQUA));
                     }
                 }
+            }
+            case "invocar" -> {
+                if (!isPlayer) { sender.sendMessage("Solo jugadores."); return true; }
+                Player player = (Player) sender;
+                ItemStack held = player.getInventory().getItemInMainHand();
+                if (held == null || !plugin.curseManager().isCapturedBook(held)) {
+                    sender.sendMessage(Component.text("Debes sostener un libro de criatura capturada.",
+                        NamedTextColor.RED));
+                    return true;
+                }
+                String creatureId = plugin.curseManager().getCapturedCreatureId(held);
+                Creature creature = plugin.creatureRegistry().get(creatureId);
+                if (creature == null) {
+                    sender.sendMessage(Component.text("Criatura no encontrada.", NamedTextColor.RED));
+                    return true;
+                }
+                plugin.summonManager().summonCreature(player, creature);
+            }
+            case "dismiss", "regresar" -> {
+                if (!isPlayer) { sender.sendMessage("Solo jugadores."); return true; }
+                Player player = (Player) sender;
+                plugin.summonManager().dismissSummon(player);
             }
             default -> {
                 sender.sendMessage(Component.text("Comando desconocido. Usa /chanequemon",

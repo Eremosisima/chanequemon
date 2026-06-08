@@ -11,6 +11,19 @@ stats:
 affinity: SPIRIT
 captureRate: 0.09
 summonAnimation: MIST
+support:
+  - aura: DEBUFF
+    effect: DARKNESS
+    amplifier: 0
+    radius: 12
+    target: MOBS
+    description: "El Espectro cubre de oscuridad a los enemigos cercanos"
+  - aura: BUFF
+    effect: INVISIBILITY
+    amplifier: 0
+    radius: 8
+    target: PLAYER
+    description: "El aura del Espectro vuelve invisible a su amo"
 moves:
   - id: dark_whisper
     displayName: "Susurro Oscuro"

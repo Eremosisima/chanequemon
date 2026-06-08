@@ -61,6 +61,7 @@ public class CreatureRegistry {
                 YamlConfiguration yaml = YamlConfiguration.loadConfiguration(f);
                 String id = yaml.getString("id");
                 if (id == null || id.isBlank()) continue;
+                List<Map<String, Object>> supportMaps = (List<Map<String, Object>>) yaml.getList("support", List.of());
                 Creature c = new Creature(
                     id,
                     yaml.getString("displayName", id),
@@ -72,7 +73,8 @@ public class CreatureRegistry {
                     yaml.getDouble("captureRate", 0.1),
                     yaml.getString("summonAnimation", "PORTAL"),
                     (List<Map<String, Object>>) yaml.getList("moves", List.of()),
-                    yaml.getConfigurationSection("spawnConditions") != null ? yaml.getConfigurationSection("spawnConditions").getValues(false) : Map.of()
+                    yaml.getConfigurationSection("spawnConditions") != null ? yaml.getConfigurationSection("spawnConditions").getValues(false) : Map.of(),
+                    supportMaps
                 );
                 creatures.put(id, c);
                 plugin.getLogger().info("  Loaded creature: " + id);

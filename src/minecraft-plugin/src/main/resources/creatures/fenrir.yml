@@ -11,6 +11,19 @@ stats:
 affinity: BEAST
 captureRate: 0.04
 summonAnimation: PORTAL
+support:
+  - aura: BUFF
+    effect: STRENGTH
+    amplifier: 1
+    radius: 10
+    target: PLAYER
+    description: "La fuerza bestial de Fenrir se transfiere a su amo"
+  - aura: DEBUFF
+    effect: WEAKNESS
+    amplifier: 1
+    radius: 10
+    target: MOBS
+    description: "El aullido de Fenrir intimida y debilita a los enemigos"
 moves:
   - id: fenris_bite
     displayName: "Mordida de Fenris"

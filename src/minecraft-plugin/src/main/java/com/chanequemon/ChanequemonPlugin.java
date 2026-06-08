@@ -7,6 +7,8 @@ import com.chanequemon.enchant.ChanequeCurseManager;
 import com.chanequemon.enchant.EnchantmentListener;
 import com.chanequemon.player.PlayerDataManager;
 import com.chanequemon.registry.CreatureRegistry;
+import com.chanequemon.summon.LecternListener;
+import com.chanequemon.summon.SummonManager;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -17,6 +19,8 @@ public final class ChanequemonPlugin extends JavaPlugin {
     private CombatManager combatManager;
     private EncounterManager encounterManager;
     private PlayerDataManager playerDataManager;
+    private SummonManager summonManager;
+    private LecternListener lecternListener;
 
     @Override
     public void onEnable() {
@@ -30,10 +34,14 @@ public final class ChanequemonPlugin extends JavaPlugin {
         this.combatManager = new CombatManager(captureManager, curseManager, this);
         this.encounterManager = new EncounterManager(creatureRegistry, combatManager, this, curseManager);
         this.playerDataManager = new PlayerDataManager(this);
+        this.summonManager = new SummonManager(this, creatureRegistry, curseManager);
+        this.lecternListener = new LecternListener(this, creatureRegistry, curseManager);
 
         getServer().getPluginManager().registerEvents(encounterManager, this);
         getServer().getPluginManager().registerEvents(combatManager.gui(), this);
         getServer().getPluginManager().registerEvents(new EnchantmentListener(curseManager, this), this);
+        getServer().getPluginManager().registerEvents(summonManager, this);
+        getServer().getPluginManager().registerEvents(lecternListener, this);
 
         getCommand("chanequemon").setExecutor(new ChanequemonCommand(this));
         getCommand("chanequemon").setTabCompleter(new ChanequemonTabCompleter());
@@ -47,6 +55,7 @@ public final class ChanequemonPlugin extends JavaPlugin {
 
     @Override
     public void onDisable() {
+        if (summonManager != null) summonManager.dismissAll();
         if (playerDataManager != null) playerDataManager.saveAll();
         getLogger().info("Chanequemon disabled.");
     }
@@ -56,4 +65,6 @@ public final class ChanequemonPlugin extends JavaPlugin {
     public CaptureManager captureManager() { return captureManager; }
     public CombatManager combatManager() { return combatManager; }
     public PlayerDataManager playerDataManager() { return playerDataManager; }
+    public SummonManager summonManager() { return summonManager; }
+    public LecternListener lecternListener() { return lecternListener; }
 }

@@ -1,6 +1,6 @@
 id: kitsune_nine
 displayName: "Kitsune de Nueve Colas"
-loreOrigin: "Folclore japonés; Nihon Shoki (720 d.C.); diversos cuentos pre-1900"
+loreOrigin: "Folclore japones; Nihon Shoki (720 d.C.); diversos cuentos pre-1900"
 publicDomainSource: true
 type: SPIRIT
 stats:
@@ -11,6 +11,19 @@ stats:
 affinity: SPIRIT
 captureRate: 0.08
 summonAnimation: PORTAL
+support:
+  - aura: BUFF
+    effect: REGENERATION
+    amplifier: 0
+    radius: 10
+    target: PLAYER
+    description: "La cola del Kitsune emite una luz calmante que regenera las heridas de su amo"
+  - aura: DEBUFF
+    effect: WEAKNESS
+    amplifier: 0
+    radius: 8
+    target: MOBS
+    description: "El Kitsune susurra ilusiones que debilitan la voluntad de los enemigos cercanos"
 moves:
   - id: fox_fire
     displayName: "Fuego de Zorro"

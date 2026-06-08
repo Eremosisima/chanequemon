@@ -1,5 +1,5 @@
 name: Chanequemon
-version: 1.0.0
+version: 1.1.0
 main: com.chanequemon.ChanequemonPlugin
 api-version: 1.21
 author: Erendira Raquel Perales Perez
@@ -8,7 +8,7 @@ website: https://github.com/eremosisima/Chanequemon
 commands:
   chanequemon:
     description: "Comando principal de Chanequemon"
-    usage: "/chanequemon <list|captured|curse|books>"
+    usage: "/chanequemon <list|captured|curse|books|invocar|regresar|dismiss>"
     aliases: [chm]
 permissions:
   chanequemon.use:

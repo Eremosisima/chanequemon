@@ -11,6 +11,19 @@ stats:
 affinity: UNDEAD
 captureRate: 0.10
 summonAnimation: MIST
+support:
+  - aura: DEBUFF
+    effect: WEAKNESS
+    amplifier: 0
+    radius: 10
+    target: MOBS
+    description: "La maldicion de la Momia drena la fuerza de los enemigos"
+  - aura: DEBUFF
+    effect: SLOWNESS
+    amplifier: 1
+    radius: 8
+    target: MOBS
+    description: "Las vendas de la Momia se extienden para ralentizar a los enemigos"
 moves:
   - id: desiccating_touch
     displayName: "Toque Desecante"

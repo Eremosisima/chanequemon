@@ -9,7 +9,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 public class ChanequemonTabCompleter implements TabCompleter {
-    private static final List<String> SUBCOMMANDS = List.of("list", "captured", "curse", "books");
+    private static final List<String> SUBCOMMANDS = List.of("list", "captured", "curse", "books", "invocar", "regresar", "dismiss");
 
     @Override
     public @Nullable List<String> onTabComplete(@NotNull CommandSender sender, @NotNull Command command,

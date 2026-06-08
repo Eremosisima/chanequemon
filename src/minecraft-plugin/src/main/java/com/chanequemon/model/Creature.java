@@ -22,13 +22,15 @@ public class Creature {
     private final String spawnTime;
     private final double spawnProbability;
     private final List<String> spawnStructures;
+    private final List<SupportAbility> supportAbilities;
 
     @SuppressWarnings("unchecked")
     public Creature(String id, String displayName, String loreOrigin, boolean publicDomainSource,
                     String typeStr, Map<String, Object> statsRaw, String affinityStr,
                     double captureRate, String summonAnimation,
                     List<Map<String, Object>> moveMaps,
-                    Map<String, Object> spawnConditions) {
+                    Map<String, Object> spawnConditions,
+                    List<Map<String, Object>> supportMaps) {
         this.id = id;
         this.displayName = displayName;
         this.loreOrigin = loreOrigin;
@@ -73,6 +75,13 @@ public class Creature {
             this.spawnProbability = 0.05;
             this.spawnStructures = List.of();
         }
+
+        this.supportAbilities = new ArrayList<>();
+        if (supportMaps != null) {
+            for (Map<String, Object> m : supportMaps) {
+                this.supportAbilities.add(SupportAbility.fromMap(m));
+            }
+        }
     }
 
     public String id() { return id; }
@@ -92,6 +101,7 @@ public class Creature {
     public String spawnTime() { return spawnTime; }
     public double spawnProbability() { return spawnProbability; }
     public List<String> spawnStructures() { return spawnStructures; }
+    public List<SupportAbility> supportAbilities() { return supportAbilities; }
 
     public boolean hasSpawnConditions() {
         return !spawnBiomes.isEmpty() || !spawnStructures.isEmpty();

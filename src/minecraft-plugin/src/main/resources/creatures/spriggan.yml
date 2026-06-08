@@ -11,6 +11,19 @@ stats:
 affinity: EARTH
 captureRate: 0.10
 summonAnimation: PORTAL
+support:
+  - aura: BUFF
+    effect: REGENERATION
+    amplifier: 1
+    radius: 10
+    target: ALLIES
+    description: "El Spriggan emana energia vital de la tierra que regenera a los aliados"
+  - aura: BUFF
+    effect: RESISTANCE
+    amplifier: 0
+    radius: 8
+    target: PLAYER
+    description: "La corteza del Spriggan fortalece a su amo contra el dano"
 moves:
   - id: crystal_blast
     displayName: "Explosion de Cristal"

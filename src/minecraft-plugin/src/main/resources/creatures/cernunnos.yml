@@ -1,40 +1,58 @@
 id: cernunnos_horned
 displayName: "Cernunnos"
-loreOrigin: "Mitologia celta — Caldero de Gundestrup (~200 a.C.); dios astado de la naturaleza"
+loreOrigin: "Mitologia celta — Pilar de los Nautas (14-37 d.C.); dios astado de la naturaleza"
 publicDomainSource: true
 type: MYTHIC
 stats:
-  hp: 100
-  attack: 70
-  defense: 75
-  speed: 55
-affinity: MYTHIC
-captureRate: 0.05
+  hp: 95
+  attack: 45
+  defense: 80
+  speed: 45
+affinity: EARTH
+captureRate: 0.04
 summonAnimation: PORTAL
+support:
+  - aura: BUFF
+    effect: REGENERATION
+    amplifier: 1
+    radius: 14
+    target: ALLIES
+    description: "Cernunnos bendice la tierra bajo sus pies, regenerando a todos los aliados"
+  - aura: BUFF
+    effect: RESISTANCE
+    amplifier: 0
+    radius: 14
+    target: ALLIES
+    description: "La coraza de corteza del dios astado protege a quienes le acompañan"
+  - aura: DEBUFF
+    effect: WEAKNESS
+    amplifier: 1
+    radius: 10
+    target: MOBS
+    description: "La naturaleza salvaje se vuelve contra los enemigos, debilitandolos"
 moves:
-  - id: stag_charge
-    displayName: "Carga del Ciervo"
-    power: 60
-    type: PHYSICAL
-    element: BEAST
-    apCost: 9
-  - id: forest_blessing
-    displayName: "Bendicion del Bosque"
-    power: 0
-    type: STATUS
-    element: PLANT
-    apCost: 15
-  - id: natures_wrath
-    displayName: "Ira de la Naturaleza"
-    power: 55
+  - id: natures_blessing
+    displayName: "Bendicion Natural"
+    power: 35
     type: MAGICAL
     element: EARTH
+    apCost: 9
+  - id: thorn_whip
+    displayName: "Latigo de Espinas"
+    power: 50
+    type: PHYSICAL
+    element: PLANT
     apCost: 10
+  - id: forest_ward
+    displayName: "Resguardo del Bosque"
+    power: 0
+    type: STATUS
+    element: EARTH
+    apCost: 14
 spawnConditions:
   biomes:
+    - DARK_FOREST
     - OLD_GROWTH_PINE_TAIGA
-    - OLD_GROWTH_SPRUCE_TAIGA
-    - FOREST
-    - MEADOW
-  time: DAY
+    - OLD_GROWTH_BIRCH_FOREST
+  time: ANY
   probability: 0.02

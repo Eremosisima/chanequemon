@@ -1,41 +1,58 @@
 id: leviathan_sea
-displayName: "Leviatán"
-loreOrigin: "Tradicion abrahamica — Libro de Job (~600 a.C.); monstruo marino primordial"
+displayName: "Leviatan"
+loreOrigin: "Tradicion judeocristiana — Libro de Job (~500-300 a.C.); monstruo marino primordial"
 publicDomainSource: true
 type: DRAGON
 stats:
-  hp: 150
-  attack: 85
-  defense: 80
-  speed: 20
-affinity: DRAGON
+  hp: 140
+  attack: 90
+  defense: 60
+  speed: 30
+affinity: WATER
 captureRate: 0.02
 summonAnimation: PORTAL
+support:
+  - aura: BUFF
+    effect: WATER_BREATHING
+    amplifier: 0
+    radius: 20
+    target: PLAYER
+    description: "El Leviatan purifica el agua alrededor, permitiendo respirar a su amo"
+  - aura: BUFF
+    effect: DOLPHINS_GRACE
+    amplifier: 0
+    radius: 20
+    target: PLAYER
+    description: "Las corrientes marinas favorecen a quien domina al Leviatan"
+  - aura: DEBUFF
+    effect: SLOWNESS
+    amplifier: 2
+    radius: 15
+    target: MOBS
+    description: "El terror primigenio del Leviatan ralentiza a los enemigos en el agua"
 moves:
-  - id: abyssal_roar
-    displayName: "Rugido Abismal"
-    power: 70
+  - id: tidal_wave
+    displayName: "Ola Gigante"
+    power: 75
     type: MAGICAL
-    element: DRAGON
+    element: WATER
     apCost: 7
-  - id: ocean_sweep
-    displayName: "Barrido Oceanico"
+  - id: abyssal_bite
+    displayName: "Mordida Abismal"
     power: 60
     type: PHYSICAL
     element: WATER
-    apCost: 9
-  - id: primordial_pressure
-    displayName: "Presion Primordial"
-    power: 0
-    type: STATUS
+    apCost: 10
+  - id: maelstrom
+    displayName: "Maelstrom"
+    power: 50
+    type: MAGICAL
     element: WATER
-    apCost: 15
-    statusEffect: PARALYSIS
+    apCost: 12
 spawnConditions:
   biomes:
     - DEEP_OCEAN
-    - DEEP_COLD_OCEAN
-    - DEEP_LUKEWARM_OCEAN
-    - FROZEN_OCEAN
+    - OCEAN
+    - WARM_OCEAN
   time: ANY
   probability: 0.01

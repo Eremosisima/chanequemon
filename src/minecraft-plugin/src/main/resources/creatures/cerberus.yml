@@ -11,6 +11,19 @@ stats:
 affinity: BEAST
 captureRate: 0.05
 summonAnimation: PORTAL
+support:
+  - aura: DEBUFF
+    effect: SLOWNESS
+    amplifier: 1
+    radius: 12
+    target: MOBS
+    description: "El triple aullido de Cerbero paraliza de miedo a los enemigos cercanos"
+  - aura: BUFF
+    effect: STRENGTH
+    amplifier: 0
+    radius: 8
+    target: PLAYER
+    description: "La presencia del guardian del Hades infunde fuerza a su amo"
 moves:
   - id: triple_bite
     displayName: "Mordida Triple"
