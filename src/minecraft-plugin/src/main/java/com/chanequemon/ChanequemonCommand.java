@@ -108,7 +108,7 @@ public class ChanequemonCommand implements CommandExecutor {
                     sender.sendMessage(Component.text("Criatura no encontrada.", NamedTextColor.RED));
                     return true;
                 }
-                plugin.summonManager().summonCreature(player, creature);
+                plugin.summonManager().summonCreature(player, creature, held);
             }
             case "dismiss", "regresar" -> {
                 if (!isPlayer) { sender.sendMessage("Solo jugadores."); return true; }

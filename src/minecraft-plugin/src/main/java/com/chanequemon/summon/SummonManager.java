@@ -12,19 +12,19 @@ import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.NamespacedKey;
 import org.bukkit.Particle;
+import org.bukkit.Sound;
 import org.bukkit.attribute.Attribute;
 import org.bukkit.entity.*;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
+import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.entity.EntityDeathEvent;
-import org.bukkit.event.player.PlayerInteractEntityEvent;
+import org.bukkit.event.entity.PotionSplashEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
-import org.bukkit.event.world.LecternAction;
 import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.meta.BookMeta;
 import org.bukkit.persistence.PersistentDataType;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.potion.PotionEffect;
@@ -39,7 +39,6 @@ public class SummonManager implements Listener {
     private final ChanequeCurseManager curseManager;
 
     private final Map<UUID, SummonedCreature> activeSummons = new HashMap<>();
-
     private final NamespacedKey summonOwnerKey;
     private final NamespacedKey summonCreatureKey;
 
@@ -69,6 +68,8 @@ public class SummonManager implements Listener {
         EFFECT_MAP.put("DARKNESS", PotionEffectType.DARKNESS);
     }
 
+    private static final Set<Creature> PHOENIX_CACHE = new HashSet<>();
+
     private static final Map<Element, List<SupportAbility>> DEFAULT_SUPPORT = new HashMap<>();
     static {
         DEFAULT_SUPPORT.put(Element.FIRE, List.of(new SupportAbility("BUFF", "FIRE_RESISTANCE", 0, 8, "PLAYER", "")));
@@ -81,6 +82,7 @@ public class SummonManager implements Listener {
         DEFAULT_SUPPORT.put(Element.BEAST, List.of(new SupportAbility("DEBUFF", "SLOWNESS", 0, 8, "MOBS", "")));
         DEFAULT_SUPPORT.put(Element.MAGICAL, List.of(new SupportAbility("BUFF", "NIGHT_VISION", 0, 8, "PLAYER", "")));
         DEFAULT_SUPPORT.put(Element.PLANT, List.of(new SupportAbility("BUFF", "REGENERATION", 0, 8, "ALLIES", "")));
+        DEFAULT_SUPPORT.put(Element.DEMON, List.of(new SupportAbility("DEBUFF", "WITHER", 0, 10, "MOBS", "")));
     }
 
     public SummonManager(JavaPlugin plugin, CreatureRegistry registry, ChanequeCurseManager curseManager) {
@@ -91,6 +93,71 @@ public class SummonManager implements Listener {
         this.summonCreatureKey = new NamespacedKey(plugin, "summon_creature");
     }
 
+    // ─── Phoenix Immortality ────────────────────────────────────────────
+    @EventHandler
+    public void onPlayerDeathSave(EntityDamageEvent event) {
+        if (!(event.getEntity() instanceof Player player)) return;
+        if (event.isCancelled()) return;
+
+        double finalDamage = event.getFinalDamage();
+        double health = player.getHealth();
+        if (health - finalDamage > 0) return;
+
+        SummonedCreature summon = activeSummons.get(player.getUniqueId());
+        if (summon == null || !summon.isPhoenix) return;
+
+        event.setCancelled(true);
+        player.setHealth(1.0);
+        player.setFireTicks(0);
+        player.addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION, 900, 1));
+        player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 900, 4));
+        player.addPotionEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, 900, 0));
+
+        player.getWorld().spawnParticle(Particle.TOTEM, player.getLocation().add(0, 1, 0), 120, 0.5, 1, 0.5, 0.5);
+        player.playSound(player.getLocation(), Sound.ITEM_TOTEM_USE, 1.0, 1.0);
+
+        Creature creature = registry.get(summon.creatureId);
+        player.sendMessage(Component.text("Tu ", NamedTextColor.GOLD)
+            .append(Component.text(creature != null ? creature.displayName() : "Fenix", NamedTextColor.AQUA))
+            .append(Component.text(" se ha sacrificado para salvarte!", NamedTextColor.GOLD)));
+
+        dismissSummon(player);
+    }
+
+    // ─── Undead Potion Reversal ─────────────────────────────────────────
+    @EventHandler
+    public void onPotionSplash(PotionSplashEvent event) {
+        boolean hasHeal = false;
+        boolean hasHarm = false;
+
+        for (PotionEffect effect : event.getPotion().getEffects()) {
+            if (effect.getType() == PotionEffectType.HEAL) hasHeal = true;
+            if (effect.getType() == PotionEffectType.HARM) hasHarm = true;
+        }
+
+        if (!hasHeal && !hasHarm) return;
+
+        for (LivingEntity entity : event.getAffectedEntities()) {
+            String creatureId = getSummonCreature(entity);
+            if (creatureId == null) continue;
+            Creature creature = registry.get(creatureId);
+            if (creature == null) continue;
+            if (!Element.isUndeadLike(creature.type().name())) continue;
+
+            double intensity = event.getIntensity(entity);
+            event.setIntensity(entity, 0);
+
+            if (hasHeal) {
+                Bukkit.getScheduler().runTask(plugin, () ->
+                    entity.addPotionEffect(new PotionEffect(PotionEffectType.HARM, 1, (int) Math.round(intensity * 2 - 1))));
+            } else if (hasHarm) {
+                Bukkit.getScheduler().runTask(plugin, () ->
+                    entity.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 1, (int) Math.round(intensity * 2 - 1))));
+            }
+        }
+    }
+
+    // ─── Summon/Interact ────────────────────────────────────────────────
     @EventHandler
     public void onPlayerInteract(PlayerInteractEvent event) {
         if (event.getHand() != EquipmentSlot.HAND) return;
@@ -107,7 +174,7 @@ public class SummonManager implements Listener {
             String creatureId = curseManager.getCapturedCreatureId(item);
             Creature creature = registry.get(creatureId);
             if (creature != null) {
-                summonCreature(player, creature);
+                summonCreature(player, creature, item);
                 event.setCancelled(true);
             }
         }
@@ -139,7 +206,8 @@ public class SummonManager implements Listener {
         }
     }
 
-    public void summonCreature(Player player, Creature creature) {
+    // ─── Core Summon Logic ──────────────────────────────────────────────
+    public void summonCreature(Player player, Creature creature, ItemStack book) {
         dismissSummon(player);
 
         Location loc = player.getLocation().add(2, 0, 0);
@@ -175,8 +243,15 @@ public class SummonManager implements Listener {
             .append(Component.text(creature.displayName(), NamedTextColor.AQUA))
             .append(Component.text("!", NamedTextColor.GOLD)));
 
-        UUID taskId = startAuraTask(player, creature, entity);
-        activeSummons.put(player.getUniqueId(), new SummonedCreature(player.getUniqueId(), creature.id(), entity.getUniqueId(), taskId));
+        int ampBonus = curseManager.getAuraAmplifierBonus(book);
+        int radBonus = curseManager.getAuraRadiusBonus(book);
+        int spdBonus = curseManager.getAuraSpeedBonus(book);
+        boolean isPhoenix = creature.id().toLowerCase().contains("phoenix")
+            || creature.displayName().toLowerCase().contains("fenix");
+
+        UUID taskId = startAuraTask(player, creature, entity, ampBonus, radBonus, spdBonus);
+        activeSummons.put(player.getUniqueId(),
+            new SummonedCreature(player.getUniqueId(), creature.id(), entity.getUniqueId(), taskId, isPhoenix));
     }
 
     public void dismissSummon(Player player) {
@@ -198,7 +273,9 @@ public class SummonManager implements Listener {
         });
     }
 
-    private UUID startAuraTask(Player player, Creature creature, Entity entity) {
+    // ─── Aura Task ──────────────────────────────────────────────────────
+    private UUID startAuraTask(Player player, Creature creature, Entity entity,
+                                int ampBonus, int radBonus, int spdBonus) {
         List<SupportAbility> abilities = creature.supportAbilities();
         if (abilities.isEmpty()) {
             List<SupportAbility> fallback = DEFAULT_SUPPORT.get(creature.affinity());
@@ -207,6 +284,8 @@ public class SummonManager implements Listener {
         }
 
         List<SupportAbility> finalAbilities = abilities;
+        long interval = Math.max(20L, AURA_INTERVAL - spdBonus);
+
         BukkitTask task = Bukkit.getScheduler().runTaskTimer(plugin, () -> {
             if (!entity.isValid() || entity.isDead()) {
                 cleanupSummon(entity.getUniqueId());
@@ -221,28 +300,35 @@ public class SummonManager implements Listener {
 
             Location eLoc = entity.getLocation();
             for (SupportAbility ab : finalAbilities) {
-                PotionEffectType effectType = EFFECT_MAP.get(ab.effect().toUpperCase());
+                String effectName = ab.effect().toUpperCase();
+
+                if ("IMMORTALITY".equals(effectName)) continue;
+
+                PotionEffectType effectType = EFFECT_MAP.get(effectName);
                 if (effectType == null) continue;
+
+                int amp = ab.amplifier() + ampBonus;
+                int rad = ab.radius() + radBonus;
 
                 if (ab.isBuff()) {
                     if ("PLAYER".equalsIgnoreCase(ab.target()) || "ALLIES".equalsIgnoreCase(ab.target())) {
-                        owner.addPotionEffect(new PotionEffect(effectType, 100, ab.amplifier(), true, false, true));
+                        owner.addPotionEffect(new PotionEffect(effectType, 100, amp, true, false, true));
                         owner.getWorld().spawnParticle(Particle.HAPPY_VILLAGER,
                             owner.getLocation().add(0, 1, 0), 3, 0.3, 0.3, 0.3, 0.01);
                     }
                     if ("ALLIES".equalsIgnoreCase(ab.target())) {
-                        for (Entity nearby : eLoc.getWorld().getNearbyEntities(eLoc, ab.radius(), ab.radius(), ab.radius())) {
+                        for (Entity nearby : eLoc.getWorld().getNearbyEntities(eLoc, rad, rad, rad)) {
                             if (nearby instanceof Player ally && !ally.equals(owner)
-                                && ally.getLocation().distanceSquared(eLoc) <= ab.radius() * ab.radius()) {
-                                ally.addPotionEffect(new PotionEffect(effectType, 100, ab.amplifier(), true, false, true));
+                                && ally.getLocation().distanceSquared(eLoc) <= rad * rad) {
+                                ally.addPotionEffect(new PotionEffect(effectType, 100, amp, true, false, true));
                             }
                         }
                     }
                 } else if (ab.isDebuff()) {
-                    for (Entity nearby : eLoc.getWorld().getNearbyEntities(eLoc, ab.radius(), ab.radius(), ab.radius())) {
+                    for (Entity nearby : eLoc.getWorld().getNearbyEntities(eLoc, rad, rad, rad)) {
                         if (nearby instanceof Mob mob && !(nearby instanceof Player)) {
                             if (ab.target().equalsIgnoreCase("MOBS") || ab.target().equalsIgnoreCase("ALL")) {
-                                mob.addPotionEffect(new PotionEffect(effectType, 100, ab.amplifier(), true, false, true));
+                                mob.addPotionEffect(new PotionEffect(effectType, 100, amp, true, false, true));
                             }
                         }
                     }
@@ -259,11 +345,12 @@ public class SummonManager implements Listener {
                     mob.getPathfinder().moveTo(owner.getLocation().add(1, 0, 1), 1.0);
                 }
             }
-        }, 20L, AURA_INTERVAL);
+        }, 20L, interval);
 
         return task.getTaskId();
     }
 
+    // ─── Cleanup ────────────────────────────────────────────────────────
     private void cleanupSummon(UUID entityUUID) {
         Entity entity = Bukkit.getEntity(entityUUID);
         if (entity != null && entity.isValid()) entity.remove();
@@ -285,19 +372,24 @@ public class SummonManager implements Listener {
         catch (IllegalArgumentException e) { return null; }
     }
 
+    private String getSummonCreature(Entity entity) {
+        return entity.getPersistentDataContainer()
+            .get(summonCreatureKey, PersistentDataType.STRING);
+    }
+
+    // ─── Entity Type ─────────────────────────────────────────────────────
     private EntityType getEntityType(Creature creature) {
         String type = creature.type().name();
         return switch (type) {
-            case "SPIRIT", "FEY" -> EntityType.ALLAY;
+            case "SPIRIT", "FEY", "DEMON" -> EntityType.ALLAY;
             case "DRAGON" -> EntityType.ENDER_DRAGON;
             case "UNDEAD" -> EntityType.ZOMBIE;
             case "BEAST" -> EntityType.WOLF;
-            case "DEMON" -> EntityType.HOGLIN;
             case "MYTHIC" -> EntityType.VEX;
             case "ELEMENTAL" -> EntityType.BLAZE;
             default -> EntityType.ALLAY;
         };
     }
 
-    private record SummonedCreature(UUID playerUUID, String creatureId, UUID entityUUID, UUID taskUUID) {}
+    private record SummonedCreature(UUID playerUUID, String creatureId, UUID entityUUID, UUID taskUUID, boolean isPhoenix) {}
 }

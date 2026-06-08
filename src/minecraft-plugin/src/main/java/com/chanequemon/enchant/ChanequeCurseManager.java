@@ -1,6 +1,5 @@
 package com.chanequemon.enchant;
 
-import com.chanequemon.capture.CaptureManager;
 import com.chanequemon.model.CreatureInstance;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.NamedTextColor;
@@ -15,12 +14,10 @@ import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.persistence.PersistentDataType;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 public class ChanequeCurseManager {
-    public static final String CURSE_NAME = "Maldición del Chaneque";
+    public static final String CURSE_NAME = "Maldicion del Chaneque";
     private static final double ENCHANT_TABLE_CURSE_CHANCE = 0.35;
     private static final double SUSPICIOUS_SAND_CURSE_CHANCE = 0.12;
     private static final double SUSPICIOUS_GRAVEL_CURSE_CHANCE = 0.10;
@@ -32,6 +29,15 @@ public class ChanequeCurseManager {
     private final NamespacedKey curseBookKey;
     private final NamespacedKey capturedCreatureKey;
     private final Random rng = new Random();
+
+    private static final Map<Enchantment, String> ENCHANT_AURA_MAP = Map.of(
+        Enchantment.SHARPNESS, "AMPLIFIER",
+        Enchantment.POWER, "AMPLIFIER",
+        Enchantment.PROTECTION, "RADIUS",
+        Enchantment.UNBREAKING, "RADIUS",
+        Enchantment.EFFICIENCY, "SPEED",
+        Enchantment.QUICK_CHARGE, "SPEED"
+    );
 
     public ChanequeCurseManager(JavaPlugin plugin) {
         this.plugin = plugin;
@@ -92,18 +98,19 @@ public class ChanequeCurseManager {
     }
 
     public ItemStack createCurseBook() {
-        ItemStack book = new ItemStack(Material.ENCHANTED_BOOK);
+        ItemStack book = new ItemStack(Material.WRITABLE_BOOK);
         ItemMeta meta = book.getItemMeta();
         meta.displayName(Component.text(CURSE_NAME, NamedTextColor.DARK_PURPLE, TextDecoration.BOLD));
         meta.lore(List.of(
-            Component.text("Aplicacion: Cualquier objeto", NamedTextColor.GRAY),
+            Component.text("Un libro virgen listo para escribir.", NamedTextColor.GRAY),
             Component.text("", NamedTextColor.DARK_GRAY),
             Component.text("Al portarlo, atrae criaturas mitologicas", NamedTextColor.DARK_PURPLE),
             Component.text("que emergen del bioma circundante.", NamedTextColor.DARK_PURPLE),
             Component.text("", NamedTextColor.DARK_GRAY),
             Component.text("Maldicion — No removible por medios normales", NamedTextColor.RED),
             Component.text("", NamedTextColor.DARK_GRAY),
-            Component.text("Puede atrapar criaturasdebilitadas en combate.", NamedTextColor.DARK_PURPLE)
+            Component.text("Usalo contra una criatura debilitada", NamedTextColor.DARK_PURPLE),
+            Component.text("para atrapar su escencia en sus paginas.", NamedTextColor.DARK_PURPLE)
         ));
         meta.getPersistentDataContainer().set(curseBookKey, PersistentDataType.BOOLEAN, true);
         meta.addEnchant(Enchantment.MENDING, 1, true);
@@ -130,11 +137,10 @@ public class ChanequeCurseManager {
     }
 
     public ItemStack createCapturedBook(ItemStack curseBook, CreatureInstance creature, int level) {
-        ItemStack book = curseBook.clone();
+        ItemStack book = new ItemStack(Material.WRITTEN_BOOK);
         book.setAmount(1);
         ItemMeta meta = book.getItemMeta();
 
-        meta.getPersistentDataContainer().remove(curseBookKey);
         meta.getPersistentDataContainer().set(capturedCreatureKey, PersistentDataType.STRING, creature.template().id());
 
         meta.displayName(Component.text("Esencia de ", NamedTextColor.GOLD)
@@ -148,12 +154,51 @@ public class ChanequeCurseManager {
         lore.add(Component.text("Origen: " + creature.template().loreOrigin(), NamedTextColor.DARK_PURPLE, TextDecoration.ITALIC));
         lore.add(Component.text("", NamedTextColor.DARK_GRAY));
         lore.add(Component.text("El espiritu habita en estas paginas...", NamedTextColor.GOLD, TextDecoration.ITALIC));
+        lore.add(Component.text("", NamedTextColor.DARK_GRAY));
+        lore.add(Component.text("Encantamientos potencian el aura", NamedTextColor.GRAY));
+        lore.add(Component.text("de la criatura al ser invocada.", NamedTextColor.GRAY));
         meta.lore(lore);
 
         meta.addEnchant(Enchantment.MENDING, 1, true);
         meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
         book.setItemMeta(meta);
         return book;
+    }
+
+    @SuppressWarnings("deprecation")
+    public int getAuraAmplifierBonus(ItemStack book) {
+        if (!isCapturedBook(book)) return 0;
+        Map<Enchantment, Integer> enchants = book.getEnchantments();
+        int bonus = 0;
+        for (Map.Entry<Enchantment, Integer> e : enchants.entrySet()) {
+            String auraType = ENCHANT_AURA_MAP.get(e.getKey());
+            if ("AMPLIFIER".equals(auraType)) bonus += e.getValue();
+        }
+        return bonus;
+    }
+
+    @SuppressWarnings("deprecation")
+    public int getAuraRadiusBonus(ItemStack book) {
+        if (!isCapturedBook(book)) return 0;
+        Map<Enchantment, Integer> enchants = book.getEnchantments();
+        int bonus = 0;
+        for (Map.Entry<Enchantment, Integer> e : enchants.entrySet()) {
+            String auraType = ENCHANT_AURA_MAP.get(e.getKey());
+            if ("RADIUS".equals(auraType)) bonus += e.getValue() * 2;
+        }
+        return bonus;
+    }
+
+    @SuppressWarnings("deprecation")
+    public int getAuraSpeedBonus(ItemStack book) {
+        if (!isCapturedBook(book)) return 0;
+        Map<Enchantment, Integer> enchants = book.getEnchantments();
+        int bonus = 0;
+        for (Map.Entry<Enchantment, Integer> e : enchants.entrySet()) {
+            String auraType = ENCHANT_AURA_MAP.get(e.getKey());
+            if ("SPEED".equals(auraType)) bonus += e.getValue() * 5;
+        }
+        return bonus;
     }
 
     public boolean rollEnchantTableCurse() {

@@ -13,6 +13,12 @@ captureRate: 0.03
 summonAnimation: PORTAL
 support:
   - aura: BUFF
+    effect: IMMORTALITY
+    amplifier: 0
+    radius: 0
+    target: PLAYER
+    description: "El Fenix se sacrifica para salvar a su amo de la muerte inminente"
+  - aura: BUFF
     effect: FIRE_RESISTANCE
     amplifier: 0
     radius: 12
