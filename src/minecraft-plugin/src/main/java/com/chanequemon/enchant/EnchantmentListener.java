@@ -33,13 +33,13 @@ public class EnchantmentListener implements Listener {
         ItemStack item = event.getItem();
         if (item == null || item.getType() == Material.AIR) return;
 
-        plugin.getLogger().info(player.getName() + " recibio la Maldicion de Lemegeton al encantar!");
+        plugin.getLogger().info(player.getName() + " recibio la Maldicion de Lemegeton Clavicula al encantar!");
 
         ItemStack cursed = curseManager.applyCurseToItem(item);
         event.getInventory().setItem(0, cursed);
 
         player.sendMessage(Component.text("Sientes el peso de un sello antiguo... ", NamedTextColor.DARK_PURPLE)
-            .append(Component.text("Maldicion de Lemegeton", NamedTextColor.RED))
+            .append(Component.text("Maldicion de Lemegeton Clavicula", NamedTextColor.RED))
             .append(Component.text(" se ha infundido en tu objeto!", NamedTextColor.DARK_PURPLE)));
     }
 

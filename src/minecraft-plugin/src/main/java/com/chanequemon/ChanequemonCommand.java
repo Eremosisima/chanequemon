@@ -32,7 +32,7 @@ public class ChanequemonCommand implements CommandExecutor {
                 NamedTextColor.GOLD));
             sender.sendMessage(Component.text("/chanequemon list — lista de criaturas", NamedTextColor.GRAY));
             sender.sendMessage(Component.text("/chanequemon captured — tus capturas", NamedTextColor.GRAY));
-            sender.sendMessage(Component.text("/chanequemon curse — obtener grimorio de Lemegeton", NamedTextColor.DARK_PURPLE));
+            sender.sendMessage(Component.text("/chanequemon curse — obtener grimorio de Lemegeton Clavicula", NamedTextColor.DARK_PURPLE));
             sender.sendMessage(Component.text("/chanequemon books — ver libros de criaturas", NamedTextColor.AQUA));
             sender.sendMessage(Component.text("/chanequemon invocar — invoca la criatura del libro en mano", NamedTextColor.GOLD));
             sender.sendMessage(Component.text("/chanequemon regresar — devuelve la criatura a su libro", NamedTextColor.GOLD));
@@ -67,7 +67,7 @@ public class ChanequemonCommand implements CommandExecutor {
                 Player player = (Player) sender;
                 player.getInventory().addItem(plugin.curseManager().createCurseBook());
                 sender.sendMessage(Component.text("Grimorio del ", NamedTextColor.DARK_PURPLE)
-                    .append(Component.text("Maldicion de Lemegeton", NamedTextColor.RED))
+                    .append(Component.text("Maldicion de Lemegeton Clavicula", NamedTextColor.RED))
                     .append(Component.text(" agregado a tu inventario.", NamedTextColor.DARK_PURPLE)));
             }
             case "books" -> {

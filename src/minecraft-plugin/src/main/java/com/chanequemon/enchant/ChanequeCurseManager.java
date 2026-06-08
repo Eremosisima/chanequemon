@@ -17,7 +17,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import java.util.*;
 
 public class ChanequeCurseManager {
-    public static final String CURSE_NAME = "Maldicion de Lemegeton";
+    public static final String CURSE_NAME = "Maldicion de Lemegeton Clavicula";
     private static final double ENCHANT_TABLE_CURSE_CHANCE = 0.35;
     private static final double SUSPICIOUS_SAND_CURSE_CHANCE = 0.12;
     private static final double SUSPICIOUS_GRAVEL_CURSE_CHANCE = 0.10;
