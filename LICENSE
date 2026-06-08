@@ -1,19 +1,47 @@
-# BestiarioMundial — Dual Licensing
+# BestiarioMundial — Licencia Pública de Código Abierto con Atribución (LPCAA) v1.0
 
-## Documentation (README.md, docs/, GUIA-PUBLICACION.md)
-**CC0 1.0 Universal (Public Domain Dedication)**
+## 1. Documentación (publicación defensiva)
 
-Estos archivos constituyen una **publicación defensiva** (prior art) y están dedicados al dominio público. Cualquier persona puede copiarlos, modificarlos, distribuirlos y usarlos, incluso comercialmente, sin pedir permiso.
+Los archivos de documentación (README.md, GUIA-PUBLICACION.md, docs/) están dedicados al **dominio público bajo CC0 1.0 Universal**. Esto constituye una publicación defensiva que establece prior art para impedir el patentamiento de las mecánicas descritas.
 
 https://creativecommons.org/publicdomain/zero/1.0/
 
-## Source Code (src/ y todos los archivos de implementación)
-**All Rights Reserved © Erendira Raquel Perales Perez**
+## 2. Código fuente (src/) y recursos del juego
 
-El código fuente del plugin está reservado. No se concede permiso para copiar, modificar, distribuir o usar el código sin autorización expresa por escrito del autor. El código se incluye en este repositorio únicamente como referencia para la publicación defensiva.
+**Copyright © 2026 Erendira Raquel Perales Perez**
 
-**Excepción:** El código de terceros (dependencias Maven, Paper API, etc.) mantiene sus respectivas licencias originales.
+Esta licencia aplica a todo el código fuente, configuraciones de criaturas, recursos visuales y sonoros incluidos en el directorio `src/` y sus subdirectorios.
 
----
+### 2.1 Derechos otorgados
 
-Para licencias comerciales o permisos, contactar a: ere_2120@hotmail.com
+Se concede permiso gratuito para:
+
+- **Visualización y estudio:** Cualquier persona puede ver, descargar y estudiar el código fuente.
+- **Uso personal no comercial:** Puedes modificar el código para tu uso privado, siempre que no lo distribuyas.
+- **Contribuciones:** Puedes enviar cambios (pull requests) y estos serán incorporados bajo esta misma licencia.
+- **Forking:** Puedes crear forks del repositorio siempre que mantengas esta licencia y atribuyas a la autora original.
+
+### 2.2 Condiciones
+
+1. **Atribución (reconocimiento):** Cualquier uso, distribución o trabajo derivado debe incluir crédito visible a la autora original: "Erendira Raquel Perales Perez" con enlace al repositorio original.
+
+2. **Permiso del autor para uso comercial:** La distribución comercial del código, plugin empaquetado, o cualquier derivado con fines de lucro requiere permiso explícito por escrito de la autora. Contacto: ere_2120@hotmail.com
+
+3. **Excepción — Minecraft Marketplace:** La autora se reserva el derecho exclusivo de publicar y vender este mod en Minecraft Marketplace y otras plataformas de distribución comercial.
+
+4. **Nota para creadores de contenido:** El uso del mod en transmisiones, videos o capturas (gameplay) no requiere permiso adicional, pero se agradece la atribución.
+
+### 2.3 Restricciones
+
+- No puedes redistribuir el código empaquetado como plugin comercial sin permiso.
+- No puedes eliminar los avisos de copyright o atribución.
+- El código de terceros (Paper API, dependencias Maven) mantiene sus licencias originales.
+
+## 3. Garantía
+
+EL SOFTWARE SE PROPORCIONA "TAL CUAL", SIN GARANTÍA DE NINGÚN TIPO, EXPRESA O IMPLÍCITA.
+
+## 4. Contacto
+
+Para licencias comerciales, permisos especiales o consultas:
+**ere_2120@hotmail.com**
