@@ -1,4 +1,4 @@
-# Chanequemon: The Lesser Key — Documento Narrativo
+# Cipactli: The Lesser Key — Documento Narrativo y de Diseño
 
 ## Premisa
 
@@ -7,376 +7,307 @@ barrera entre el mundo mortal y el inconsciente colectivo de la humanidad. Cada 
 mitológica que la humanidad haya imaginado, temido o adorado cobró carne. Los dioses
 no vinieron. Solo los monstruos.
 
-La civilización retrocedió a ciudades fortificadas. Entre ellas: selvas donde los árboles
-tienen hambre, desiertos donde la arena recuerda, mares que no reflejan el cielo.
+Tú encuentras un grimorio en las ruinas de un monasterio en la frontera del mundo conocido.
+El **Lesser Key**. Piel humana, broches de hierro negro, 80 páginas en blanco. Un apetito
+con tapas.
 
-Tú encuentras el libro en las ruinas de un monasterio en la frontera del mundo conocido.
-El **Lesser Key** (*Clavicula Salomonis Regis*). Piel humana, broches de hierro negro, 80
-páginas en blanco. Páginas que llevan un siglo esperando ser llenadas.
-
-No es un arma. No es una herramienta. Es un apetito con tapas.
+Pero la Key no es un arma. Tampoco una herramienta. Es una **llave que alguien quiere que
+uses**. Y el que te la dio no es tu aliado.
 
 ---
 
-## El Velo — Cosmología
+## Cosmología
 
-### Qué fue
+### El Velo
 
-El Velo no es una cortina entre dimensiones. Es una **herida en la realidad**. Los
-teólogos lo llaman el Sueño Roto de Dios. Los científicos lo llaman una sobrecarga del
-inconsciente colectivo. Los que empuñan la Key lo llaman hambre.
+El Velo es una herida en la realidad. Toda creencia — viva o muerta — tomó forma. Un dios
+olvidado de una tribu extinta tiene la misma realidad que un monstruo de una película muda.
+La creencia es el único sustrato. La fe es combustible.
 
-Cuando el Velo cayó, toda creencia — viva o muerta — tomó forma. Un dios olvidado de
-una tribu extinta tiene la misma realidad que un monstruo de una película muda. La
-creencia es el único sustrato. La fe es combustible.
+Las ciudades sobreviven porque la fe colectiva en sus muros las mantiene en pie. Fuera de
+ellas, la realidad es maleable. Los portadores de la Key son inmunes al Desgaste (la erosión
+de la memoria que sufren quienes salen de las ciudades). Pero la Key tiene su propio apetito.
 
-### Cómo funciona
+### Los Inframundos
 
-- Las criaturas existen porque la humanidad cree (o creyó) en ellas
-- Una criatura olvidada por completo se desvanece
-- Una criatura temida se vuelve más fuerte
-- Las ciudades sobreviven porque la fe colectiva en sus muros las mantiene en pie
-- Fuera de las ciudades, la realidad es maleable
+El Velo no separa la vida de la muerte: las **fusionó**. Los inframundos de todas las
+culturas existen simultáneamente, superpuestos como páginas de un libro húmedo. Cada
+región del juego es un inframundo de una cultura real:
 
-### El Precio del Velo
+| Región | Cultura | Inframundo | Ambiente |
+|--------|---------|------------|----------|
+| Selva Lacandona | Azteca | Mictlan | Obsidiana, jade, nueve niveles de silencio |
+| Yucatán | Maya | Xibalba | Sangre, cuevas, la Casa de los Murciélagos respira |
+| Desierto Negro | Egipcio | Duat | El peso del corazón contra la pluma |
+| Tundra Blanca | Nórdico | Helheim | Desolación helada, muertos olvidados |
+| Bosque de Sombras | Griego | Hades | Campos de asfódelos, río del olvido |
+| Jardín Púdrido | Japonés | Yomi | Cerezos en flor sobre carne podrida |
+| Llanuras Ígneas | Hindú | Naraka | Llamas que no consumen |
+| Montaña del Viento | Persa | Hamistagan | El limbo entre luz y oscuridad |
 
-Cada persona que sale de las ciudades fortificadas desarrolla el **Desgaste**:
-- Los recuerdos se vuelven porosos
-- Los sueños son invadidos por las criaturas
-- El reflejo se retrasa medio segundo
-- Las sombras no siempre siguen a sus dueños
+Cada región tiene su propio tipo de horror, su propia mecánica única, y sus propias
+criaturas para sellar.
 
-Los portadores de la Key son inmunes al Desgaste. Pero tienen su propio precio.
+### Mictlantecuhtli
 
----
-
-## El Lesser Key — El Libro
-
-### Origen
-
-Nadie sabe quién lo encuadernó. Las páginas no son de papel. Son de **pergamino de
-alma** — una sustancia que solo existe en el espacio entre el Velo y el mundo. Las 80
-páginas no se pueden arrancar. No se pueden quemar. No se pueden llenar con tinta.
-
-Solo con almas.
-
-### Cómo funciona
-
-Cuando una criatura es vencida en combate, la Key puede **sellar** su alma:
-
-1. El libro se abre solo. Las páginas se agitan como alas de paloma.
-2. Sombra líquida brota de los broches de hierro y se extiende hacia la criatura.
-3. La criatura es envuelta en tendones de oscuridad.
-4. Su alma es arrancada del cuerpo e impresa en una página vacía.
-5. El cuerpo se deshace en polvo, ceniza o espuma, según su naturaleza.
-6. Un **sello único** — un sigilo que representa la esencia de esa criatura — aparece
-   en la página. Cada sello es diferente. Cada sello es irrepetible.
-
-La criatura ahora **existe dentro del libro**. La página no muestra una imagen de la
-criatura. Muestra un patrón geométrico vivo que se retuerce lentamente, como un
-insecto pinchado en un alfiler.
-
-### Invocar desde la Key
-
-El portador puede **conjurar** el alma sellada para que luche:
-
-1. Abre la Key en la página correspondiente.
-2. Pasa la mano sobre el sello.
-3. La sombra del libro se derrama al suelo, se eleva, y toma la forma de la criatura.
-4. La criatura obedece — pero sus ojos (si los tiene) miran al portador con un odio
-   perfecto y silencioso.
-
-### El Precio de Empuñar la Key (Corrupción)
-
-Cada sello en la Key **reduce permanentemente** la vitalidad del portador. Mecánicamente:
-
-- **Vitalidad Máxima**: se reduce en 1-3 puntos por sello (según la fuerza de la
-  criatura sellada)
-- **Sueños**: se vuelven visitas al momento de la muerte de cada criatura sellada
-- **Reflejo**: el espejo muestra al portador más delgado, más pálido, más hueco. La
-  sonrisa tarda un segundo en aparecer
-- **Sombra**: después de 20 sellos, la sombra del portador se mueve sola cuando él no
-  la mira. Después de 40, la sombra habla. Después de 60, la sombra desobedece
-- **La Voz del Libro**: después de 10 sellos, la Key susurra en sueños. Después de 30,
-  susurra despierto. Después de 50, discute. La Key siempre quiere más páginas llenas
-- **Portadores anteriores**: la Key ha tenido dueños. Sus fantasmas aparecen en
-  visiones. Ninguno llegó a llenar las 80 páginas. Todos murieron de formas que la Key
-  recuerda con nostalgia
-
-### El Vacío
-
-Hay 80 páginas en la Key. 80 almas por sellar. Cuando el portador muere, la Key se
-cierra sola. Los sellos se borran. Las páginas vuelven a estar en blanco. La Key busca
-un nuevo portador. Siempre hay un nuevo portador.
+El Señor del Inframundo Azteca observa desde su trono de hueso. No es el enemigo. No es
+un aliado. Es un **jugador** que ha estado esperando cien años a que alguien encontrara
+la Key. Él sabe que los 8 legendarios no son trofeos — son **candados vivos** que contienen
+partes del caos primordial de Cipactli. Él no puede traspasarlos. Necesita que alguien los
+selle y luego los libere en el portal. Tú eres ese alguien.
 
 ---
 
-## El Protagonista
-
-Tu nombre no importa. Lo que eras antes del Velo — granjero, soldado, académico — se
-está borrando. Encontraste la Key en las ruinas del Monasterio de San Judas, en la
-frontera entre el territorio conocido y el Velo. El monje que la custodiaba estaba
-muerto hacía décadas, sentado contra la pared, con los ojos abiertos y la boca
-igualmente abierta, como si la muerte lo hubiera sorprendido en medio de un grito que
-nunca terminó de salir.
-
-La Key estaba en su regazo.
-
-Desde entonces no has envejecido. Pero tampoco has dormido bien.
-
-### Arco Narrativo
-
-| Etapa | Sellos | Estado |
-|-------|--------|--------|
-| **Negación** | 0-15 | Usas la Key por necesidad. Sobrevivir. Cada sello es una herramienta. Todavía te dices a ti mismo que puedes dejarla |
-| **Familiaridad** | 16-35 | La Key ya no te pesa en las manos. Sus susurros empiezan a tener sentido. Has empezado a hablarle de vuelta |
-| **Dependencia** | 36-55 | No recuerdas cómo eras antes de la Key. No te importa. Las páginas vacías te incomodan |
-| **Fusión** | 56-79 | Tú y la Key son la misma cosa. Tu sombra te obedece a los dos. Los fantasmas de los portadores anteriores te llaman hermano |
-| **El Vacío** | 80 | La última página se llena. La Key se cierra. Para siempre. Y entonces... |
-
----
-
-## Fracciones y Conflictos
-
-### La Iglesia del Velo
-
-Una religión que surgió después de la Caída. Predican que el Velo es el Juicio Final
-y que las criaturas son ángeles castigadores. Quieren **destruir toda criatura**
-(incluyendo las selladas en la Key) y, de paso, a todos los portadores de la Key.
-
-- **Objetivo**: Eliminar la Key y todas las criaturas
-- **Método**: Cazadores entrenados que queman libros y criaturas por igual
-- **Ironía**: Usan tecnología basada en reliquias del Velo. Son tan dependientes de
-  él como los monstruos que cazan
-
-### La Corte de los Susurros
-
-Portadores de la Key anteriores que sobrevivieron. Rechazaron llenar todas las
-páginas (entre 30 y 60 sellos cada uno). Formaron una sociedad secreta que busca
-controlar el Velo en lugar de destruirlo.
-
-- **Objetivo**: Encontrar una manera de cerrar el Velo sin llenar la Key
-- **Método**: Mantener el equilibrio. Ni demasiadas criaturas sueltas (caos) ni
-  demasiadas selladas (la Key se vuelve poderosa)
-- **Tensión**: Saben que eres un portador nuevo. Te observan. Te ayudan a veces. Te
-  ponen a prueba siempre
-
-### Los Despiertos
-
-Criaturas inteligentes que han desarrollado conciencia más allá de su mitología
-original. Saben lo que la Key hace. Algunas quieren ser selladas (el libro es mejor
-que el mundo roto). Otras quieren destruir la Key. Otras quieren empuñarla.
-
-- **No todas las criaturas son bestias**: Algunas pueden negociar, engañar,
-  aliarse... o poseer al portador cuando este abre la Key en la página equivocada
-
-### Otros Portadores
-
-Existen otras Keys. No muchas. Cada una es diferente: un anillo, un colgante, un
-hueso tallado, una máscara de madera negra. Cada una tiene su propio método y su
-propio precio. Los portadores se reconocen entre sí por la ausencia de reflejo en los
-ojos.
-
----
-
-## Mecánica Narrativa del Combate y Captura
-
-### Combate
-
-No hay "Pokémon amigos". Cada criatura que invocas es un alma atrapada que **odia
-obedecer**. Mecánicas de lealtad:
-
-- Las criaturas recién selladas tienen **Lealtad 0**. Pueden negarse a atacar,
-  atacar al azar, o intentar dañar al portador
-- La lealtad sube al usar a la misma criatura en combates difíciles (esto les da un
-  sentido de propósito que no tenían)
-- La lealtad baja si el portador usa a la criatura para huir o sacrificarla
-- Las criaturas con lealtad alta revelan diálogos, recuerdos de su vida antes del
-  Velo, y a veces enseñan movimientos únicos
+## El Sistema de Juego
 
 ### Captura (El Ritual de Sellado)
 
-1. **Debilitar**: La criatura debe estar por debajo del 30% de HP
-2. **Abrir la Key**: Seleccionar "Sellar" del menú de combate
-3. **El Ritual**: Aparece un círculo de invocación inverso alrededor de la criatura.
-   No se lanza nada. No se apunta a nada. El menú lo hace todo
-4. **Resistencia**: Cada criatura tiene una **Voluntad** (0-100). Contra más alta,
-   más difícil de sellar. La Voluntad se reduce al bajar la HP y aplicar estados
-   (miedo, parálisis, sueño)
-5. **Éxito/Fallo**: Si el ritual falla, la criatura se cura 20% de HP y gana un
-   bonus de ataque por 3 turnos (está furiosa)
-6. **Sellado**: Si el ritual funciona, la criatura es absorbida. Su sello aparece en
-   la Key. El portador pierde 1-3 de Vitalidad Máxima (permanente para ese ciclo)
+La Key es una extensión del portador. Cuando una criatura es vencida en combate (menos
+del 30% de HP), puedes activar el ritual:
 
-### Liberación
+1. Seleccionas "Sellar" en el menú de combate
+2. La Key se abre sola. Las páginas se agitan.
+3. Sombra líquida brota de los broches y envuelve a la criatura.
+4. El alma es arrancada del cuerpo e impresa en una página vacía.
+5. El cuerpo se deshace en polvo, ceniza o espuma.
+6. Un sigilo único — el sello — aparece en la página.
 
-El portador puede **liberar** una criatura de la Key. Esto:
-- Restaura la Vitalidad Máxima perdida por ese sello
-- La criatura vuelve al mundo, libre
-- La página se vuelve a poner en blanco
-- Pero la Key se resiente. Pierde la confianza en el portador. Los sellos
-  restantes se vuelven más difíciles de invocar (lealtad general baja)
+El sello no muestra una imagen. Es un patrón geométrico vivo que se retuerce,
+como un insecto pinchado en un alfiler.
 
----
+### Invocación — Coste de Aliento y Vida
 
-## Censo de Entidades
+Invocar una criatura sellada tiene un costo:
 
-### Total: 80 criaturas sellables (una por página)
+| Rango de criatura | Coste de Aliento | Coste de emergencia (Vida) |
+|-------------------|-----------------|---------------------------|
+| Común (Alux, Kappa) | 10% | 3% Vida (1.5x daño) |
+| Rara (Kitsune, Oni) | 35% | 8% Vida (1.5x daño) |
+| Legendaria (Fenrir, Tiamat) | 80% | 15% Vida (1.5x daño) |
+| Cipactli | — | No puede ser invocado |
 
-### Por cultura
+- **Aliento** es la stamina primaria. Se recupera lentamente al caminar sin correr,
+  en fogatas del inframundo, o sacrificando criaturas.
+- **Vida** puede usarse como emergencia cuando no hay Aliento. La criatura entra
+  "furiosa" (1.5x daño) porque sabe que te está matando.
+- Sin Aliento ni Vida disponibles: no puedes invocar.
 
-| Cultura | Criaturas | Cantidad |
-|---------|-----------|----------|
-| Griego | Centauro, Cerbero, Chimera, Fenix, Grifo, Hidra, Medusa, Minotauro | 8 |
-| Azteca / Nahua | Ahuizotl, Cipactli, Nahual, Tzitzimime, Xiuhcoatl | 5 |
-| Japones | Kappa, Kitsune, Oni, Tengu, Yuki-onna | 5 |
-| Egipcio | Ammit, Anubis, Bastet | 3 |
-| Maya | Alux, Camazotz, Vucub-Caquix, Zipacna | 4 |
-| Amazonico | Boiuna, Curupira, Iara, Mapinguari | 4 |
-| Polinesio | Menehune, Mo'o, Ponaturi, Taniwha | 4 |
-| Persa | Div, Peri, Simurgh | 3 |
-| Filipino | Aswang, Kapre, Tikbalang | 3 |
-| Nordico | Draugr, Fenrir, Jormundgander | 3 |
-| Celta | Banshee, Cernunnos, Kelpie | 3 |
-| Eslavo | Baba Yaga, Leshy, Rusalka | 3 |
-| Chino | Jiangshi, Long, Qilin | 3 |
-| Hindu | Garuda, Naga, Rakshasa | 3 |
-| Abrahamico | Behemoth, Golem, Leviatan | 3 |
-| Europeo General | Basilisco, Hombre Lobo, Vampiro | 3 |
-| Yoruba | Abiku, Emere, Iwin | 3 |
-| Inuit | Amarok, Mahaha, Qalupalik | 3 |
-| Andino | Amaru | 1 |
-| Mexicano | La Llorona | 1 |
-| Zulu | Impundulu, Tikoloshe | 2 |
-| Mesopotamico | Pazuzu, Tiamat | 2 |
-| Nativo Americano | Thunderbird, Wendigo | 2 |
-| Ghana | Anansi | 1 |
-| Britanico | Redcap | 1 |
-| Literario s.XIX | Carmilla, Frankenstein | 2 |
-| Arabe | Nasnas | 1 |
-| Bali | Barong | 1 |
-| **TOTAL** | | **80** |
+### Desgaste de Sellos
 
-### Por tipo elemental
+Cada vez que invocas una criatura, su sello se **desgasta**:
 
-| Tipo | Cantidad (estimada) |
-|------|--------------------|
-| SPIRIT | 15+ |
-| BEAST | 14+ |
-| DRAGON | 8+ |
-| MYTHIC | 8+ |
-| UNDEAD | 8+ |
-| WATER | 7+ |
-| EARTH | 6+ |
-| AIR | 3+ |
-| FIRE | 2+ |
-| PLANT | 2+ |
+- 0-3 invocaciones: sello intacto
+- 4-6 invocaciones: sello grietado (la criatura tiene 10% menos HP)
+- 7-9 invocaciones: sello quebrado (30% menos HP, puede negarse a atacar)
+- 10+ invocaciones: **rotura** (el sello se rompe, la criatura escapa como
+  Versión Despierta — más fuerte y te recuerda)
 
-### Jerarquía de rareza por región
+Si la criatura "muere" en combate, su sello se debilita gravemente (+3 niveles de
+desgaste instantáneo).
 
-Cada región del mundo tiene criaturas comunes (fáciles de encontrar y sellar),
-criaturas raras (encuentros condicionados), y criaturas legendarias (una por región
-bioma, spawn único).
+### Sacrificio
 
-| Región | Comunes | Raras | Legendaria |
-|--------|---------|-------|------------|
-| Selva Lacandona (Mesoamerica) | Alux, Ahuizotl | Camazotz, Zipacna | Cipactli |
-| Tundra Nórdica | Draugr | Hombre Lobo | Fenrir |
-| Bosque Japonés | Kappa, Tengu | Kitsune, Yuki-onna | Oni |
-| Desierto Egipcio | Ammit, Bastet | Anubis | — |
-| Amazonía | Curupira, Iara | Boiuna | Mapinguari |
-| Polinesia | Menehune, Mo'o | Ponaturi | Taniwha |
-| Persia | Peri, Div | Nasnas | Simurgh |
+Puedes **romper deliberadamente** un sello para:
 
----
+1. **Abrir puertas**: el peso del alma alimenta los portales entre regiones.
+   Más fuerte la criatura, más "peso de alma" tiene.
+2. **Recuperar Vida y Aliento**: sacrificar criaturas te cura. Una común te da
+   ~15% Vida + 20% Aliento. Una rara ~40%+50%. Una legendaria te salva de la
+   muerte pero... ¿de verdad quieres gastarla así?
+3. **Activar altares de respawn** (ver más abajo).
 
-## Arcos de Historia por Región
+Las criaturas débiles no son basura. Son **combustible**.
 
-### 1. El Monasterio (Tutorial)
+### Altares de Respawn
 
-Las ruinas donde encuentras la Key. Criaturas débiles (Alux, Redcap). Aprendes a
-sellar. El fantasma del monje anterior te da una advertencia críptica que solo
-entiendes después de 20 sellos.
+Cada región tiene altares de hueso esparcidos por el mapa.
 
-### 2. La Cacería de los Primeros Sellos
+| Acción | Coste |
+|--------|-------|
+| **Activar** un altar | Sacrificar 1 criatura (el alma alimenta el altar) |
+| **Usar** un altar al morir | Sacrificar 1 criatura al volver. Sin criaturas: respawn en el último altar activo y no gastado, o al inicio de la región |
 
-Las primeras regiones. Criaturas de dificultad baja-media. El jugador decide si
-sella todo lo que encuentra (sed de poder, la Key susurra) o solo lo necesario
-(más difícil pero menor corrupción).
+Cada altar solo puede usarse una vez. Debes re-activarlo si quieres volver a
+usarlo. Esto crea un flujo constante de decisión:
 
-### 3. La Corte de los Susurros
+- Activar altar = perder una criatura ahora, tener red de seguridad
+- No activar = conservar la criatura, pero morir te manda muy atrás
+- Usar el altar al morir = perder otra criatura (duele más si es fuerte)
 
-Primer encuentro con otros portadores. Te ofrecen un trato: información sobre el
-Velo a cambio de que liberes una criatura específica. Prueba de si puedes
-desprenderte de un sello.
+Al final, cuando enfrentas a Cipactli, cada criatura que sacrificaste en altares
+es una que no tienes para el combate. Y sabes que las sacrificaste porque tuviste
+miedo de morir.
 
-### 4. La Iglesia del Velo
+### Recuperación Natural
 
-Los cazadores de la Iglesia te persiguen. Descubres que tienen su propia Key (una
-campana de plata). Su líder quiere llenar las 80 páginas para destruir el mundo y
-"recomenzar el Juicio". Tú eres un obstáculo.
+| Acción | Recupera |
+|--------|----------|
+| 10 seg sin moverte (fuera de combate) | +1 Aliento |
+| Fogata del inframundo | +30% Vida / +50% Aliento (una vez por zona, se apaga) |
+| Sacrificar criatura | Vida y Aliento según nivel |
+| Beber de un río del inframundo | +10% Vida pero -5% Vida Máx permanente |
 
-### 5. El Despertar de los Despiertos
+### Herramientas de Combate No Letal
 
-Las criaturas inteligentes se revelan. Algunas ofrecen pactos: que las selles a
-cambio de conocimiento. Otras amenazan con revelar tu posición a la Iglesia.
-Una (Vucub-Caquix) se ofrece a sí misma como sello si la llevas ante un ser
-específico en el corazón del Velo.
+Ninguna herramienta mata permanentemente. Todas te compran tiempo para sellar.
 
-### 6. El Corazón del Velo
+| Objeto | Efecto | Origen |
+|--------|--------|--------|
+| **Navaja de obsidiana** (iztli) | Corte profundo: sangrado 3 turnos, baja HP sin matar | Mictlan |
+| **Cal viva** | Quemadura alcalina: daño lento, baja defensa | Xibalba |
+| **Miel de abeja melipona** | Pegajosa: ralentiza 2 turnos. Con cal, trampa | Selva Maya |
+| **Xtabentún** | Aturdimiento: criatura se tambalea 1-2 turnos | Ritual maya |
+| **Polvo de hueso** | Ceguera temporal: ataca al azar | Almas olvidadas |
+| **Pluma de quetzal** | Distracción brillante: la criatura la sigue 2 turnos | Pluma sagrada |
+| **Copal** | Humo espeso: invisibilidad 1 turno (se disipa al moverte) | Ritual universal |
+| **Red de ixtle** | Atrapa 2-3 turnos. Criaturas fuertes la rompen antes | Fibra de agave |
+| **Semillas de cacao** | Moneda de intercambio con Despiertos. Les hablas en vez de pelear | Comercio maya |
+| **Espejo de humo** | Creas un reflejo ilusorio tuyo. La criatura lo ataca 1 turno | Tezcatlipoca |
 
-La última región. Donde el Velo es más denso. Las criaturas aquí tienen voliciones
-propias y rango de rareza máxima. Aquí se decide: llenas las últimas páginas y
-cierra la Key, o liberas todo y destruyes el ciclo.
+### Sigilo
 
-### Final A: El Vacío (80 sellos)
+El inframundo no es un campo de batalla. Es un lugar hostil donde eres débil.
+El sigilo no es opcional — es supervivencia.
 
-La Key se cierra. El Velo colapsa. Las criaturas se desvanecen. El mundo vuelve a
-la normalidad. El portador... también se desvanece. Las 80 páginas están llenas de
-su alma. La Key se abre de nuevo. Busca un nuevo portador.
+| Mecánica | Cómo funciona |
+|----------|--------------|
+| **Oscuridad como cobertura** | Pararte en sombras te hace invisible para la mayoría de criaturas |
+| **La Key brilla** | Abrir la Key para ver el mapa o seleccionar criatura emite luz. Te delata |
+| **Ruido al caminar** | Terreno diferente = ruido diferente. Barro = silencioso. Huesos = alerta. Agua = alto |
+| **Patrones de criaturas** | Algunas patrullan, otras duermen, otras merodean. Aprendes sus rutas |
+| **Distracción** | Pluma de quetzal, espejo de humo, o liberar un alma menor para desviar atención |
 
-### Final B: Liberación (0 sellos, liberar todo)
-
-Liberas todas las criaturas. La Key se cierra vacía. Sin almas que la alimenten,
-se vuelve polvo. El Velo permanece. Pero sin la Key, nadie puede sellar criaturas
-nunca más. El mundo aprende a coexistir con los monstruos.
-
-### Final C: El Trono (40-60 sellos, alianza con la Corte)
-
-Usas los sellos para negociar con la Corte. Crean un nuevo equilibrio. El Velo se
-reduce pero no desaparece. Los portadores gobiernan en las sombras. Tú eres uno de
-ellos. La Key sigue contigo. Sigue hambrienta.
+Si te detectan cuando no deberían (por ruido, por luz, por descuido), algunas
+criaturas entran en **estado de alerta** y llaman a otras. La zona se vuelve más
+peligrosa temporalmente.
 
 ---
 
-## Principios de Diseño para Implementación
+## Los 8 Legendarios y la Mentira de Mictlantecuhtli
 
-### Oscuridad, no edgy
+Cada región tiene un **jefe legendario**: la criatura más poderosa de ese inframundo.
+Al vencerla, la Key la sella. Pero estos sellos son **especiales**:
 
-- El tono es melancólico y solemne, no grotesco gratuito
-- Las criaturas no son malvadas por naturaleza. Son seres atrapados entre dos
-  mundos. Sellarlas es un acto cuestionable
-- El horror viene de las consecuencias, no de los sustos
+- No se desgastan con el uso — no porque sean fuertes, sino porque **no puedes usarlos**
+- No pueden ser invocados en combate
+- No pueden ser sacrificados en altares ni para curarte
+- Su página en la Key está marcada con un sigilo diferente, más antiguo
 
-### El libro es un personaje
+Cuando los 8 están sellados, Mictlantecuhtli se revela. Te dice la verdad:
 
-- La Key debe tener presencia en la UI: cuando está cerrada, cuando se abre, el
-  peso de las páginas, los susurros visibles como texto en la pantalla
-- Cada sello debe sentirse significativo: animación, sonido, el sigilo que aparece
+> Esos 8 no eran guardianes. Eran **candados**. Yo no podía romperlos. Tú sí.
+> Los 8 legendarios contienen fragmentos de Cipactli. El caos primordial está
+> repartido entre ellos. Esa es la única razón por la que Cipactli no ha subido.
+> Pero ahora todos están en la Key. En un solo lugar. Y cuando los liberes en el
+> portal para irte... Cipactli se reconstruye.
 
-### El costo se siente
+No hay alternativa. Para abrir el portal de regreso al mundo de los vivos, debes
+colocar los 8 sellos legendarios en sus pedestales. Cada sello que pones libera
+el fragmento. La criatura aparece frente a ti. Te mira. Sabe lo que va a pasar.
+Asiente o gruñe o calla. Y se deshace en alma que alimenta el portal.
 
-- La Vitalidad Máxima reducida se refleja en la UI: la barra de HP del personaje
-  tiene una marca permanentemente más baja
-- Los sueños son cinemáticas cortas: flashes de la memoria de cada criatura al
-  momento de su muerte original
-- La sombra: un detalle visual que cambia progresivamente
+Cuando el octavo sello se rompe, el portal se abre. Pero del lago de sangre del
+fondo de Mictlan, algo sube. Cipactli emerge. No para pelear. Para **cerrar la
+puerta**.
 
-### El combate cuenta una historia
+---
 
-- Las criaturas no tienen nombres de mascota. Tienen epítetos: "el que fue lobo
-  antes del Velo", "la que guardaba el templo antes de caer"
-- Los movimientos son descripciones narrativas: "El Kappa extiende sus brazos
-  escamosos. El agua en su cavidad craneal hierve"
-- La lealtad baja se manifiesta en diálogo: la criatura se niega, insulta, o
-  peor, obedece con una sonrisa que no debería tener
+## Cipactli — El Combate Final
+
+Cipactli no es un jefe al que le ganas a golpes. Es el caos primordial. No tiene
+barra de HP. Tiene **estados**.
+
+### Estructura del Combate
+
+```
+FASE 1 — Cipactli duerme en el lago de sangre
+  Tú estás en la orilla. El portal está del otro lado.
+  No puedes cruzarlo sin que él te vea.
+  Usas una pluma de quetzal (u otra distracción) para desviar su atención.
+  Avanzas sigilosamente mientras él investiga el señuelo.
+
+FASE 2 — Te detecta
+  Cipactli sabe que estás ahí. Ahora corres.
+  No puedes pelear. Solo usar el entorno.
+  Las trampas que dejaste antes (cal viva + miel, redes de ixtle) se vuelven
+   útiles ahora en retrospectiva.
+  Espejos de humo para confundirlo. Terreno que conoces porque pasaste por aquí
+   al entrar.
+
+FASE 3 — Te acorrala contra el portal
+  No te queda nada. Sin trampas. Sin herramientas.
+  Una opción: la Key.
+  Se la ofreces. Cipactli la muerde.
+  No es un alma. Es el libro. No sabe qué hacer con él.
+  Mientras lo mastica, confundido, el portal titila detrás de ti.
+
+FASE 4 — Corres al portal
+  Cipactli escupe la Key. Furioso.
+  La Key cae al suelo. Abierta. Páginas en blanco.
+  Tú cruzas el portal.
+  Cipactli no puede seguirte porque el portal solo deja pasar almas humanas.
+  La tuya todavía lo es.
+
+  Cipactli se queda con la Key vacía.
+  Buscando a quién engañar después.
+
+  El ciclo se reinicia. La Key siempre encuentra un nuevo portador.
+```
+
+### Principios de Diseño del Combate Final
+
+1. **No hay combate ofensivo.** No invocas criaturas. No atacas. No hay barra de
+   HP de Cipactli.
+2. **Usas lo que aprendiste en todo el juego.** Sigilo. Herramientas. Conocimiento
+   del entorno.
+3. **La Key misma es la herramienta final.** No es un poder que acumulaste — es
+   un objeto que puedes sacrificar.
+4. **Ganas no porque mataste a Cipactli.** Ganas porque **renunciaste al libro**.
+
+---
+
+## Finales
+
+### Final A — El Vacío (Sacrificas todo, escapas solo)
+
+Colocas los 8 legendarios en el portal. Te enfrentas a Cipactli sin ellos.
+Entregas la Key. Escapas. Regresas al mundo de los vivos. La Key se queda en
+el inframundo, vacía. Buscando un nuevo portador. El ciclo no se rompió — solo
+te excluiste de él.
+
+### Final B — Liberación (No usas el portal. Liberas todo.)
+
+En lugar de abrir el portal con los legendarios, los liberas uno por uno en sus
+regiones de origen. Cada criatura vuelve a su inframundo. La Key se cierra vacía.
+Sin almas que la alimenten, se vuelve polvo. Mictlantecuhtli te observa en
+silencio. Cipactli nunca sube. Pero tú te quedas en el inframundo para siempre.
+Has condenado tu alma. Has liberado las de los demás.
+
+### Final C — El Trono (40-60 sellos. Te quedas. Gobiernas.)
+
+No sacrificas todo. Usas los sellos que te quedan para negociar con la Corte de
+los Susurros (portadores anteriores). Crean un nuevo equilibrio en el inframundo.
+Tú eres uno de ellos. La Key sigue contigo. Sigue hambrienta. Gobiernas desde
+las sombras.
+
+### Final Secreto — Página 80 (Intentas sellar a Mictlantecuhtli)
+
+Si llegas a Cipactli con más de 75 sellos, tienes la opción de no abrir el portal.
+En lugar de eso, usas la última página vacía contra el Dios del Inframundo.
+Mictlantecuhtli se da cuenta. Sonríe. La página 80 no es para una criatura. Es
+para él. Y él sabe que no tendrás valor para intentarlo.
+
+Si lo intentas, fallas. La página 80 no se puede llenar.
+Pero el intento queda registrado.
+Y Mictlantecuhtli, por primera vez en milenios, duda.
+
+---
+
+## El Título Completo
+
+**Cipactli: The Lesser Key**
+
+Cipactli es el monstruo primordial, sí. Pero también es una advertencia que el
+jugador no entiende hasta el final. Y The Lesser Key es el grimorio — pequeño
+comparado con el poder que contiene, y menor comparado con el hambre que lo
+aguarda.

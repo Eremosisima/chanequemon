@@ -1,4 +1,4 @@
-# Chanequemon — Defensive Publication
+# Cipactli: The Lesser Key — Defensive Publication
 
 **Title:** System and Method for Menu-Based Capture of Mythological Creatures in an Open-World RPG
 
@@ -9,7 +9,7 @@
 **Status:** Public Disclosure for Prior Art Purposes
 
 **Repository:** https://github.com/eremosisima/Chanequemon
-**Series:** Cipactli: The Lesser Key (narrative pivot from Chanequemon)
+**Series:** Cipactli: The Lesser Key
 
 ---
 

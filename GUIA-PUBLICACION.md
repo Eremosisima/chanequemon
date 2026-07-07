@@ -1,4 +1,4 @@
-# Guía de Publicación Defensiva
+# Guía de Publicación Defensiva — Cipactli: The Lesser Key
 
 Para que este documento sirva como prior art legalmente válido:
 
@@ -49,6 +49,7 @@ Chanequemon/
 ├── docs/
 │   ├── guia-diseno.md     ← Bestiario completo: 80 criaturas dominio público
 │   ├── analisis-patentes.md
+│   ├── mecanicas.md       ← Diseño completo de sistemas de juego: recursos, sigilo, captura, sacrificio, Cipactli final
 │   ├── narrativa.md       ← Documento narrativo: Cipactli: The Lesser Key
 │   └── diagramas/
 ├── chanequemon-roblox/    ← Implementación Roblox (Luau)
