@@ -383,7 +383,348 @@
 
 ---
 
-## Resumen de tipos elementales por diseno
+## Criaturas de Mesoamerica y Latinoamerica
+
+### Ahuizotl
+
+- **Fuente original**: Codice Florentino (Historia General de las Cosas de Nueva Espana), Bernardino de Sahagun, 1577 (dominio publico por antiguedad)
+- **Descripcion original**: Criatura pequena del tamano de un perro, piel negra y lisa, cola que termina en una mano humana. Vive en lagos y rios, imita el llanto de un bebe para atraer personas y las arrastra al agua para comerles los ojos, dientes y unas
+- **Referencias permitidas**: Codice Florentino, ilustraciones de los codices mexicanos originales (dominio publico)
+- **EVITAR**: Diseno de _Dungeons & Dragons_ homebrew, _Pathfinder_, videojuegos modernos
+- **Paleta**: Negro azabache, gris agua, rojo sangre
+- **Tipo**: WATER / BEAST
+
+### Cipactli
+
+- **Fuente original**: Codice Florentino, Libro 1 y 7, Sahagun, 1577; mitologia azteca de la creacion
+- **Descripcion original**: Monstruo marino primordial, parte cocodrilo, parte pez, parte sapo. Cuerpo espinoso y dentado con multiples bocas en cada articulacion. Tezcatlipoca sacrifico su pie para atraerlo, luego fue despedazado para crear la tierra
+- **Referencias permitidas**: Codice Florentino, imagenes de codices prehispanicos (dominio publico)
+- **EVITAR**: Diseno de _Monster Manual_ moderno, _Final Fantasy_, videojuegos de mitologia azteca
+- **Paleta**: Verde pantano, marron tierra, azul profundo, rojo sangre
+- **Tipo**: DRAGON / WATER
+
+### Xiuhcoatl (Serpiente de Fuego / Serpiente Turquesa)
+
+- **Fuente original**: Codice Florentino, Libro 12, Sahagun, 1577; Codice Borbonico (~1500s, dominio publico)
+- **Descripcion original**: Serpiente con cuerpo de color turquesa, vientre amarillo, cabeza con hocico prominente y marcas en zigzag como relampagos. Porta el fuego del sol a traves del cielo. Huitzilopochtli la uso como arma para decapitar a Coyolxauhqui
+- **Referencias permitidas**: Codice Borbonico, Codice Florentino, imagenes de codices aztecas (dominio publico)
+- **EVITAR**: Diseno de _Smite_, _Final Fantasy_, _Genshin Impact_, disenos modernos de "serpiente de fuego"
+- **Paleta**: Turquesa, amarillo oro, rojo fuego, naranja
+- **Tipo**: DRAGON / FIRE
+
+### Nahual (Nagual)
+
+- **Fuente original**: Codice Florentino, Libro 10 y 11, Sahagun, 1577 (dominio publico)
+- **Descripcion original**: Humano que puede cambiar de forma a animal (generalmente jaguar, coyote, perro o ave). Descrito como un espiritu animal gemelo nacido al mismo tiempo que el humano. El cambiaformas despedaza victimas humanas en encrucijadas
+- **Referencias permitidas**: Codices mexicanos, ilustraciones de Sahagun (dominio publico)
+- **EVITAR**: Interpretaciones modernas New Age de "espiritu animal", _Maya and the Three_ (Netflix), videojuegos modernos
+- **Paleta**: Jaguar manchado, negro noche, verde selva, rojo
+- **Tipo**: BEAST / SPIRIT
+
+### Tzitzimime (Demonios Estelares)
+
+- **Fuente original**: Codice Florentino, Libro 7, Sahagun, 1577 (dominio publico)
+- **Descripcion original**: Demonios estelares femeninos esqueleticos que descienden durante eclipses solares para devorar humanos. Huesos expuestos, faldas de huesos cruzados, manos y pies con garras. Bocas abiertas listas para tragarse el sol
+- **Referencias permitidas**: Codice Florentino, imagenes de codices aztecas (dominio publico)
+- **EVITAR**: Interpretaciones modernas del Dia de Muertos, disenos de _Smite_, _Dungeons & Dragons_
+- **Paleta**: Negro espacio, blanco hueso, rojo sangre, azul noche
+- **Tipo**: SPIRIT / MYTHIC
+
+### Camazotz (Murcielago de la Muerte)
+
+- **Fuente original**: Popol Vuh (~1550), publicado en ingles por Herbert Howe Bancroft, 1886 (dominio publico)
+- **Descripcion original**: Murcielago gigante de nariz de hoja con forma humanoide. Habita la Casa de los Murcielagos en Xibalba (el inframundo maya). Decapito a Hunahpu de un solo golpe. A veces representado con un cuchillo sacrificial en una mano y un corazon humano en la otra
+- **Referencias permitidas**: Traduccion de Bancroft del Popol Vuh (1886), ceramica maya clasica (dominio publico)
+- **EVITAR**: Diseno de _DC Comics_ (Camazotz de Batman), _Marvel_, _The Legend of Zelda_, videojuegos modernos
+- **Paleta**: Negro murcielago, rojo sangre, blanco hueso, naranja atardecer
+- **Tipo**: BEAST / UNDEAD
+
+### Zipacna
+
+- **Fuente original**: Popol Vuh, traduccion de Bancroft, 1886 (dominio publico)
+- **Descripcion original**: Hijo de Vucub-Caquix, un gigante jactancioso que afirma haber creado las montanas y las carga sobre su espalda. Los Hermanos Gemelos lo mataron haciendole sostener una montana falsa que colapso sobre el
+- **Referencias permitidas**: Popol Vuh (Bancroft 1886), ceramica maya clasica (dominio publico)
+- **EVITAR**: Plantillas de gigantes de fantasia moderna, _Dungeons & Dragons_, _God of War_
+- **Paleta**: Gris piedra, marron tierra, verde musgo, rojo
+- **Tipo**: EARTH
+
+### Vucub-Caquix (Siete Guacamayo)
+
+- **Fuente original**: Popol Vuh, traduccion de Bancroft, 1886 (dominio publico)
+- **Descripcion original**: Ave-demonio orgulloso que pretendia ser el sol y la luna. Ojos enormes y brillantes de metal, dientes de esmeralda, nariz de plata. Los Hermanos Gemelos le dispararon con cerbatanas, derribaron sus dientes enjoyados y los reemplazaron con granos de maiz
+- **Referencias permitidas**: Popol Vuh (Bancroft 1886), arte maya clasico (dominio publico)
+- **EVITAR**: Disenos modernos de aves monstruosas, _Dungeons & Dragons_, _Final Fantasy_
+- **Paleta**: Rojo guacamayo, verde esmeralda, plata, azul, maiz dorado
+- **Tipo**: MYTHIC / AIR
+
+### Alux (Aluxo'ob)
+
+- **Fuente original**: Relacion de las Cosas de Yucatan, Diego de Landa, ~1566; Libro de Chilam Balam de Chumayel (traducido 1913, dominio publico)
+- **Descripcion original**: Pequenos espiritus del tamano de una rodilla, vestidos como mini agricultores mayas. Se esconden en campos sin cultivar y piramides de piedra. Pueden ser utiles o traviesos: roban tortillas, esconden herramientas o pierden a viajeros
+- **Referencias permitidas**: De Landa (1566), Chilam Balam (1913), arte maya clasico (dominio publico)
+- **EVITAR**: Comparaciones con _leprechaun_ o _gnomo_ modernos, _Dungeons & Dragons_
+- **Paleta**: Blanco piedra caliza, verde maiz, azul maya, marron
+- **Tipo**: SPIRIT / EARTH
+
+### Amaru
+
+- **Fuente original**: Primer Nueva Coronica y Buen Gobierno, Felipe Guaman Poma de Ayala, 1615; Comentarios Reales de los Incas, Garcilaso de la Vega, 1609 (ambos dominio publico)
+- **Descripcion original**: Serpiente-dragon de dos cabezas, a veces con cabeza de llama y cuerpo serpentino. Vive bajo tierra y en lagos profundos, emerge para causar terremotos y tormentas. Sus escamas son de oro y jade
+- **Referencias permitidas**: Guaman Poma (1615), ceramica y textil inca (dominio publico)
+- **EVITAR**: Disenos modernos de dragon, _Dungeons & Dragons_, _Final Fantasy_, _Smite_
+- **Paleta**: Oro, verde jade, marron tierra, azul noche
+- **Tipo**: DRAGON / EARTH
+
+### La Llorona
+
+- **Fuente original**: Codice Florentino (menciona a Cihuacoatl llorando), Sahagun, 1577; tradicion oral mexicana recogida en _Mexicanische Zustande_, Carl Sartorius, 1855 (dominio publico)
+- **Descripcion original**: Fantasma de una mujer con vestido blanco, gimiendo y llorando por sus hijos perdidos. Flota sobre rios y canales, a veces visible como figura esqueletica, a veces como mujer hermosa cuyo rostro se convierte en calavera de caballo al acercarse
+- **Referencias permitidas**: Sartorius (1855), grabados mexicanos del s.XIX (dominio publico)
+- **EVITAR**: Peliculas de horror modernas (_The Curse of La Llorona_ 2019 — Warner Bros), disenos de _Dia de Muertos_ comerciales
+- **Paleta**: Blanco fantasma, gris niebla, azul noche, negro
+- **Tipo**: SPIRIT / WATER
+
+---
+
+## Criaturas de Africa Subsahariana
+
+### Emere
+
+- **Fuente original**: _Yoruba Folklore_, John Parkinson, Journal of the African Society, 1909 (dominio publico)
+- **Descripcion original**: Nino espiritu que camina y habla desde el nacimiento. Los Emere no son humanos — son seres sobrenaturales que fingen ser bebes. Tienen sabiduria enorme y causan la muerte de su "madre" durante el parto imposible. Pueden cambiar de forma a aves y escapar por ventanas
+- **Referencias permitidas**: Parkinson (1909), textos folkloricos yoruba del s.XIX (dominio publico)
+- **EVITAR**: Tropos modernos de "nino aterrador", peliculas de terror, _The Omen_, _The Ring_
+- **Paleta**: Marron tierra, blanco, ocre, rojo
+- **Tipo**: SPIRIT / MYTHIC
+
+### Iwin
+
+- **Fuente original**: _Yoruba-Speaking Peoples of the Slave Coast of West Africa_, Alfred Burdon Ellis, 1894 (dominio publico)
+- **Descripcion original**: Espiritus del bosque, beneficos o maliciosos. Humanoides con pies hacia atras, muy altos y delgados, cabello salvaje. Atraen cazadores al fondo del bosque para que se pierdan para siempre
+- **Referencias permitidas**: Ellis (1894), textos folkloricos yoruba del s.XIX (dominio publico)
+- **EVITAR**: Disenos modernos de "espiritu del bosque", _Dungeons & Dragons_, _The Witcher_
+- **Paleta**: Verde bosque, marron corteza, gris, hojas
+- **Tipo**: SPIRIT / PLANT
+
+### Abiku
+
+- **Fuente original**: _Yoruba Folklore_, John Parkinson, 1909 (dominio publico)
+- **Descripcion original**: Espiritu nino vagabundo que muere y renace repetidamente a la misma madre, causando dolor infinito. Descrito como un nino arrugado y enfermizo con ojos penetrantes y sabios demasiado viejos para su rostro. Tiene una peque?a hendidura en la oreja o nariz como se?al
+- **Referencias permitidas**: Parkinson (1909), textos folkloricos yoruba del s.XIX (dominio publico)
+- **EVITAR**: Romanticismos modernos del concepto, representaciones de _American Gods_ (Neil Gaiman), versiones de literatura contemporanea
+- **Paleta**: Gris ceniza, marron, blanco palido, rojo
+- **Tipo**: SPIRIT / UNDEAD
+
+### Tikoloshe (Tokoloshe)
+
+- **Fuente original**: _Specimens of Bushman Folklore_, Bleek & Lloyd, 1911; folklore zulu/xhosa recogido en el s.XIX (dominio publico)
+- **Descripcion original**: Criatura pequena, peluda, simiesca, con una sola nalga, genitales enormes y cola larga. Puede volverse invisible tragando una piedra. Invocado por brujas para hacer da?o — muerde los dedos de los pies de los durmientes y trae pesadillas
+- **Referencias permitidas**: Bleek & Lloyd (1911), textos folkloricos sudafricanos del s.XIX (dominio publico)
+- **EVITAR**: Versiones modernas de libros infantiles suavizados, _Dungeons & Dragons_
+- **Paleta**: Gris oscuro, marron, negro, rojo
+- **Tipo**: BEAST / SPIRIT
+
+### Impundulu (Pajaro del Rayo)
+
+- **Fuente original**: _The Native Races of South Africa_, George W. Stow, 1905 (dominio publico)
+- **Descripcion original**: Ave gigante blanca y negra del tamano de un humano, con patas y cresta rojo sangre. Convoca relampagos y truenos con sus alas. Sus huevos explotan como truenos al caer al suelo. Es el familiar de las brujas, capaz de transformarse en hombre hermoso
+- **Referencias permitidas**: Stow (1905), textos folkloricos zulu/xhosa del s.XIX (dominio publico)
+- **EVITAR**: Disenos modernos de "thunderbird" de otras culturas, _Dungeons & Dragons_, _Magic: The Gathering_
+- **Paleta**: Blanco hueso, negro carbon, rojo sangre, azul electrico
+- **Tipo**: AIR / MYTHIC
+
+---
+
+## Criaturas de la Amazonia
+
+### Curupira
+
+- **Fuente original**: Historia da Provincia de Santa Cruz, Pero de Magalhaes Gandavo, 1576; Cartas Jesuitas, Jose de Anchieta, 1560 (dominio publico)
+- **Descripcion original**: Duende o enano con cabello rojo anaranjado llameante y pies al reves. Silba penetrantemente y deja huellas que apuntan en direccion opuesta a su avance. Monta un pecar y protege el bosque de cazadores
+- **Referencias permitidas**: Gandavo (1576), Anchieta (1560), textos folkloricos brasilenos del s.XIX (dominio publico)
+- **EVITAR**: Versiones suavizadas de libros infantiles modernos, disenos de _Rio_ (Blue Sky/Disney)
+- **Paleta**: Rojo fuego, naranja, verde selva, marron tierra
+- **Tipo**: PLANT / SPIRIT
+
+### Boiuna (Cobra Grande)
+
+- **Fuente original**: _O Selvagem_, Joao Barbosa Rodrigues, 1876 (dominio publico)
+- **Descripcion original**: Anaconda negra colosal de hasta 200 metros, con ojos amarillo-anaranjados brillantes del tamano de reflectores. Colmillos afilados que sobresalen por agujeros en su mandibula superior. Arrastra botes enteros bajo el agua y tiene poder magnetico para paralizar barcos
+- **Referencias permitidas**: Barbosa Rodrigues (1876), textos folkloricos amazoniocos del s.XIX (dominio publico)
+- **EVITAR**: Peliculas modernas de "serpiente gigante", _Anaconda_ (Sony 1997), _Dungeons & Dragons_
+- **Paleta**: Negro azabache, amarillo ojo, verde escama, blanco
+- **Tipo**: DRAGON / WATER
+
+### Iara (Yara / Mae d'Agua)
+
+- **Fuente original**: _O Selvagem_, Joao Barbosa Rodrigues, 1876; _Lendas e Mitos dos Indios Brasileiros_ (dominio publico)
+- **Descripcion original**: Sirena hermosa de cabello verde y piel clara, sentada en rocas peinandose con un peine dorado. Canta tan hipnoticamente que los hombres saltan a los rios para alcanzarla y nunca vuelven a salir. Su cancion causa que los rios se desborden
+- **Referencias permitidas**: Barbosa Rodrigues (1876), textos folkloricos brasilenos del s.XIX (dominio publico)
+- **EVITAR**: Representaciones modernas de "sirena dulce", _Disney_ (La Sirenita), _H2O: Just Add Water_, sirenas romanticas
+- **Paleta**: Verde agua, dorado, blanco perla, azul rio
+- **Tipo**: WATER / SPIRIT
+
+### Mapinguari
+
+- **Fuente original**: _The Amazon and Madeira Rivers_, Franz Keller, 1874 (dominio publico)
+- **Descripcion original**: Hominido alto y gre?udo, de olor fétido, con un solo ojo ciclopeo y una segunda boca en el vientre. Garras largas y pies al reves. Su rugido aterrador suena como un hombre siendo asesinado. Invencible a flechas y balas
+- **Referencias permitidas**: Keller (1874), textos folkloricos amazoniocos del s.XIX (dominio publico)
+- **EVITAR**: Interpretaciones modernas de "Bigfoot", _Dungeons & Dragons_, _The Witcher_
+- **Paleta**: Verde musgo, marron, gris, negro
+- **Tipo**: BEAST / EARTH
+
+---
+
+## Criaturas de Polinesia
+
+### Taniwha
+
+- **Fuente original**: _Polynesian Mythology_, Sir George Grey, 1855; _Maori-Polynesian Comparative Dictionary_, Edward Tregear, 1891 (dominio publico)
+- **Descripcion original**: Guardianes acuaticos sobrenaturales que habitan pozas profundas, rios y cuevas marinas. Algunos son como lagartos gigantes con aletas; otros son criaturas serpentinas colosales con escamas que brillan verde y plata. Protegen a su tribu pero arrastran a intrusos a muertes acuaticas
+- **Referencias permitidas**: Grey (1855), Tregear (1891), arte maori tradicional (dominio publico)
+- **EVITAR**: Disenos modernos de "monstruo marino" o "dragon", _Dungeons & Dragons_, _God of War_
+- **Paleta**: Verde jade, plata, azul profundo, blanco espuma
+- **Tipo**: DRAGON / WATER
+
+### Menehune
+
+- **Fuente original**: _Polynesian Mythology_, Sir George Grey, 1855; tradicion oral hawaiana recogida en el s.XIX (dominio publico)
+- **Descripcion original**: Raza de gente pequena de 60-90 cm de altura, increiblemente fuertes y habiles artesanos. Construyen estanques, templos y canoas en una sola noche. Desaparecen antes del amanecer — si alguien los observa trabajar, abandonan el proyecto para siempre
+- **Referencias permitidas**: Grey (1855), textos folkloricos hawaianos del s.XIX (dominio publico)
+- **EVITAR**: Comparaciones con _elfos_ o _leprechauns_ modernos, disneyficacion
+- **Paleta**: Marron, verde hoja, rojo, negro
+- **Tipo**: SPIRIT / EARTH
+
+### Mo'o
+
+- **Fuente original**: _Voyage of H.M.S. Blonde_, 1826; tradicion oral hawaiana (dominio publico)
+- **Descripcion original**: Lagarto acuatico gigante o dragon de agua, generalmente femenino, que guarda pozas, manantiales y cuevas. Cambia de forma: en el agua es una masa oscura con ojos brillantes; en tierra, una mujer hermosa con lengua larga y dientes afilados. Protege fuentes de agua
+- **Referencias permitidas**: _Voyage of H.M.S. Blonde_ (1826), textos hawaianos del s.XIX (dominio publico)
+- **EVITAR**: Disenos de "lizardfolk" o "dragon" de fantasia moderna, _Dungeons & Dragons_
+- **Paleta**: Verde lagarto, negro, azul noche, dorado
+- **Tipo**: DRAGON / WATER
+
+### Ponaturi
+
+- **Fuente original**: _Polynesian Mythology_, Sir George Grey, 1855 (dominio publico)
+- **Descripcion original**: Raza de humanoides marinos con aspecto de murcielago que viven en una aldea hundida bajo el oceano. Duermen en tierra por la noche pero deben regresar al mar antes del amanecer o mueren. Piel palida y humeda, orejas puntiagudas, dedos palmeados
+- **Referencias permitidas**: Grey (1855), textos maories del s.XIX (dominio publico)
+- **EVITAR**: Disenos modernos de "merfolk" o "deep ones" lovecraftianos, _Dungeons & Dragons_
+- **Paleta**: Azul marino, gris palido, verde bioluminiscente, blanco
+- **Tipo**: WATER / SPIRIT
+
+---
+
+## Criaturas del Artico
+
+### Amarok
+
+- **Fuente original**: _Eskimo Folktales_, Knud Rasmussen, 1921 (dominio publico)
+- **Descripcion original**: Lobo solitario gigantesco, mucho mayor que cualquier lobo normal. A diferencia de los lobos en manada, Amarok caza solo. Acecha y devora cazadores que se aventuran solos de noche. Sus huellas son del tamano de un torso humano; sus ojos brillan como brasas en la oscuridad
+- **Referencias permitidas**: Rasmussen (1921), textos folkloricos inuit del s.XIX (dominio publico)
+- **EVITAR**: Disenos modernos de "dire wolf", _Game of Thrones_ (Huargos), _Dungeons & Dragons_
+- **Paleta**: Blanco nieve, gris tormenta, negro, ojos rojos
+- **Tipo**: BEAST / EARTH
+
+### Qalupalik
+
+- **Fuente original**: _Eskimo Folktales_, Knud Rasmussen, 1921; _Tales and Traditions of the Eskimo_, Hinrich Rink, 1875 (dominio publico)
+- **Descripcion original**: Criatura marina humanoide con unas largas y afiladas, piel cubierta de algas verdes viscosas. Lleva una bolsa en la espalda hecha de pieles de ave. Vive a lo largo de las costas y secuestra ni?os que se acercan demasiado al agua, llevandolos en su bolsa
+- **Referencias permitidas**: Rink (1875), Rasmussen (1921), textos inuit (dominio publico)
+- **EVITAR**: Disenos modernos de "sea hag" o "sirena", _Dungeons & Dragons_
+- **Paleta**: Verde algas, gris azulado, negro, blanco
+- **Tipo**: WATER / BEAST
+
+### Mahaha
+
+- **Fuente original**: _Eskimo Folktales_, Knud Rasmussen, 1921 (dominio publico)
+- **Descripcion original**: Humanoide demacrado y esqueletico con piel azul hielo y una sonrisa congelada aterradora. Corre desnudo por la tundra, riendo maniaticamente. Cuando atrapa a una victima, la hace cosquillas hasta matarla con sus dedos frios y afilados. Es demasiado rapido para escapar a pie
+- **Referencias permitidas**: Rasmussen (1921), textos inuit (dominio publico)
+- **EVITAR**: Interpretaciones modernas de "zombie" o "wendigo", _Dungeons & Dragons_
+- **Paleta**: Azul hielo, blanco, gris, negro
+- **Tipo**: SPIRIT / UNDEAD
+
+---
+
+## Criaturas de Persia y Medio Oriente
+
+### Simurgh (Simorgh)
+
+- **Fuente original**: Shahnameh (Libro de los Reyes), Ferdowsi, 1010; traduccion inglesa de James Atkinson, 1832 / Warner, 1905-1925 (dominio publico)
+- **Descripcion original**: Ave colosal benefica con cabeza de perro y garras de leon, plumas de cola de pavo real en tonos esmeralda y oro. Anida en la cima del Monte Alborz / Monte Qaf. Es tan antigua que ha visto el mundo destruirse tres veces. Sus plumas tienen poderes curativos
+- **Referencias permitidas**: Shahnameh (Atkinson 1832), miniaturas persas del s.XV-XVII (dominio publico por antiguedad)
+- **EVITAR**: Comparaciones con el Fenix moderno, disenos de _Final Fantasy_, _Magic: The Gathering_, _Prince of Persia_ (Ubisoft)
+- **Paleta**: Dorado, verde esmeralda, rojo, blanco
+- **Tipo**: MYTHIC / AIR
+
+### Div (Daeva)
+
+- **Fuente original**: Shahnameh, Ferdowsi, 1010; Avesta (escrituras zoroastricas, dominio publico)
+- **Descripcion original**: Humanoides monstruosos con cuernos, colmillos de jabali que sobresalen de la boca, estatura gigantesca (mas altos que dos hombres), garras como ganchos de hierro. Cubiertos de pelaje negro o rojo hirsuto. Algunos usan armadura y portan mazas con púas. Sirven a Ahriman, el espiritu de la oscuridad
+- **Referencias permitidas**: Shahnameh (Atkinson 1832), Avesta, miniaturas persas clasicas (dominio publico)
+- **EVITAR**: Disenos modernos de "orco" o "demonio", _Dungeons & Dragons_, _World of Warcraft_, _Lord of the Rings_
+- **Paleta**: Rojo oscuro, negro, gris hierro, bronce
+- **Tipo**: BEAST / EARTH
+
+### Peri (Pari)
+
+- **Fuente original**: Shahnameh, Ferdowsi, 1010; Las Mil y Una Noches (traduccion de Richard Burton, 1885, dominio publico)
+- **Descripcion original**: Espiritus alados hermosos hechos de luz y fuego, mas peque?os y gráciles que los humanos. Son angeles caidos condenados hasta completar penitencia. Guian a viajeros perdidos, bendicen amantes y a veces se casan con mortales. Fragiles — pueden ser muertos por hierro
+- **Referencias permitidas**: Shahnameh (Atkinson 1832), Burton (1885), miniaturas persas (dominio publico)
+- **EVITAR**: Disenos de "hada" o "angel" modernos, _Disney_ (Tinker Bell), _Dungeons & Dragons_
+- **Paleta**: Blanco luz, dorado, azul celeste, rosa
+- **Tipo**: SPIRIT / MYTHIC
+
+### Nasnas
+
+- **Fuente original**: Las Mil y Una Noches (traduccion de Burton, 1885); Al-Qazwini's Wonders of Creation, ~1200s (dominio publico)
+- **Descripcion original**: Mitad de un ser humano — tiene un brazo, una pierna, medio torso, media cabeza con un ojo. Salta sobre su unica pierna con velocidad asombrosa. Se encuentra en desiertos e islas remotas. Puede hablar arabe y a veces se burla de los viajeros
+- **Referencias permitidas**: Burton (1885), Al-Qazwini (1200s), textos folkloricos arabes (dominio publico)
+- **EVITAR**: Disenos modernos de "zombie" o "mutante", _Dungeons & Dragons_, videojuegos modernos
+- **Paleta**: Marron arena, gris, blanco, negro
+- **Tipo**: SPIRIT / BEAST
+
+---
+
+## Criaturas del Sureste Asiatico
+
+### Aswang
+
+- **Fuente original**: _The Bontoc Igorot_, Albert Ernest Jenks, 1905; _The Philippine Islands 1493-1898_, Blair & Robertson, 1903-1909 (dominio publico)
+- **Descripcion original**: Ghoul cambiaformas que parece mujer hermosa de dia pero se parte a la mitad en la cintura por la noche, dejando su cuerpo inferior atras mientras la mitad superior desarrolla alas de murcielago y vuela a cazar. Tiene una lengua larga, hueca y como aguja que extiende a traves del techo para chupar la sangre de victimas dormidas
+- **Referencias permitidas**: Jenks (1905), Blair & Robertson (1903-1909), textos folkloricos filipinos del s.XIX (dominio publico)
+- **EVITAR**: Peliculas de horror filipinas modernas, disenos de _Dungeons & Dragons_
+- **Paleta**: Blanco palido, negro, rojo sangre, verde
+- **Tipo**: SPIRIT / UNDEAD
+
+### Tikbalang
+
+- **Fuente original**: _The Bontoc Igorot_, Jenks, 1905; _Folk Tales of the Filipinos_, Mabel Cook Cole, 1916 (dominio publico)
+- **Descripcion original**: Criatura alta y desgarbada con cabeza y pezu?as de caballo, cuerpo de hombre, y piernas tan largas que cuando se sienta las rodillas le llegan sobre la cabeza. Vive en arboledas de bambú y monta?as, haciendo que los viajeros den vueltas en circulos hasta perderse irremediablemente. Se aplaca con ofrendas de arroz
+- **Referencias permitidas**: Jenks (1905), Cole (1916), textos folkloricos filipinos del s.XIX (dominio publico)
+- **EVITAR**: Comparaciones con centauro moderno, _Dungeons & Dragons_, _The Witcher_
+- **Paleta**: Marron caballo, verde bambu, gris, blanco
+- **Tipo**: BEAST / SPIRIT
+
+### Kapre
+
+- **Fuente original**: _The Bontoc Igorot_, Jenks, 1905; _Folk Tales of the Filipinos_, Cole, 1916 (dominio publico)
+- **Descripcion original**: Humanoide gigante, oscuro y peludo que vive en arboles grandes (especialmente acacia y balete). Se sienta en ramas fumando una pipa gigante, apareciendo como una masa sombria. Hace bromas pesadas o puede ser protector. Su presencia causa una sensacion inexplicable de pesadez y miedo
+- **Referencias permitidas**: Jenks (1905), Cole (1916), textos folkloricos filipinos (dominio publico)
+- **EVITAR**: Comparaciones modernas con "Bigfoot", _Dungeons & Dragons_, _Harry Potter_ (Hagrid/Grodd)
+- **Paleta**: Negro carbon, marron oscuro, rojo tabaco, verde
+- **Tipo**: BEAST / PLANT
+
+### Barong
+
+- **Fuente original**: _The Religion of the Balinese_, Walter Spiess, 1908; _Barong: A Balinese Play_, recogido ~1910 (dominio publico)
+- **Descripcion original**: Bestia benefica con aspecto de leon, cubierta de pelaje largo blanco, rojo y dorado, con una mandibula enorme llena de colmillos. Baila y lucha contra Rangda — una reina bruja aterradora con unas largas y afiladas, lengua de fuego protuberante y senos colgantes. Rangda lleva intestinos como joyeria
+- **Referencias permitidas**: Spiess (1908), textos balineses del s.XIX, fotos de danzas balinesas pre-1929 (dominio publico)
+- **EVITAR**: Disenos modernos de "demonio" o "monstruo" de fantasia, _Dungeons & Dragons_
+- **Paleta**: Blanco, rojo, dorado, negro (Barong); Rojo sangre, negro, fuego (Rangda)
+- **Tipo**: MYTHIC / BEAST (Barong); SPIRIT / MYTHIC (Rangda)
+
+---
 
 | Elemento | Formas base | Colores clave |
 |---|---|---|
@@ -397,6 +738,42 @@
 | EARTH | Rocosos, arcillosos, vegetales | Marrones, grises, verdes |
 | AIR | Alados, vaporosos, tormenta | Blancos, grises, azules cielo |
 | PLANT | Forestales, enredaderas | Verdes, marrones, flores |
+
+---
+
+## Resumen de culturas representadas
+
+| Cultura | Criaturas | Cantidad |
+|---------|-----------|----------|
+| **Griego** | Centauro, Cerbero, Chimera, Fenix, Grifo, Hidra, Medusa, Minotauro | 8 |
+| **Azteca / Nahua** | Ahuizotl, Cipactli, Nahual, Tzitzimime, Xiuhcoatl | 5 |
+| **Japones** | Kappa, Kitsune, Oni, Tengu, Yuki-onna | 5 |
+| **Egipcio** | Ammit, Anubis, Bastet | 3 |
+| **Maya** | Alux, Camazotz, Vucub-Caquix, Zipacna | 4 |
+| **Amazonico** | Boiuna, Curupira, Iara, Mapinguari | 4 |
+| **Maori / Polinesio** | Menehune, Mo'o, Ponaturi, Taniwha | 4 |
+| **Persa** | Div, Peri, Simurgh | 3 |
+| **Filipino** | Aswang, Kapre, Tikbalang | 3 |
+| **Nordico** | Draugr, Fenrir, Jormundgander | 3 |
+| **Celta** | Banshee, Cernunnos, Kelpie | 3 |
+| **Eslavo** | Baba Yaga, Leshy, Rusalka | 3 |
+| **Chino** | Jiangshi, Long, Qilin | 3 |
+| **Hindu** | Garuda, Naga, Rakshasa | 3 |
+| **Abrahamico** | Behemoth, Golem, Leviatan | 3 |
+| **Europeo General** | Basilisco, Hombre Lobo, Vampiro | 3 |
+| **Yoruba (Africa Oeste)** | Abiku, Emere, Iwin | 3 |
+| **Inuit / Artico** | Amarok, Mahaha, Qalupalik | 3 |
+| **Inca / Andino** | Amaru | 1 |
+| **Mexicano Colonial** | La Llorona | 1 |
+| **Zulu (Africa Sur)** | Impundulu, Tikoloshe | 2 |
+| **Mesopotamico** | Pazuzu, Tiamat | 2 |
+| **Nativo Americano** | Thunderbird, Wendigo | 2 |
+| **Africano (Ghana)** | Anansi | 1 |
+| **Britanico** | Redcap | 1 |
+| **Literario (s.XIX)** | Carmilla, Frankenstein | 2 |
+| **Arabe / Islamico** | Nasnas | 1 |
+| **Bali / Indonesia** | Barong | 1 |
+| **TOTAL** | **78 criaturas** | **78** |
 
 ---
 

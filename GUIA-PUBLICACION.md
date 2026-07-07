@@ -45,10 +45,18 @@ Usar "Third-Party Preissuance Submission" (35 U.S.C. § 122(e)):
 Chanequemon/
 ├── README.md              ← Documento principal de publicación defensiva
 ├── LICENSE                ← CC0 1.0 Universal (dedicación a dominio público)
+├── GUIA-PUBLICACION.md    ← Instrucciones de publicación defensiva
 ├── docs/
+│   ├── guia-diseno.md     ← Bestiario completo: 80 criaturas dominio público
 │   ├── analisis-patentes.md
-│   └── diagramas/         ← Diagramas de flujo del sistema
-└── src/                   ← Código de referencia (implementación)
-    ├── minecraft-plugin/  ← Esqueleto del plugin Paper
-    └── roblox/            ← Esqueleto del juego Roblox
+│   ├── narrativa.md       ← Documento narrativo: Cipactli: The Lesser Key
+│   └── diagramas/
+├── chanequemon-roblox/    ← Implementación Roblox (Luau)
+│   ├── default.project.json
+│   └── src/
+│       ├── server/
+│       ├── shared/
+│       └── startergui/
+└── src/
+    └── minecraft-plugin/  ← Paper plugin (Java, mantenido por compatibilidad)
 ```

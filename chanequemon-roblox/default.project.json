@@ -1,0 +1,24 @@
+{
+  "name": "Chanequemon",
+  "tree": {
+    "$className": "DataModel",
+    "ReplicatedStorage": {
+      "$className": "ReplicatedStorage",
+      "Chanequemon": {
+        "$path": "src/shared"
+      }
+    },
+    "ServerScriptService": {
+      "$className": "ServerScriptService",
+      "ChanequemonServer": {
+        "$path": "src/server"
+      }
+    },
+    "StarterGui": {
+      "$className": "StarterGui",
+      "ChanequemonGUI": {
+        "$path": "src/startergui"
+      }
+    }
+  }
+}

@@ -9,6 +9,7 @@
 **Status:** Public Disclosure for Prior Art Purposes
 
 **Repository:** https://github.com/eremosisima/Chanequemon
+**Series:** Cipactli: The Lesser Key (narrative pivot from Chanequemon)
 
 ---
 
