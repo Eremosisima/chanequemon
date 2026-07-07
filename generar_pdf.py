@@ -939,6 +939,12 @@ pdf.cell(0, 5, 'Creado por Eremosisima - Julio 2026', align='C')
 pdf.ln(5)
 pdf.cell(0, 5, 'github.com/Eremosisima/chanequemon', align='C')
 
+# Metadatos del PDF
+pdf.set_title('Cipactli: The Lesser Key')
+pdf.set_author('Eremosisima')
+pdf.set_subject('Juego de Rol de Mesa - Horror Cosmico y Supervivencia - CC0 1.0 Universal')
+pdf.set_creator('generar_pdf.py')
+
 # Guardar
 output_path = 'C:/Users/x/Downloads/Cipactli_The_Lesser_Key_Rol.pdf'
 pdf.output(output_path)

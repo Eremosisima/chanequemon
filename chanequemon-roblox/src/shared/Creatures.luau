@@ -630,6 +630,25 @@ Creatures.DJINN = {
 }
 
 -- MISC
+-- AZTEC
+Creatures.CIPACTLI = {
+	name = "Cipactli",
+	type = "DRAGON",
+	affinity = "WATER",
+	hp = 135, atk = 75, def = 90, spd = 25,
+	captureRate = 0.03, spawnWeight = 1,
+	biomes = {"Ocean", "River", "Swamp"},
+	time = "ANY",
+	lore = "Monstruo marino primordial azteca, parte cocodrilo, parte pez, parte sapo. Con espinas y multiples bocas en cada articulacion.",
+	passive = { name = "Primordial", desc = "Resiste WATER y EARTH. Vulnerable a SPIRIT.", effect = nil, target = "SELF" },
+	moves = {
+		{ name = "Mandibula Primordial", power = 65, element = "WATER", moveType = "PHYSICAL", ap = 8, desc = "Mordisco de sus multiples bocas.", statusEffect = nil },
+		{ name = "Espina Dorsal", power = 45, element = "EARTH", moveType = "PHYSICAL", ap = 10, desc = "Lanza espinas de su lomo.", statusEffect = nil },
+		{ name = "Sumergir", power = 0, element = "WATER", moveType = "DEBUFF", ap = 6, desc = "Arrastra al enemigo a las profundidades.", statusEffect = "SPEED_DOWN" },
+		{ name = "Creacion del Mundo", power = 0, element = "EARTH", moveType = "BUFF", ap = 5, desc = "Su carne crea la tierra. Recupera 40 HP.", statusEffect = nil },
+	},
+}
+
 Creatures.PHOENIX = {
 	name = "Phoenix", type = "MYTHIC", affinity = "FIRE",
 	hp = 80, atk = 75, def = 40, spd = 100,
